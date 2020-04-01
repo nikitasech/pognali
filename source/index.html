@@ -6,37 +6,45 @@
   </head>
   <body class="container">
     <header class="main-header">
-      <img src="https://via.placeholder.com/100x19" alt="Логотип сервиса «Погнали»" class="logo" width="100" height="19">
-      <button type="button" class="main-header__button--open-menu">Открыть меню</button>
+      <a>
+        <img src="https://via.placeholder.com/100x19" alt="Логотип сервиса «Погнали»" class="logo" width="100" height="19">
+      </a>
+      <button type="button" class="main-header__button main-header__button--open-menu">Открыть меню</button>
       <div class="main-header__wrapper">
         <nav class="main-header__navigation navigation">
           <ul class="navigation__list">
             <li class="navigation__item">
-              <a class="navigation__link link">О сервисе</a>
+              <a href="" class="navigation__link link">О сервисе</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link link">Направления</a>
+              <a href="form.html" class="navigation__link link">Направления</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link link">Попутчики</a>
+              <a href="catalog.html" class="navigation__link link">Попутчики</a>
             </li>
           </ul>
         </nav>
-        <a href="" class="main-header__button--auth button--auth">Авторизация</a>
+        <a href="" class="main-header__button main-header__button--auth button button--auth">Авторизация</a>
         <section class="main-header__contacts contacts">
           <h2 class="contacts__title visually-hidden">Наши контакты</h2>
-          <ul class="contacts__list--direct direct-contacts">
+          <ul class="contacts__list contacts__list--direct direct-contacts">
             <li class="direct-contacts__item direct-contacts__item--tel">
               <a href="tel:+78005558628" class="direct-contacts__link link">8 800 555-86-28</a>
             </li>
-            <li class="direct-contacts__item direct-contacts__item--e-mail">
+            <li class="direct-contacts__item direct-contacts__item--email">
               <a href="mailto:mail@htmlacademy.ru" class="direct-contacts__link link">mail@htmlacademy.ru</a>
             </li>
           </ul>
-          <ul class="contacts__list--direct social-contacts">
-            <li class="social-contacts__item social-contacts__item--fb">Facebook</li>
-            <li class="social-contacts__item social-contacts__item--vk">Вконтакте</li>
-            <li class="social-contacts__item social-contacts__item--insta">Instagram</li>
+          <ul class="contacts__list contacts__list--socials social-contacts">
+            <li class="social-contacts__item social-contacts__item--fb">
+              <a href="">Facebook</a>
+            </li>
+            <li class="social-contacts__item social-contacts__item--vk">
+              <a href="">Вконтакте</a>
+            </li>
+            <li class="social-contacts__item social-contacts__item--insta">
+              <a href="">Instagram</a>
+            </li>
           </ul>
         </section>
       </div>
@@ -53,7 +61,7 @@
             <a href="mailto:mail@htmlacademy.ru" class="actions__button button">Написать</a>
           </li>
           <li class="actions__item actions__item--auth">
-            <a href="" class="actions__button button button--auth">Авторизация</a>
+            <a href="" class="actions__button actions__button--auth button button--auth">Авторизация</a>
           </li>
         </ul>
         <blockquote class="intro__quote quote">
@@ -64,7 +72,7 @@
             газеты «гаджетлайф»
           </p>
         </blockquote>
-        <ol class="main__list--start start__list">
+        <ol class="main__list main__list--start start__list">
           <li class="start__item">Выберите направление</li>
           <li class="start__item">Изучите идеи путешественников</li>
           <li class="start__item">Находите тех, кто похож на вас</li>
@@ -114,7 +122,7 @@
         <p class="companions__description">
           Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.
         </p>
-        <p class="companions__descriptions--bold">
+        <p class="companions__descriptions companions__descriptions--bold">
           Теперь можно легко найти единомышленников!
         </p>
         <ul class="companions__list">
@@ -181,19 +189,27 @@
             59 руб./мес
           </li>
         </ul>
-        <a href="" class="companions__link link">Показать всех</a>
+        <a href="" class="rates__link link">Показать тарифы для бизнеса</a>
       </section>
     </main>
     <footer class="main-footer">
-      <img src="https://via.placeholder.com/96x15" alt="Логотип сервиса «Погнали»" width="96" height="15" class="main-footer__img--logo">
+      <img src="https://via.placeholder.com/96x15" alt="Логотип сервиса «Погнали»" width="96" height="15" class="main-footer__img main-footer__img--logo">
       <ul class="main-footer__social social-contacts">
-        <li class="social-contacts__item social-contacts__item--fb">Facebook</li>
-        <li class="social-contacts__item social-contacts__item--vk">Вконтакте</li>
-        <li class="social-contacts__item social-contacts__item--insta">Instagram</li>
+        <li class="social-contacts__item social-contacts__item--fb">
+          <a href="">Facebook</a>
+        </li>
+        <li class="social-contacts__item social-contacts__item--vk">
+          <a href="">Вконтакте</a>
+        </li>
+        <li class="social-contacts__item social-contacts__item--insta">
+          <a href="">Instagram</a>
+        </li>
       </ul>
       <p class="main-footer__copyright">
         Разработано
-        <img src="https://via.placeholder.com/27x34" alt="HTML Academy" class="main-footer__img--copiryght" width="27" height="34">
+        <a href="https://htmlacademy.ru/intensive/adaptive">
+          <img src="https://via.placeholder.com/27x34" alt="HTML Academy" class="main-footer__img main-footer__img--copiryght" width="27" height="34">
+        </a>
       </p>
     </footer>
   </body>
