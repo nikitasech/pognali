@@ -50,6 +50,212 @@
       </div>
     </header>
     <main class="main">
+      <section class="main-title">
+        <h1 class="main-title__text">Попутчики</h1>
+      </section>
+      <section class="countries-filters">
+        <h2 class="visually-hidden">Фильтрация по странам</h2>
+        <ul class="countries-filters__list countries-filters__list--group">
+          <li class="countries-filters__item">
+            <a class="countries-filters__link countries-filters__link--selected" href="">Европа</a>
+          </li>
+          <li class="countries-filters__item">
+            <a class="countries-filters__link" href="">Азия</a>
+          </li>
+          <li class="countries-filters__item">
+            <a class="countries-filters__link" href="">Америка</a>
+          </li>
+          <li class="countries-filters__item">
+            <a class="countries-filters__link" href="">Острова</a>
+          </li>
+        </ul>
+        <table class="coutries-filters__alphabet alphabet">
+          <tbody>
+            <tr class="alphabet__row">
+              <td class="atphabet__cell">
+                <button class="alphabet__button" type="button">А</button>
+              </td>
+              <td class="atphabet__cell">
+                <button class="alphabet__button" type="button">Б</button>
+              </td>
+              <td class="atphabet__cell">
+                <button class="alphabet__button" type="button">В</button>
+              </td>
+              <td class="atphabet__cell">
+                <button class="alphabet__button" type="button">Г</button>
+              </td>
+              <td class="atphabet__cell">
+                <button class="alphabet__button" type="button">Д</button>
+              </td>
+            </tr>
+            <tr class="alphabet__row">
+              <td class="atphabet__cell">
+                <button class="alphabet__button" type="button">Е</button>
+              </td>
+              <td class="atphabet__cell">
+                <button class="alphabet__button" type="button">З</button>
+              </td>
+              <td class="atphabet__cell">
+                <button class="alphabet__button" type="button">И</button>
+              </td>
+              <td class="atphabet__cell">
+                <button class="alphabet__button" type="button">К</button>
+              </td>
+              <td class="atphabet__cell">
+                <button class="alphabet__button" type="button">Л</button>
+              </td>
+            </tr>
+            <tr class="alphabet__row">
+              <td class="atphabet__cell">
+                <button class="alphabet__button" type="button">М</button>
+              </td>
+              <td class="atphabet__cell">
+                <button class="alphabet__button" type="button">Н</button>
+              </td>
+              <td class="atphabet__cell">
+                <button class="alphabet__button" type="button">О</button>
+              </td>
+              <td class="atphabet__cell">
+                <button class="alphabet__button" type="button">П</button>
+              </td>
+              <td class="atphabet__cell">
+                <button class="alphabet__button" type="button">Р</button>
+              </td>
+            </tr>
+            <tr class="alphabet__row">
+              <td class="atphabet__cell">
+                <button class="alphabet__button" type="button">С</button>
+              </td>
+              <td class="atphabet__cell">
+                <button class="alphabet__button" type="button">Т</button>
+              </td>
+              <td class="atphabet__cell">
+                <button class="alphabet__button" type="button">У</button>
+              </td>
+              <td class="atphabet__cell">
+                <button class="alphabet__button" type="button">Ф</button>
+              </td>
+              <td class="atphabet__cell">
+                <button class="alphabet__button" type="button">Х</button>
+              </td>
+            </tr>
+            <tr class="alphabet__row">
+              <td class="atphabet__cell">
+                <button class="alphabet__button" type="button">Ч</button>
+              </td>
+              <td class="atphabet__cell">
+                <button class="alphabet__button" type="button">Ш</button>
+              </td>
+              <td class="atphabet__cell">
+                <button class="alphabet__button" type="button">Э</button>
+              </td>
+              <td class="atphabet__cell">
+                <button class="alphabet__button" type="button">Ю</button>
+              </td>
+              <td class="atphabet__cell">
+                <button class="alphabet__button" type="button">Я</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <ul class="countries-filters__list countries-filters__list--coutries">
+          <li class="coutries-filters__item">Австралия</li>
+          <li class="coutries-filters__item">Австрия</li>
+          <li class="coutries-filters__item">Азербайджан</li>
+          <li class="coutries-filters__item">Албания</li>
+          <li class="coutries-filters__item">Алжир</li>
+          <li class="coutries-filters__item">Ангола</li>
+          <li class="coutries-filters__item">Андорра</li>
+          <li class="coutries-filters__item">Антигуа и Барбуда</li>
+          <li class="coutries-filters__item">Аргентина</li>
+          <li class="coutries-filters__item">Армения</li>
+          <li class="coutries-filters__item">Афганистан</li>
+        </ul>
+        <button class="coutries-filters__button coutries-filters__button--close button">Свернуть</button>
+      </section>
+      <section class="filters">
+        <h2 class="visually-hidden">Фильтры</h2>
+        <form class="filters__form form" action="https://echo.htmlacademy.ru/" method="get">
+          <p class="form__description">Подберите идеального попутчика</p>
+          <fieldset class="form__set">
+            <legend class="form__legend">
+              Хобби
+              <button class="filters__button filters__button--closed-group">Открыть группу</button>
+            </legend>
+          </fieldset>
+          <fieldset class="form__set">
+            <legend class="form__legend">
+              Музыка
+              <button class="filters__button filters__button--opened-group">Закрыть группу</button>
+            </legend>
+            <ul class="form__list">
+              <li class="form__item">
+                <input class="visually-hidden" type="checkbox" name="music__hard-rock" id="music__hard-rock">
+                <label class="form__label form__label--checkbox" for="music__hard-rock">Тяжелый рок</label>
+              </li>
+              <li class="form__item">
+                <input class="visually-hidden" type="checkbox" name="music__russian-rap" id="music__russian-rap">
+                <label class="form__label form__label--checkbox" for="music__russian-rap">Русский рэп</label>
+              </li>
+              <li class="form__item">
+                <input class="visually-hidden" type="checkbox" name="music__eurodance" id="music__eurodance">
+                <label class="form__label form__label--checkbox" for="music__eurodance">Евроденс</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="form__set">
+            <legend class="form__legend">
+              Еда
+              <button class="filters__button filters__button--closed-group">Открыть группу</button>
+            </legend>
+          </fieldset>
+          <fieldset class="form__set">
+            <legend class="form__legend">
+              Транспорт
+              <button class="filters__button filters__button--opened-group">Закрыть группу</button>
+            </legend>
+            <ul class="form__transport-list transport-list">
+              <li class="transport-list__item transport-list__item--plane">
+                <input class="visually-hidden" type="checkbox" name="transport__plane" id="transport__plane">
+                <label class="form__label form__label--transport" for="transport__plane">Самолёт</label>
+              </li>
+              <li class="transport-list__item transport-list__item--car">
+                <input class="visually-hidden" type="checkbox" name="transport__car" id="transport__car">
+                <label class="form__label form__label--transport" for="transport__car">Машина</label>
+              </li>
+              <li class="transport-list__item transport-list__item--bicycle">
+                <input class="visually-hidden" type="checkbox" name="transport__bicycle" id="transport__bicycle">
+                <label class="form__label form__label--transport" for="transport__bicycle">Велосипед</label>
+              </li>
+              <li class="transport-list__item transport-list__item--walk">
+                <input class="visually-hidden" type="checkbox" name="transport__walk" id="transport__walk">
+                <label class="form__label form__label--transport" for="transport__walk">Прогулка</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="double-range">
+            <legend class="form__title double-range__title">
+              Левел
+              <button class="filters__button filters__button--opened-group">Закрыть группу</button>
+            </legend>
+            <div class="double-range__controls">
+              <input class="double-range__field double-range__field_min" type="number" value="0" id="double-range__field--min">
+              <input class="double-range__field double-range__field_max" type="number" value="3000" id="double-range__field--max">
+            </div>
+            <div class="double-range__scale">
+              <div class="double-range__bar">
+                <label class="double-range__toggle double-range__toggle_min" for="double-range__field--min">
+                  От
+                </label>
+                <label class="double-range__toggle double-range__toggle_max" for="double-range__field--max">
+                  До
+                </label>
+              </div>
+            </div>
+          </fieldset>
+          <input type="submit" value="Показать" class="filters__input filters__input--submit form__input form__input--submit">
+        </form>
+      </section>
       <section class="companions">
         <ul class="companions__list">
           <li class="companions__item companion">
@@ -60,24 +266,24 @@
               <span class="visually-hidden">Поставили лайк:</span>
               1,5 m
             </p>
-            <ul class="companion__hashtags-list">
-              <li class="companion__hashtags-item">
-                <a href="" class="companion__hashtags-link link">#ЗОЖ</a>
+            <ul class="companion__hashtags-list hashtags-list">
+              <li class="hashtags-list__item">
+                <a href="" class="hashtags-list__link link">#ЗОЖ</a>
               </li>
-              <li class="companion__hashtags-item">
-                <a href="" class="companion__hashtags-link link">#ПП</a>
+              <li class="hashtags-list__item">
+                <a href="" class="hashtags-list__link link">#ПП</a>
               </li>
-              <li class="companion__hashtags-item">
-                <a href="" class="companion__hashtags-link link">#Фитнес</a>
+              <li class="hashtags-list__item">
+                <a href="" class="hashtags-list__link link">#Фитнес</a>
               </li>
-              <li class="companion__hashtags-item">
-                <a href="" class="companion__hashtags-link link">#пляж</a>
+              <li class="hashtags-list__item">
+                <a href="" class="hashtags-list__link link">#пляж</a>
               </li>
-              <li class="companion__hashtags-item">
-                <a href="" class="companion__hashtags-link link">#авокадо</a>
+              <li class="hashtags-list__item">
+                <a href="" class="hashtags-list__link link">#авокадо</a>
               </li>
-              <li class="companion__hashtags-item">
-                <a href="" class="companion__hashtags-link link">#смузи</a>
+              <li class="hashtags-list__item">
+                <a href="" class="hashtags-list__link link">#смузи</a>
               </li>
             </ul>
             <p class="visually-hidden">хочет посетить:</p>
@@ -87,15 +293,15 @@
               <li class="companion__countries-item companion__countrues-item--seychelles">Сейшелы</li>
             </ul>
             <p class="visually-hidden">транспорт:</p>
-            <ul class="companion__transport-list">
-              <li class="companion__transport-item companion__transport-item--plane">Самолёт</li>
-              <li class="companion__transport-item companion__transport-item--car" aria-hidden="true">Машина</li>
-              <li class="companion__transport-item companion__transport-item--bicycle" aria-hidden="true">Велосипед</li>
-              <li class="companion__transport-item companion__transport-item--walk" aria-hidden="true">Прогулка</li>
+            <ul class="companion__transport-list transport-list">
+              <li class="transport-list__item transport-list__item--plane">Самолёт</li>
+              <li class="transport-list__item transport-list__item--car" aria-hidden="true">Машина</li>
+              <li class="transport-list__item transport-list__item--bicycle" aria-hidden="true">Велосипед</li>
+              <li class="transport-list__item transport-list__item--walk" aria-hidden="true">Прогулка</li>
             </ul>
-            <p class="companion__level">
+            <p class="companion__level level">
               99
-              <span class="companion__description">level</span>
+              <span class="level__description">level</span>
             </p>
             <button class="companion__button companion__button--call button">Позвать!</button>
           </li>
@@ -107,39 +313,55 @@
               <span class="visually-hidden">Поставили лайк:</span>
               1500
             </p>
-            <p class="companion__hashtags">#рэп #тату #хайпбист #кроссовки #суприм</p>
+            <ul class="companion__hashtags-list hashtags-list">
+              <li class="hashtags-list__item">
+                <a href="" class="hashtags-list__link link">#рэп</a>
+              </li>
+              <li class="hashtags-list__item">
+                <a href="" class="hashtags-list__link link">#тату</a>
+              </li>
+              <li class="hashtags-list__item">
+                <a href="" class="hashtags-list__link link">#хайпбист</a>
+              </li>
+              <li class="hashtags-list__item">
+                <a href="" class="hashtags-list__link link">#кроссовки</a>
+              </li>
+              <li class="hashtags-list__item">
+                <a href="" class="hashtags-list__link link">#суприм</a>
+              </li>
+            </ul>
             <p class="visually-hidden">хочет посетить:</p>
             <ul class="companion__countries-list">
               <li class="companion__countrues-item companion__countrues-item--belgium">Бельгия</li>
               <li class="companion__countries-item companion__countrues-item--czech">Чехия</li>
             </ul>
-            <ul class="companion__hashtags-list">
-              <li class="companion__hashtags-item">
-                <a href="" class="companion__hashtags-link link">#бургер</a>
+            <ul class="hashtags-list__list">
+              <li class="hashtags-list__item">
+                <a href="" class="hashtags-list__link link">#бургер</a>
               </li>
-              <li class="companion__hashtags-item">
-                <a href="" class="companion__hashtags-link link">#бар</a>
+              <li class="hashtags-list__item">
+                <a href="" class="hashtags-list__link link">#бар</a>
               </li>
-              <li class="companion__hashtags-item">
-                <a href="" class="companion__hashtags-link link">#футбол</a>
+              <li class="hashtags-list__item">
+                <a href="" class="hashtags-list__link link">#футбол</a>
               </li>
-              <li class="companion__hashtags-item">
-                <a href="" class="companion__hashtags-link link">#концерт</a>
+              <li class="hashtags-list__item">
+                <a href="" class="hashtags-list__link link">#концерт</a>
               </li>
-              <li class="companion__hashtags-item">
-                <a href="" class="companion__hashtags-link link">#крафт</a>
+              <li class="hashtags-list__item">
+                <a href="" class="hashtags-list__link link">#крафт</a>
               </li>
             </ul>
             <p class="visually-hidden">транспорт:</p>
-            <ul class="companion__transport-list">
-              <li class="companion__transport-item companion__transport-item--plane">Самолёт</li>
-              <li class="companion__transport-item companion__transport-item--car">Машина</li>
-              <li class="companion__transport-item companion__transport-item--bicycle" aria-hidden="true">Велосипед</li>
-              <li class="companion__transport-item companion__transport-item--walk">Прогулка</li>
+            <ul class="companion__transport-list transport-list">
+              <li class="transport-list__item transport-list__item--plane">Самолёт</li>
+              <li class="transport-list__item transport-list__item--car" aria-hidden="true">Машина</li>
+              <li class="transport-list__item transport-list__item--bicycle" aria-hidden="true">Велосипед</li>
+              <li class="transport-list__item transport-list__item--walk" aria-hidden="true">Прогулка</li>
             </ul>
-            <p class="companion__level">
+            <p class="companion__level level">
               80
-              <span class="companion__description">level</span>
+              <span class="level__description">level</span>
             </p>
             <button class="companion__button companion__button--call button">Позвать!</button>
           </li>
@@ -151,21 +373,21 @@
               <span class="visually-hidden">Поставили лайк:</span>
               170
             </p>
-            <ul class="companion__hashtags-list">
-              <li class="companion__hashtags-item">
-                <a href="" class="companion__hashtags-link link">#рэп</a>
+            <ul class="companion__hashtags-list hashtags-list">
+              <li class="hashtags-list__item">
+                <a href="" class="hashtags-list__link link">#рэп</a>
               </li>
-              <li class="companion__hashtags-item">
-                <a href="" class="companion__hashtags-link link">#тату</a>
+              <li class="hashtags-list__item">
+                <a href="" class="hashtags-list__link link">#тату</a>
               </li>
-              <li class="companion__hashtags-item">
-                <a href="" class="companion__hashtags-link link">#хайпбист</a>
+              <li class="hashtags-list__item">
+                <a href="" class="hashtags-list__link link">#хайпбист</a>
               </li>
-              <li class="companion__hashtags-item">
-                <a href="" class="companion__hashtags-link link">#кроссовки</a>
+              <li class="hashtags-list__item">
+                <a href="" class="hashtags-list__link link">#кроссовки</a>
               </li>
-              <li class="companion__hashtags-item">
-                <a href="" class="companion__hashtags-link link">#суприм</a>
+              <li class="hashtags-list__item">
+                <a href="" class="hashtags-list__link link">#суприм</a>
               </li>
             </ul>
             <p class="visually-hidden">хочет посетить:</p>
@@ -175,15 +397,15 @@
               <li class="companion__countries-item companion__countrues-item--dominicana">Доминикана</li>
             </ul>
             <p class="visually-hidden">транспорт:</p>
-            <ul class="companion__transport-list">
-              <li class="companion__transport-item companion__transport-item--plane">Самолёт</li>
-              <li class="companion__transport-item companion__transport-item--car" aria-hidden="true">Машина</li>
-              <li class="companion__transport-item companion__transport-item--bicycle">Велосипед</li>
-              <li class="companion__transport-item companion__transport-item--walk" aria-hidden="true">Прогулка</li>
+            <ul class="companion__transport-list transport-list">
+              <li class="transport-list__item transport-list__item--plane">Самолёт</li>
+              <li class="transport-list__item transport-list__item--car" aria-hidden="true">Машина</li>
+              <li class="transport-list__item transport-list__item--bicycle" aria-hidden="true">Велосипед</li>
+              <li class="transport-list__item transport-list__item--walk" aria-hidden="true">Прогулка</li>
             </ul>
-            <p class="companion__level">
+            <p class="companion__level level">
               25
-              <span class="companion__description">level</span>
+              <span class="level__description">level</span>
             </p>
             <button class="companion__button companion__button--call button">Позвать!</button>
           </li>
@@ -195,18 +417,18 @@
               <span class="visually-hidden">Поставили лайк:</span>
               23
             </p>
-            <ul class="companion__hashtags-list">
-              <li class="companion__hashtags-item">
-                <a href="" class="companion__hashtags-link link">#образование</a>
+            <ul class="companion__hashtags-list hashtags-list">
+              <li class="hashtags-list__item">
+                <a href="" class="hashtags-list__link link">#образование</a>
               </li>
-              <li class="companion__hashtags-item">
-                <a href="" class="companion__hashtags-link link">#карьера</a>
+              <li class="hashtags-list__item">
+                <a href="" class="hashtags-list__link link">#карьера</a>
               </li>
-              <li class="companion__hashtags-item">
-                <a href="" class="companion__hashtags-link link">#учеба</a>
+              <li class="hashtags-list__item">
+                <a href="" class="hashtags-list__link link">#учеба</a>
               </li>
-              <li class="companion__hashtags-item">
-                <a href="" class="companion__hashtags-link link">#линкедин</a>
+              <li class="hashtags-list__item">
+                <a href="" class="hashtags-list__link link">#линкедин</a>
               </li>
             </ul>
             <p class="visually-hidden">хочет посетить:</p>
@@ -215,15 +437,15 @@
               <li class="companion__countries-item companion__countrues-item--germany">Германия</li>
             </ul>
             <p class="visually-hidden">транспорт:</p>
-            <ul class="companion__transport-list">
-              <li class="companion__transport-item companion__transport-item--plane">Самолёт</li>
-              <li class="companion__transport-item companion__transport-item--car">Машина</li>
-              <li class="companion__transport-item companion__transport-item--bicycle" aria-hidden="true">Велосипед</li>
-              <li class="companion__transport-item companion__transport-item--walk" aria-hidden="true">Прогулка</li>
+            <ul class="companion__transport-list transport-list">
+              <li class="transport-list__item transport-list__item--plane">Самолёт</li>
+              <li class="transport-list__item transport-list__item--car" aria-hidden="true">Машина</li>
+              <li class="transport-list__item transport-list__item--bicycle" aria-hidden="true">Велосипед</li>
+              <li class="transport-list__item transport-list__item--walk" aria-hidden="true">Прогулка</li>
             </ul>
-            <p class="companion__level">
+            <p class="companion__level level">
               25
-              <span class="companion__description">level</span>
+              <span class="level__description">level</span>
             </p>
             <button class="companion__button companion__button--call button">Позвать!</button>
           </li>
