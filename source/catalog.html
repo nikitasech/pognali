@@ -54,7 +54,7 @@
         <h1 class="main-title__text">Попутчики</h1>
       </section>
       <section class="countries-filters">
-        <h2 class="visually-hidden"></h2>
+        <h2 class="visually-hidden">Фильтрация по странам</h2>
         <ul class="countries-filters__list countries-filters__list--group">
           <li class="countries-filters__item">
             <a class="countries-filters__link countries-filters__link--selected" href="">Европа</a>
@@ -69,83 +69,95 @@
             <a class="countries-filters__link" href="">Острова</a>
           </li>
         </ul>
-        <ul class="coutries-filters__list countries-filters__list--alphabet">
-          <li class="countries-filters__item">
-            А
-          </li>
-          <li class="countries-filters__item">
-            Б
-          </li>
-          <li class="countries-filters__item">
-            В
-          </li>
-          <li class="countries-filters__item">
-            Г
-          </li>
-          <li class="countries-filters__item">
-            Д
-          </li>
-          <li class="countries-filters__item">
-            Е
-          </li>
-          <li class="countries-filters__item">
-            З
-          </li>
-          <li class="countries-filters__item">
-            И
-          </li>
-          <li class="countries-filters__item">
-            К
-          </li>
-          <li class="countries-filters__item">
-            Л
-          </li>
-          <li class="countries-filters__item">
-            М
-          </li>
-          <li class="countries-filters__item">
-            Н
-          </li>
-          <li class="countries-filters__item">
-            О
-          </li>
-          <li class="countries-filters__item">
-            П
-          </li>
-          <li class="countries-filters__item">
-            Р
-          </li>
-          <li class="countries-filters__item">
-            С
-          </li>
-          <li class="countries-filters__item">
-            Т
-          </li>
-          <li class="countries-filters__item">
-            У
-          </li>
-          <li class="countries-filters__item">
-            Ф
-          </li>
-          <li class="countries-filters__item">
-            Х
-          </li>
-          <li class="countries-filters__item">
-            Ч
-          </li>
-          <li class="countries-filters__item">
-            Ш
-          </li>
-          <li class="countries-filters__item">
-            Э
-          </li>
-          <li class="countries-filters__item">
-            Ю
-          </li>
-          <li class="countries-filters__item">
-            Я
-          </li>
-        </ul>
+        <table class="coutries-filters__alphabet alphabet">
+          <tbody>
+            <tr class="alphabet__row">
+              <td class="atphabet__cell">
+                <button class="alphabet__button" type="button">А</button>
+              </td>
+              <td class="atphabet__cell">
+                <button class="alphabet__button" type="button">Б</button>
+              </td>
+              <td class="atphabet__cell">
+                <button class="alphabet__button" type="button">В</button>
+              </td>
+              <td class="atphabet__cell">
+                <button class="alphabet__button" type="button">Г</button>
+              </td>
+              <td class="atphabet__cell">
+                <button class="alphabet__button" type="button">Д</button>
+              </td>
+            </tr>
+            <tr class="alphabet__row">
+              <td class="atphabet__cell">
+                <button class="alphabet__button" type="button">Е</button>
+              </td>
+              <td class="atphabet__cell">
+                <button class="alphabet__button" type="button">З</button>
+              </td>
+              <td class="atphabet__cell">
+                <button class="alphabet__button" type="button">И</button>
+              </td>
+              <td class="atphabet__cell">
+                <button class="alphabet__button" type="button">К</button>
+              </td>
+              <td class="atphabet__cell">
+                <button class="alphabet__button" type="button">Л</button>
+              </td>
+            </tr>
+            <tr class="alphabet__row">
+              <td class="atphabet__cell">
+                <button class="alphabet__button" type="button">М</button>
+              </td>
+              <td class="atphabet__cell">
+                <button class="alphabet__button" type="button">Н</button>
+              </td>
+              <td class="atphabet__cell">
+                <button class="alphabet__button" type="button">О</button>
+              </td>
+              <td class="atphabet__cell">
+                <button class="alphabet__button" type="button">П</button>
+              </td>
+              <td class="atphabet__cell">
+                <button class="alphabet__button" type="button">Р</button>
+              </td>
+            </tr>
+            <tr class="alphabet__row">
+              <td class="atphabet__cell">
+                <button class="alphabet__button" type="button">С</button>
+              </td>
+              <td class="atphabet__cell">
+                <button class="alphabet__button" type="button">Т</button>
+              </td>
+              <td class="atphabet__cell">
+                <button class="alphabet__button" type="button">У</button>
+              </td>
+              <td class="atphabet__cell">
+                <button class="alphabet__button" type="button">Ф</button>
+              </td>
+              <td class="atphabet__cell">
+                <button class="alphabet__button" type="button">Х</button>
+              </td>
+            </tr>
+            <tr class="alphabet__row">
+              <td class="atphabet__cell">
+                <button class="alphabet__button" type="button">Ч</button>
+              </td>
+              <td class="atphabet__cell">
+                <button class="alphabet__button" type="button">Ш</button>
+              </td>
+              <td class="atphabet__cell">
+                <button class="alphabet__button" type="button">Э</button>
+              </td>
+              <td class="atphabet__cell">
+                <button class="alphabet__button" type="button">Ю</button>
+              </td>
+              <td class="atphabet__cell">
+                <button class="alphabet__button" type="button">Я</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
         <ul class="countries-filters__list countries-filters__list--coutries">
           <li class="coutries-filters__item">Австралия</li>
           <li class="coutries-filters__item">Австрия</li>
@@ -167,12 +179,14 @@
           <p class="form__description">Подберите идеального попутчика</p>
           <fieldset class="form__set">
             <legend class="form__legend">
-              <a class="form__button form__button--set form__button--hidden" href="">Хобби</a>
+              Хобби
+              <button class="filters__button filters__button--closed-group">Открыть группу</button>
             </legend>
           </fieldset>
           <fieldset class="form__set">
             <legend class="form__legend">
-              <a class="form__button form__button--set" href="">Музыка</a>
+              Музыка
+              <button class="filters__button filters__button--opened-group">Закрыть группу</button>
             </legend>
             <ul class="form__list">
               <li class="form__item">
@@ -191,12 +205,14 @@
           </fieldset>
           <fieldset class="form__set">
             <legend class="form__legend">
-              <a class="form__button form__button--set form__button--hidden" href="">Еда</a>
+              Еда
+              <button class="filters__button filters__button--closed-group">Открыть группу</button>
             </legend>
           </fieldset>
           <fieldset class="form__set">
             <legend class="form__legend">
-              <a class="form__button form__button--set" href="">Транспорт</a>
+              Транспорт
+              <button class="filters__button filters__button--opened-group">Закрыть группу</button>
             </legend>
             <ul class="form__transport-list transport-list">
               <li class="transport-list__item transport-list__item--plane">
@@ -219,7 +235,8 @@
           </fieldset>
           <fieldset class="double-range">
             <legend class="form__title double-range__title">
-              <a class="form__button form__button--set" href="">level</a>
+              Левел
+              <button class="filters__button filters__button--opened-group">Закрыть группу</button>
             </legend>
             <div class="double-range__controls">
               <input class="double-range__field double-range__field_min" type="number" value="0" id="double-range__field--min">

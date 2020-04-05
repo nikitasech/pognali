@@ -53,6 +53,44 @@
       <section class="main-title">
         <h1 class="main-title__text">Направления</h1>
       </section>
+      <form class="form profile-form" action="https://echo.htmlacademy.ru/" method="get">
+        <h2 class="visually-hidden">Ваш профиль</h2>
+        <div class="profile__wrapper">
+          <p class="profile__level level">
+            80
+            <span class="level__description">level</span>
+          </p>
+          <img class="profile__image" src="https://via.placeholder.com/100x100" alt="Фотография вашего профиля">
+        </div>
+        <label class="form__input form__input--file" for="profile__change-image">Сменить фото</label>
+        <input class="visually-hidden" type="file" name="profile__change-image" id="profile__change-image">
+        <p class="form__paragraph">
+          <label class="form__title form__title--border" for="profile__tags">Теги</label>
+          <textarea class="form__field" type="text" name="profile__tags" id="profile__tags">#бургер #бар #футбол #концерт #крафт</textarea>
+        </p>
+        <p class="form__paragraph">
+          <span class="form__title form__title--border">Транспорт</span>
+          <ul class="profile-form__transport-list transport-list">
+            <li class="transport-list__item transport-list__item--plane">
+              <input class="visually-hidden" type="checkbox" name="transport__plane" id="transport__plane">
+              <label class="form__label form__label--transport" for="transport__plane">Самолёт</label>
+            </li>
+            <li class="transport-list__item transport-list__item--car">
+              <input class="visually-hidden" type="checkbox" name="transport__car" id="transport__car">
+              <label class="form__label form__label--transport" for="transport__car">Машина</label>
+            </li>
+            <li class="transport-list__item transport-list__item--bicycle">
+              <input class="visually-hidden" type="checkbox" name="transport__bicycle" id="transport__bicycle">
+              <label class="form__label form__label--transport" for="transport__bicycle">Велосипед</label>
+            </li>
+            <li class="transport-list__item transport-list__item--walk">
+              <input class="visually-hidden" type="checkbox" name="transport__walk" id="transport__walk">
+              <label class="form__label form__label--transport" for="transport__walk">Прогулка</label>
+            </li>
+          </ul>
+        </p>
+        <input type="submit" value="Сохранить">
+      </form>
       <section class="profile">
         <h2 class="visually-hidden">Ваш профиль</h2>
         <div class="profile__wrapper">
@@ -99,17 +137,17 @@
         <h2 class="add-plan__title title">Добавить план</h2>
         <ul class="add-plan__list add-plan__list--slider">
           <li class="add-plan__item">
-            <a href="" class="add-plan__link--slider">Первый шаг</a>
+            <a href="" class="add-plan__link add-plan__link--slider">Первый шаг</a>
           </li>
           <li class="add-plan__item">
-            <a href="" class="add-plan__link--slider">Второй шаг</a>
+            <a href="" class="add-plan__link add-plan__link--slider">Второй шаг</a>
           </li>
           <li class="add-plan__item">
-            <a href="" class="add-plan__link--slider">Третий шаг</a>
+            <a href="" class="add-plan__link add-plan__link--slider">Третий шаг</a>
           </li>
         </ul>
         <form class="add-plan__form form" action="https://echo.htmlacademy.ru/" method="get">
-          <ul class="add-plan__list--steps">
+          <ul class="add-plan__list add-plan__list--steps">
             <li class="add-plan__item step">
               <h3 class="step__title">
                 <span class="step__counter">Шаг 1.</span>
@@ -123,7 +161,7 @@
                 <span class="form__label-text">ищу попутчиков:</span>
                 <span class="form__label-description">чел.</span>
               </label>
-              <div class="form__container--number form__container--number form__container--people">
+              <div class="form__container form__container--number form__container--people">
                 <button type="button" class="form__button form__button--quantity form__button--minus">Меньше</button>
                 <input type="number" value="2" id="number-companions" name="number-companions" class="form__field form__field--number">
                 <button type="button" class="form__button form__button--quantity form__button--plus">Больше</button>
@@ -144,7 +182,7 @@
               <div class="form__date date">
                 <div class="date__month">
                   <button class="date__button date__button--previous-month" type="button">Предыдущий месяц</button>
-                  <button class="date__button date__button--month">Март 2019</button>
+                  <span class="date__rescription">Март 2019</span>
                   <button class="date__button date__button--next-month" type="button">Следующий месяц</button>
                 </div>
                 <table class="date__calendar">
@@ -351,27 +389,37 @@
               <p class="step__description">
                 Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.
               </p>
-              <ul class="form__list--countries">
-                <li class="form__item form__container--select">
-                  <button class="form__button form__button--select form__button--selected" type="button">Босния и герцеговина</button>
+              <ul class="form__list form__list--countries">
+                <li class="form__item form__container form__container--select">
+                  <p class="form__select-text form__select-text--selected">
+                    Босния и герцеговина
+                    <button class="form__button form__button--select" type="button">Выбрать другую страну</button>
+                  </p>
                   <div class="form__flag form__flag--bosnia-and-herzegovina">
                     <!-- svg -->
                   </div>
-                  <button class="form__button--delete-country">Удалить</button>
+                  <button class="form__button form__button--delete-country">Удалить</button>
                 </li>
-                <li class="form__item form__container--select">
-                  <button class="form__button form__button--select form__button--selected" type="button">Чехия</button>
+                <li class="form__item form__container form__container--select">
+                  <p class="form__select-text form__select-text--selected">
+                    Чехия
+                    <button class="form__button form__button--select" type="button">Выбрать другую страну</button>
+                  </p>
                   <div class="form__flag form__flag--czech">
                     <!-- svg -->
                   </div>
-                  <button class="form__button--delete-country">Удалить</button>
+                  <button class="form__button form__button--delete-country">Удалить</button>
                 </li>
-                <li class="form__item form__container--select">
-                  <button class="form__button form__button--select form__button--choose-country" type="button">Выберите страну</button>
-                  <button class="form__button--delete-country">Удалить</button>
+                <li class="form__item form__container form__container--select">
+                  <p class="form__select-text form__select-text">
+                    <button class="form__button form__button--select" type="button">Выбрать страну</button>
+                  </p>
+                  <button class="form__button form__button--delete-country">Удалить</button>
                 </li>
-                <li class="form__item form__container--select">
-                  <button class="form__button form__button--select form__button--add-country" type="button">Добавть страну</button>
+                <li class="form__item form__container form__container--select">
+                  <p class="form__select-text form__select-text">
+                    <button class="form__button form__button--select form__button--add-country" type="button">Добавить страну</button>
+                  </p>
                 </li>
               </ul>
               <a class="form__button form__button--next-step button" href="">Следующий шаг</a>
@@ -389,14 +437,14 @@
               <ul class="step__list--textarea">
                 <li class="step__item">
                   <label class="form__label form__label--textarea" for="plan__bosnia-and-herzegovina">Босния и Герцеговина</label>
-                  <textarea class="form__field--textarea" name="plan__bosnia-and-herzegovina" id="plan__bosnia-and-herzegovina" cols="30" rows="10" placeholder="План действий"></textarea>
+                  <textarea class="form__field form__field--textarea" name="plan__bosnia-and-herzegovina" id="plan__bosnia-and-herzegovina" cols="30" rows="10" placeholder="План действий"></textarea>
                 </li>
                 <li class="step__item">
                   <label class="form__label form__label--textarea" for="plan__czech">Чехия</label>
-                  <textarea class="form__field--textarea" name="plan__czech" id="plan__czech" cols="30" rows="10" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                  <textarea class="form__field form__field--textarea" name="plan__czech" id="plan__czech" cols="30" rows="10" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
                 </li>
               </ul>
-              <input class="form__input--submit" type="submit" value="Отправить">
+              <input class="form__input form__input--submit" type="submit" value="Отправить">
               <a class="form__button form__button--back-step" href="">На шаг назад</a>
             </li>
           </ul>
