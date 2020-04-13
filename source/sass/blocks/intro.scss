@@ -1,0 +1,31 @@
+.intro {
+  padding-top: 12px;
+  padding-bottom: 80px;
+
+  color: $white;
+
+  background-color: $blue;
+}
+
+.intro__slogan {
+  margin: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 700;
+  text-transform: none;
+}
+
+.intro__actions {
+  margin-top: 247px;
+}
+
+.intro__quote {
+  margin-top: 26px;
+}
+
+.intro__start {
+  margin-top: 31px;
+}

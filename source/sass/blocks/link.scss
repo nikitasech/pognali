@@ -1,0 +1,23 @@
+.link {
+  color: $gold;
+
+  &:hover {
+    color: $mango;
+  }
+
+  &:active {
+    color: rgba($mango, 0.3);
+  }
+}
+
+.link--blue {
+  color: $blue-slate;
+
+  &:hover {
+    color: $blue;
+  }
+
+  &:active {
+    color: rgba($blue, 0.3);
+  }
+}

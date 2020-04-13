@@ -1,0 +1,111 @@
+.rates {
+  padding-top: 36px;
+  padding-bottom: 20px;
+
+  background-color: $basis-background;
+}
+
+.rates__descriprtion {
+  display: flex;
+  align-items: center;
+  min-height: 100px;
+  margin: 0;
+  padding-right: 110px;
+  padding-left: 25px;
+
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  color: $mango;
+
+  background-image: url("../img/rates@1x.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 99px;
+}
+
+.rates__list {
+  @include list-reset;
+
+  margin-top: 33px;
+}
+
+.rates__list--counter {
+  margin-right: 45px;
+  padding-left: 25px;
+
+  counter-reset: rates-counter;
+}
+
+.rates__item {
+  position: relative;
+
+  padding: 10px 0;
+
+  border-top: 1px solid rgba(#000000, 0.05);
+}
+
+.rates__item:last-child {
+  border-bottom: 1px solid rgba(#000000, 0.05);
+}
+
+.rates__list--counter .rates__item::after {
+  content: counter(rates-counter);
+  position: absolute;
+  top: 0;
+  right: -44px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 34px;
+  height: 34px;
+
+  color: $white;
+
+  background-color: $mango-three;
+  border-radius: 50%;
+
+  counter-increment: rates-counter;
+}
+
+.rates__list--counter .rates__item:nth-child(2)::after {
+  background-color: $mango-two;
+}
+
+.rates__list--counter .rates__item:nth-child(3)::after {
+  background-color: $gold;
+}
+
+.rates__service,
+.rates__price {
+  margin: 0;
+}
+
+.rates__link {
+  display: block;
+  margin-top: 31px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  text-align: center;
+  color: $blue-grey;
+  text-decoration: none;
+}
+
+.rates__modal {
+  top: -10px;
+
+  padding-bottom: 80px;
+}
+
+.rates__modal--visible {
+  display: block;
+}
+
+.rates__subtitle {
+  margin: 0;
+
+  text-align: center;
+}

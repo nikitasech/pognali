@@ -1,0 +1,21 @@
+.copyright-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-height: 62px;
+  margin-top: 37px;
+
+  color: $grey;
+  text-decoration: none;
+
+  border-top: 1px solid rgba(#000000, 0.05);
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

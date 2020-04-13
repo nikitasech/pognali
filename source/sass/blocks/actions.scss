@@ -1,0 +1,41 @@
+.actions {
+  display: flex;
+
+  @include list-reset;
+}
+
+.actions__button--cal,
+.actions__button--write {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 40px;
+  height: 40px;
+
+  font-size: 0;
+
+  &:active .actions__icon {
+    fill-opacity: 0.3;
+  }
+}
+
+.actions__button--cal {
+  background-color: $mango;
+}
+
+.actions__button--write {
+  background-color: darken($gold, 15%);
+}
+
+.actions__icon {
+  fill: #231f20;
+}
+
+.actions__item--auth {
+  flex-grow: 1;
+}
+
+.actions__button--auth {
+  width: 100%;
+}

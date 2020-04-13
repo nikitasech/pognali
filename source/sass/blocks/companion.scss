@@ -1,0 +1,175 @@
+.companion {
+  position: relative;
+
+  padding-top: 16px;
+
+  background-color: $white;
+  border-radius: 20px;
+}
+
+.companion__image {
+  position: absolute;
+  top: 15px;
+  left: 18px;
+
+  border-radius: 50%;
+}
+
+.companion__name {
+  min-height: 70px;
+  margin: 0;
+  padding-right: 93px;
+  padding-left: 95px;
+}
+
+.companion__link {
+  font-size: 20px;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+.companion__number-like {
+  position: absolute;
+  top: 54px;
+  left: 67px;
+
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.companion__button--like {
+  width: 31px;
+  height: 31px;
+  margin-right: 6px;
+
+  font-size: 0;
+
+  background-color: $pale-grey;
+  border: none;
+  border-radius: 50%;
+}
+
+.companion__hashtags-list {
+  @include list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 15px;
+  padding-right: 78px;
+  padding-left: 26px;
+}
+
+.companion__hashtags-item {
+  margin-right: 5px;
+}
+
+.companion__hashtags-item:last-child {
+  margin-right: 0;
+}
+
+.companion__hashtags-link {
+  color: $grey;
+  text-decoration: none;
+}
+
+.companion__subtitle {
+  margin: 0;
+  padding-right: 78px;
+  padding-left: 26px;
+}
+
+.companion__subtitle--level {
+  padding-left: 0;
+}
+
+.companion__subtitle--countries {
+  margin-top: 20px;
+}
+
+.companion__countries-list {
+  @include list-reset;
+
+  margin-top: 15px;
+  padding-right: 78px;
+  padding-left: 26px;
+
+  font-weight: 500;
+  color: $blue-slate;
+  text-transform: uppercase;
+}
+
+.companion__countries-item {
+  display: flex;
+  margin-top: 5px;
+
+  &::before {
+    content: "";
+
+    display: block;
+    width: 26px;
+    height: 18px;
+    margin-right: 5px;
+
+    background-color: $dark-two;
+    border-radius: 3px;
+  }
+}
+
+.companion__countries-item:first-child {
+  margin-top: 0;
+}
+
+.companion__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.companion__transport-list {
+  @include list-reset;
+
+  display: flex;
+  margin-top: 10px;
+  padding-left: 26px;
+
+  font-size: 0;
+}
+
+.companion__transport-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 33px;
+  height: 33px;
+
+  background-color: $pale-grey;
+  border-radius: 50%;
+}
+
+.companion__transport-item[aria-hidden="true"] .companion__transport-icon {
+  fill-opacity: 0.15;
+}
+
+.companion__level {
+  width: 63px;
+  padding-right: 11px;
+}
+
+.companion__level-number {
+  display: block;
+  margin-top: 20px;
+
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 18px;
+  color: $blue-slate;
+}
+
+.companion__button--call {
+  width: calc(100% - 40px);
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-bottom: 22px;
+  margin-left: 20px;
+}

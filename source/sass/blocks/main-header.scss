@@ -1,0 +1,139 @@
+@keyframes before-hamburger {
+  50% {
+    transform: translateY(4px);
+    transform-origin: 50% 50%;
+
+    transition-timing-function: ease-in-out;
+  }
+
+  100% {
+    transform: translateY(4px) rotate(45deg);
+    transform-origin: 50% 50%;
+
+    transition-timing-function: ease-in-out;
+  }
+}
+
+@keyframes after-hamburger {
+  50% {
+    transform: translateY(-4px);
+    transform-origin: 50% 50%;
+
+    transition-timing-function: ease-in-out;
+  }
+
+  100% {
+    transform: translateY(-4px) rotate(-45deg);
+    transform-origin: 50% 50%;
+
+    transition-timing-function: ease-in-out;
+  }
+}
+
+.main-header {
+  position: relative;
+}
+
+.main-header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 27px;
+  padding-bottom: 27px;
+
+  background-color: $blue;
+}
+
+.main-header__button-menu {
+  position: relative;
+
+  width: 25px;
+  height: 11px;
+
+  font-size: 0;
+
+  background-color: transparent;
+  border: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+    width: 25px;
+    height: 3px;
+
+    background-color: $white;
+    border-radius: 5px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    display: block;
+    width: 25px;
+    height: 3px;
+
+    background-color: $white;
+    border-radius: 5px;
+  }
+}
+
+.main-header__button-menu--open {
+  &::before {
+    background-color: darken($white, 20%);
+    transform: translateY(4px) rotate(45deg);
+  }
+
+  &::after {
+    background-color: darken($white, 20%);
+    transform: translateY(-4px) rotate(-45deg);
+  }
+}
+
+.main-header__menu {
+  position: absolute;
+  top: 79px;
+  left: 0;
+
+  display: none;
+  width: 100vw;
+  padding-top: 35px;
+  padding-bottom: 29px;
+
+  background-color: $white;
+}
+
+.main-header__menu--opened {
+  display: block;
+}
+
+.main-header__button {
+  width: 100%;
+  margin-top: 53px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.contacts__list--direct {
+  margin-top: 50px;
+}
+
+.contacts__list--direct .direct-contacts__link {
+  color: $blue-grey;
+}
+
+.contacts__list--socials {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.contacts__list--socials .social-contacts__button {
+  background-color: transparent;
+}

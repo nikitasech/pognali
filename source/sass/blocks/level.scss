@@ -1,0 +1,25 @@
+.level {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  margin: 0;
+
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  color: $white;
+
+  background-color: rgba(#000000, 0.6);
+  border-radius: 50%;
+}
+
+.level__description {
+  display: block;
+  padding-top: 4px;
+
+  font-size: 14px;
+  line-height: 14px;
+}

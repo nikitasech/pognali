@@ -1,0 +1,30 @@
+.quote {
+  margin: 0;
+  padding: 0;
+  padding-left: 25px;
+
+  text-transform: none;
+}
+
+.quote__text {
+  width: 170px;
+  margin: 0;
+
+  font-weight: 300;
+  quotes: "\00ab" "\00bb";
+
+  &::before {
+    content: open-quote;
+  }
+
+  &::after {
+    content: close-quote;
+  }
+}
+
+.quote__author {
+  width: 180px;
+  margin-top: 18px;
+
+  font-weight: 700;
+}
