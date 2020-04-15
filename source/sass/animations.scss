@@ -1,0 +1,31 @@
+@keyframes before-hamburger {
+  50% {
+    transform: translateY(4px);
+    transform-origin: 50% 50%;
+
+    transition-timing-function: ease-in-out;
+  }
+
+  100% {
+    transform: translateY(4px) rotate(45deg);
+    transform-origin: 50% 50%;
+
+    transition-timing-function: ease-in-out;
+  }
+}
+
+@keyframes after-hamburger {
+  50% {
+    transform: translateY(-4px);
+    transform-origin: 50% 50%;
+
+    transition-timing-function: ease-in-out;
+  }
+
+  100% {
+    transform: translateY(-4px) rotate(-45deg);
+    transform-origin: 50% 50%;
+
+    transition-timing-function: ease-in-out;
+  }
+}

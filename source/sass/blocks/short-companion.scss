@@ -1,0 +1,114 @@
+.short-companion {
+  position: relative;
+
+  background-color: $white;
+  border-radius: 10px;
+}
+
+.short-companion__image {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  border-radius: 10px 10px 0 0;
+}
+
+.short-companion__wrapper {
+  position: relative;
+
+  padding: 25px 30px 15px 30px;
+}
+
+.short-companion__countries-list {
+  @include list-reset;
+
+  position: absolute;
+  top: -12px;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  font-size: 0;
+}
+
+.short-companion__countries-item {
+  width: 35px;
+  height: 24px;
+  margin-left: 18px;
+
+  background-color: $blue;
+  border-radius: 5px;
+}
+
+.short-companion__countries-item:first-child {
+  margin-left: 0;
+}
+
+.short-companion__name {
+  margin: 0;
+
+  font-size: 21px;
+  line-height: 21px;
+  text-align: center;
+}
+
+.short-companion__link {
+  text-decoration: none;
+}
+
+.short-companion__hashtags-list {
+  @include list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 11px;
+}
+
+.short-companion__hashtags-item {
+  margin-left: 5px;
+}
+
+.short-companion__hashtags-item:first-child {
+  margin-left: 0;
+}
+
+.short-companion__hashtags-link {
+  color: $grey;
+  text-decoration: none;
+}
+
+.short-companion__transport-list {
+  @include list-reset;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 7px;
+
+  font-size: 0;
+}
+
+.short-companion__transport-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 34px;
+  height: 34px;
+}
+
+.short-companion__transport-icon {
+  fill: $blue-slate;
+}
+
+.short-companion__transport-item[aria-hidden="true"] .short-companion__transport-icon {
+  fill-opacity: 0.15;
+}
+
+.short-companion__level {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+}

@@ -1,0 +1,55 @@
+.directions {
+  padding-top: 70px;
+  padding-bottom: 30px;
+
+  background-color: $basis-background;
+  border-radius: 30px;
+}
+
+.directions__title {
+  margin: 0;
+  margin-left: 25px;
+}
+
+.directions__description {
+  margin: 0;
+  margin-top: 20px;
+  margin-right: 50px;
+  margin-left: 25px;
+}
+
+.directions__list {
+  position: relative;
+
+  margin: 0;
+  margin-top: 60px;
+  padding: 0;
+
+  list-style: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    display: block;
+    width: 100%;
+    height: 80px;
+
+    background: linear-gradient(transparent, $basis-background);
+  }
+}
+
+.directions__item {
+  margin-top: 10px;
+}
+
+.directions__item:first-child {
+  margin-top: 0;
+}
+
+.direction__button {
+  width: 100%;
+  margin-top: 28px;
+}

@@ -2,67 +2,133 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Погнали</title>
   </head>
-  <body class="container">
+  <body>
     <header class="main-header">
-      <a>
-        <img src="https://via.placeholder.com/100x19" alt="Логотип сервиса «Погнали»" class="logo" width="100" height="19">
-      </a>
-      <button type="button" class="main-header__button main-header__button--open-menu">Открыть меню</button>
-      <div class="main-header__wrapper">
+      <div class="main-header__wrapper container">
+        <a class="main-header__logo-link">
+          <img class="main-header__logo logo" src="https://via.placeholder.com/100x19" alt="Логотип сервиса «Погнали»" width="100" height="19">
+        </a>
+        <button type="button" class="main-header__button-menu main-header__button-menu--opened">Открыть меню</button>
+      </div>
+      <div class="main-header__menu container">
         <nav class="main-header__navigation navigation">
           <ul class="navigation__list">
             <li class="navigation__item">
-              <a href="" class="navigation__link link">О сервисе</a>
+              <a href="index.html" class="navigation__link link link--blue">О сервисе</a>
             </li>
             <li class="navigation__item">
-              <a href="form.html" class="navigation__link link">Направления</a>
+              <a href="form.html" class="navigation__link link link--blue">Направления</a>
             </li>
             <li class="navigation__item">
-              <a href="catalog.html" class="navigation__link link">Попутчики</a>
+              <a href="catalog.html" class="navigation__link link link--blue">Попутчики</a>
             </li>
           </ul>
         </nav>
-        <a href="" class="main-header__button main-header__button--auth button button--auth">Авторизация</a>
+        <a href="" class="main-header__button button">Авторизация</a>
         <section class="main-header__contacts contacts">
           <h2 class="contacts__title visually-hidden">Наши контакты</h2>
           <ul class="contacts__list contacts__list--direct direct-contacts">
             <li class="direct-contacts__item direct-contacts__item--tel">
-              <a href="tel:+78005558628" class="direct-contacts__link link">8 800 555-86-28</a>
+              <a href="tel:+78005558628" class="direct-contacts__link direct-contacts__link--header link">
+                <div class="direct-contacts__icon-wrapper">
+                  <svg class="direct-contacts__icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 36 36" width="18" height="18">
+                    <path class="st0" d="M18,0C11.6,0,5.2,1.1,2.8,3.4C0.9,5.3,0.2,8.7,0,10.8c0,0,0,0.2,0,0.3c0,0.8,0.7,1.5,1.5,1.5c0.1,0,3.7-0.3,5.9-0.5c0.1,0,0.1,0,0.2,0c0.8,0,1.5-0.7,1.5-1.5l0-3C9,6.7,9.7,6,10.7,6h14.7C26.2,6,27,6.7,27,7.7l0,3c0,0.8,0.7,1.5,1.5,1.5c0.1,0,0.1,0,0.2,0c2.2,0.2,5.8,0.5,5.9,0.5c0.8,0,1.5-0.7,1.5-1.5c0-0.1,0-0.3,0-0.3c-0.2-2.1-0.9-5.5-2.8-7.4C30.8,1.1,24.4,0,18,0z M18,19.5c-1.7,0-3,1.3-3,3s1.3,3,3,3c1.7,0,3-1.3,3-3S19.7,19.5,18,19.5zM15.7,12.7v-1.9c0-1-0.8-1.9-1.9-1.9S12,9.8,12,10.9v1.9L1.9,23.6c-0.7,0.7-1.1,1.6-1.1,2.7v3c0,1.7,1.3,3,3,3h0.8v1.9c0,1,0.8,1.9,1.9,1.9s1.9-0.8,1.9-1.9v-1.9h19.5v1.9c0,1,0.8,1.9,1.9,1.9c1,0,1.9-0.8,1.9-1.9v-1.9h0.8c1.7,0,3-1.3,3-3v-3c0-1.1-0.4-2-1.1-2.7L24,12.7v-1.9c0-1-0.8-1.9-1.9-1.9s-1.9,0.8-1.9,1.9v1.9H15.7z M18,16.5c3.3,0,6,2.7,6,6c0,3.3-2.7,6-6,6c-3.3,0-6-2.7-6-6C12,19.2,14.7,16.5,18,16.5z"/>
+                  </svg>
+                </div>
+                8 800 555-86-28
+              </a>
             </li>
             <li class="direct-contacts__item direct-contacts__item--email">
-              <a href="mailto:mail@htmlacademy.ru" class="direct-contacts__link link">mail@htmlacademy.ru</a>
+              <a href="mailto:mail@htmlacademy.ru" class="direct-contacts__link direct-contacts__link--header link">
+                <div class="direct-contacts__icon-wrapper">
+                  <svg class="direct-contacts__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 36 26" width="18" height="13">
+                    <path class="st0" d="M0,23c0,1.6,1.3,3,3,3h30c1.7,0,3-1.3,3-3V3c0-1.6-1.3-3-3-3H3C1.3,0,0,1.3,0,3L0,23L0,23z M11,13L4.2,6.2
+                    c-0.6-0.6-0.6-1.5,0-2c0.6-0.6,1.5-0.6,2.1,0l11,10.9c0.4,0.4,1.2,0.4,1.6,0l11-10.9c0.6-0.6,1.5-0.6,2.1,0c0.6,0.6,0.6,1.5,0,2
+                    L25,13l6.9,6.8c0.6,0.6,0.6,1.5,0,2c-0.6,0.6-1.5,0.6-2.1,0l-6.9-6.8c0,0-2.1,2.2-2.5,2.5c-0.6,0.6-1.4,1-2.4,1
+                    c-0.9,0-1.8-0.4-2.4-1c-0.4-0.4-2.5-2.5-2.5-2.5l-6.9,6.8c-0.6,0.6-1.5,0.6-2.1,0c-0.6-0.6-0.6-1.5,0-2L11,13z"/>
+                  </svg>
+                </div>
+                mail@htmlacademy.ru
+              </a>
             </li>
           </ul>
           <ul class="contacts__list contacts__list--socials social-contacts">
-            <li class="social-contacts__item social-contacts__item--fb">
-              <a href="">Facebook</a>
+            <li class="social-contacts__item">
+              <a href="" class="social-contacts__button social-contacts__button--header social-contacts__button--fb button">
+                <svg class="social-contacts__icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 11 21" width="11" height="21">
+                  <g>
+                    <path d="M7.8,21H2.2v-9.8H0V6.4h2.1C2,4.2,2.4,2.6,3.4,1.5C4.2,0.6,5.5,0.1,7.1,0L11,0v4.7H7.9C7.8,4.9,7.7,5.5,7.7,6.4H11v4.8H7.8V21z M3.4,19.9h3.1v-9.8h3.2V7.5H6.5l0-0.6c0-1.5,0-2.9,0.8-3.4l0.2-0.1h2.3V1.1H7.1C5.9,1.2,4.9,1.6,4.3,2.3C3.5,3.2,3.2,4.8,3.4,6.9l0.1,0.6H1.2v2.6h2.2V19.9z"/>
+                  </g>
+                </svg>
+                Facebook
+              </a>
             </li>
-            <li class="social-contacts__item social-contacts__item--vk">
-              <a href="">Вконтакте</a>
+            <li class="social-contacts__item">
+              <a href="" class="social-contacts__button  social-contacts__button--header social-contacts__button--vk button">
+                <svg class="social-contacts__icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                viewBox="0 0 30 15.8" width="23" height="12">
+                  <g>
+                    <path d="M23.9,15.8c-0.4,0-1.2-0.1-2.1-0.6c-0.6-0.4-1.2-1-1.8-1.5c-0.4-0.4-1.2-1.2-1.4-1.2c-0.3,0.1-0.5,0.9-0.5,1.6c0,0.1,0,0.8-0.5,1.2c-0.4,0.4-1.1,0.5-1.2,0.5l-1.9,0c-1,0-4.4-0.2-7.4-3c-3.7-3.4-6.8-9.8-7-10.1C0,2.2-0.1,1.5,0.3,1.1c0.4-0.4,1.1-0.5,1.4-0.5l4.1,0l0.1,0c0.1,0,0.6,0.1,1,0.3c0.4,0.2,0.6,0.7,0.6,0.7c0,0,0.6,1.4,1.5,2.7c1.3,2,1.9,2.5,2.1,2.6c0.2-0.4,0.3-1.7,0.2-2.9c0-0.5-0.1-1.1-0.3-1.3c-0.1-0.1-0.4-0.3-0.8-0.3L9.5,1.8c-0.1-0.7,0.6-1.2,1.1-1.4C11.3,0.1,12.4,0,13.7,0l0.7,0c1.2,0,1.6,0.1,2.1,0.2c1.7,0.4,1.6,1.7,1.6,3.3c0,0.5,0,1,0,1.6c0,0.2,0,0.3,0,0.5c0,0.4,0,1,0.1,1.3c0.2-0.1,0.9-0.7,2.1-2.5c0.8-1.2,1.4-2.5,1.5-2.8l0,0c0.2-0.4,0.6-0.9,1.6-0.9l4.3,0c0,0,0.2,0,0.4,0c1,0,1.6,0.3,1.8,0.9c0.3,0.6,0.2,1.7-2.4,4.6c-0.4,0.4-0.7,0.8-1,1.1c-0.6,0.7-1.2,1.4-1.2,1.6C25.4,9,26,9.5,26.6,10c1.5,1.2,2.5,2.3,3,3.1c0.5,0.8,0.4,1.3,0.3,1.7c-0.4,0.9-1.6,1-1.9,1l-3.8,0C24.1,15.8,24.1,15.8,23.9,15.8z M18.6,10.9c0.9,0,1.7,0.8,2.5,1.6c0.5,0.5,1,1,1.5,1.3c0.7,0.4,1.3,0.4,1.4,0.4l0.1,0l3.8,0c0.2,0,0.4-0.1,0.5-0.1c0,0,0-0.1-0.1-0.2c-0.4-0.7-1.4-1.7-2.7-2.7c-1.2-1-1.8-1.5-1.9-2.2c-0.1-0.8,0.5-1.4,1.6-2.7c0.3-0.3,0.6-0.7,1-1.1c1.6-1.8,2-2.6,2.1-3c-0.2,0-0.6,0-0.7,0l-4.4,0c-0.2,0-0.2,0-0.2,0c-0.2,0.4-0.8,1.8-1.6,3c-1.9,2.8-2.8,3.2-3.4,3.2c-0.2,0-0.4,0-0.6-0.1c-1-0.6-1-1.8-0.9-2.8c0-0.1,0-0.3,0-0.4c0-0.6,0-1.2,0-1.7c0.1-1.7,0-1.7-0.4-1.8c-0.4-0.1-0.7-0.1-1.9-0.2l-0.7,0c-0.6,0-1.3,0-1.9,0.1c0.1,0.1,0.2,0.2,0.3,0.3c0.6,0.7,0.6,2,0.6,2.2c0.1,1.6,0.1,3.8-1,4.3c-0.2,0.1-0.4,0.1-0.6,0.1c-0.9,0-1.9-0.9-3.4-3.3C6.8,3.9,6.1,2.4,6.1,2.3c0,0-0.1-0.1-0.1-0.1C5.9,2.2,5.8,2.1,5.7,2.1l-4,0c0,0,0,0-0.1,0C2.2,3.3,5,8.7,8.1,11.6c2.7,2.5,5.8,2.6,6.4,2.6l1.9,0c0,0,0.2-0.1,0.3-0.1c0,0,0-0.1,0-0.1c0-0.3,0-2.6,1.6-3C18.4,10.9,18.5,10.9,18.6,10.9z"/>
+                  </g>
+                </svg>
+                Вконтакте
+              </a>
             </li>
-            <li class="social-contacts__item social-contacts__item--insta">
-              <a href="">Instagram</a>
+            <li class="social-contacts__item">
+              <a href="" class="social-contacts__button  social-contacts__button--header social-contacts__button--insta button">
+                <svg class="social-contacts__icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 23 23" width="18" height="18">
+                  <path class="st0" d="M17,1.5c2.5,0,4.5,2,4.5,4.5v11c0,2.5-2,4.5-4.5,4.5H6c-2.5,0-4.5-2-4.5-4.5V6c0-2.5,2-4.5,4.5-4.5L17,1.5M17,0H6C2.7,0,0,2.7,0,6v11c0,3.3,2.7,6,6,6h11c3.3,0,6-2.7,6-6V6C23,2.7,20.3,0,17,0L17,0z"/>
+                  <path class="st0" d="M11.5,7.1c2.4,0,4.4,2,4.4,4.4c0,2.4-2,4.4-4.4,4.4c-2.4,0-4.4-2-4.4-4.4C7.1,9.1,9.1,7.1,11.5,7.1 M11.5,5.6c-3.3,0-5.9,2.7-5.9,5.9s2.7,5.9,5.9,5.9s5.9-2.7,5.9-5.9S14.8,5.6,11.5,5.6L11.5,5.6z"/>
+                  <circle class="st0" cx="17.6" cy="5.4" r="1.3"/>
+                </svg>
+                Instagram
+              </a>
             </li>
           </ul>
         </section>
       </div>
     </header>
-    <main class="main">
-      <h1 class="main__title">Сервис «Погнали»</h1>
-      <section class="intro">
-        <h2 class="visually-hidden">О нашем сервисе</h2>
+    <main class="main catalog">
+      <h1 class="visually-hidden">Сервис «Погнали»</h1>
+      <section class="main__intro intro container">
+        <h2 class="visually-hidden">Основная информация</h2>
         <p class="intro__slogan">В путешествие с крутыми попутчиками!</p>
         <ul class="intro__actions actions">
-          <li class="actions__item actions__item--call">
-            <a href="tel:+78005558628" class="actions__button button">Позвонить</a>
+          <li class="actions__item">
+            <a href="tel:+78005558628" class="actions__button actions__button--cal button">
+              <svg class="actions__icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 18 18" width="18" height="18">
+                <g>
+                  <g>
+                    <g>
+                      <path class="st0" d="M12.6,18c-0.3,0-0.5,0-0.8,0c-3.6-0.4-6.2-2.1-8.1-4.3C1.8,11.6,0.3,8.8,0,5c0-0.3,0-0.7,0-1c0.1-0.7,0.4-1.1,0.8-1.5C1.2,2,2,1.4,2.6,1.3c0.5,0,1.3,0.3,1.6,0.8c0.3,0.4,0.4,1.2,0.6,1.8c0.1,0.6,0.4,1.4,0.4,2C5,6.8,3.9,7.2,3.5,7.8c1.1,2.8,3,4.8,5.4,6.2c0.6-0.3,1.2-1.4,2-1.4c0.3,0,0.7,0.2,1,0.3c0.3,0.1,0.6,0.2,1,0.4c0.5,0.2,1.4,0.5,1.7,0.9c0.3,0.4,0.5,1.2,0.4,1.7C14.9,16.7,13.4,17.7,12.6,18z"/>
+                    </g>
+                  </g>
+                  <path class="st0" d="M9.1,1.1c4.3,0,7.8,3.6,7.8,8H18c0-5-4-9.1-8.9-9.1L9.1,1.1z"/>
+                  <path class="st0" d="M9.1,6.9V8c0.6,0,1,0.5,1,1.1h1.1C11.2,7.9,10.3,6.9,9.1,6.9z"/>
+                  <path class="st0" d="M9.1,4.6c2.4,0,4.4,2,4.4,4.5h1.2c0-3.1-2.5-5.7-5.5-5.7V4.6L9.1,4.6z"/>
+                </g>
+              </svg>
+              Позвонить
+            </a>
           </li>
-          <li class="actions__item actions__item--write">
-            <a href="mailto:mail@htmlacademy.ru" class="actions__button button">Написать</a>
+          <li class="actions__item">
+            <a href="mailto:mail@htmlacademy.ru" class="actions__button actions__button--write button">
+              <svg class="actions__icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 36 26" width="18" height="13">
+                <path class="st0" d="M0,23c0,1.6,1.3,3,3,3h30c1.7,0,3-1.3,3-3V3c0-1.6-1.3-3-3-3H3C1.3,0,0,1.3,0,3L0,23L0,23z M11,13L4.2,6.2
+                c-0.6-0.6-0.6-1.5,0-2c0.6-0.6,1.5-0.6,2.1,0l11,10.9c0.4,0.4,1.2,0.4,1.6,0l11-10.9c0.6-0.6,1.5-0.6,2.1,0c0.6,0.6,0.6,1.5,0,2
+                L25,13l6.9,6.8c0.6,0.6,0.6,1.5,0,2c-0.6,0.6-1.5,0.6-2.1,0l-6.9-6.8c0,0-2.1,2.2-2.5,2.5c-0.6,0.6-1.4,1-2.4,1
+                c-0.9,0-1.8-0.4-2.4-1c-0.4-0.4-2.5-2.5-2.5-2.5l-6.9,6.8c-0.6,0.6-1.5,0.6-2.1,0c-0.6-0.6-0.6-1.5,0-2L11,13z"/>
+              </svg>
+              Написать
+            </a>
           </li>
           <li class="actions__item actions__item--auth">
-            <a href="" class="actions__button actions__button--auth button button--auth">Авторизация</a>
+            <a href="" class="actions__button actions__button--auth button">Авторизация</a>
           </li>
         </ul>
         <blockquote class="intro__quote quote">
@@ -73,17 +139,25 @@
             газеты «гаджетлайф»
           </p>
         </blockquote>
-        <ol class="main__list main__list--start start__list">
-          <li class="start__item">Выберите направление</li>
-          <li class="start__item">Изучите идеи путешественников</li>
-          <li class="start__item">Находите тех, кто похож на вас</li>
-          <li class="start__item">Путешествуйте вместе!</li>
+        <ol class="intro__start start">
+          <li class="start__item">
+            <p class="start__text-wrapper">Выберите направление</p>
+          </li>
+          <li class="start__item">
+            <p class="start__text-wrapper">Изучите идеи путешественников</p>
+          </li>
+          <li class="start__item">
+            <p class="start__text-wrapper">Находите тех, кто&nbsp;похож на вас</p>
+          </li>
+          <li class="start__item">
+            <p class="start__text-wrapper">Путешествуйте вместе!</p>
+          </li>
         </ol>
       </section>
-      <section class="about">
+      <section class="main__about about">
         <h2 class="about__title title">О сервисе</h2>
         <p class="about__text">
-          Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.
+          Любое путешествие веселее с&nbsp;попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.
         </p>
         <p class="about__text about__text--bold">
           А если найдете кого-то
@@ -91,144 +165,243 @@
           зовите в совместный трип!
         </p>
       </section>
-      <section class="directions">
+      <section class="main__directions directions container">
         <h2 class="directions__title title">Направления</h2>
         <p class="directions__description">
-          Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.
+          Мы не продаем туры и&nbsp;ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.
         </p>
         <ul class="directions__list">
           <li class="directions__item country-card">
-            <img src="https://via.placeholder.com/270x110" alt="Фотография скалы посреди моря в Таиланде" width="270" height="110" class="country-card__image">
-            <h3 class="country-card__country">Таиланд</h3>
-            <p class="country-card__description">Джунгли зовут!</p>
-            <p class="country-card__companions-counter">18321</p>
+            <img class="country-card__image" src="https://via.placeholder.com/270x110" alt="Фотография скалы посреди моря в Таиланде" width="270" height="110">
+            <div class="country-card__wrapper">
+              <a class="country-card__link link link--blue" href="">
+                Таиланд
+                <p class="country-card__description">Джунгли зовут!</p>
+              </a>
+              <p class="country-card__companions-counter">18321</p>
+            </div>
           </li>
-          <li class="directions__item card">
-            <img src="https://via.placeholder.com/270x110" alt="Фотография красивого здания во Франции" width="270" height="110" class="country-card__image">
-            <h3 class="country-card__country">Франция</h3>
-            <p class="country-card__description">Трэ бьен манифик!</p>
-            <p class="country-card__companions-counter">12518</p>
+          <li class="directions__item country-card">
+            <img class="country-card__image" src="https://via.placeholder.com/270x110" alt="Фотография красивого здания во Франции" width="270" height="110">
+            <div class="country-card__wrapper">
+              <a class="country-card__link link link--blue" href="">
+                Франция
+                <p class="country-card__description">Трэ бьен манифик!</p>
+              </a>
+              <p class="country-card__companions-counter">12518</p>
+            </div>
           </li>
-          <li class="directions__item card">
-            <img src="https://via.placeholder.com/270x110" alt="Фотография теплохода с Карловым мостом на фоне" width="270" height="110" class="country-card__image">
-          <h3 class="country-card__country">Чехия</h3>
-          <p class="country-card__description">Закоулки старой Европы</p>
-          <p class="country-card__companions-counter">5326</p>
+          <li class="directions__item country-card">
+            <img class="country-card__image" src="https://via.placeholder.com/270x110" alt="Фотография теплохода с Карловым мостом на фоне" width="270" height="110">
+            <div class="country-card__wrapper">
+              <a class="country-card__link link link--blue" href="">
+                Чехия
+                <p class="country-card__description">Закоулки старой Европы</p>
+              </a>
+              <p class="country-card__companions-counter">5326</p>
+            </div>
           </li>
         </ul>
-        <a href="" class="direction__button button">Показать все</a>
+        <a href="" class="direction__button button button--rect">
+          Показать все
+          <svg class="button__icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 10 14">
+            <polygon points="0,14 0,0.1 10,7.1"/>
+          </svg>
+        </a>
       </section>
-      <section class="companions">
+      <section class="main__companions companions container">
         <h2 class="companions__title title">Попутчики</h2>
         <p class="companions__description">
           Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.
         </p>
-        <p class="companions__descriptions companions__descriptions--bold">
+        <p class="companions__description companions__description--bold">
           Теперь можно легко найти единомышленников!
         </p>
         <ul class="companions__list">
-          <li class="companions__item companion companion--short">
-            <img src="https://via.placeholder.com/270x270" alt="Фотография Татьяны Фирсовой" width="270" height="270" class="companion__image">
-            <h3 class="companion__name">Таня Фирсова</h3>
-            <p class="visually-hidden">хочет посетить:</p>
-            <ul class="companion__countries-list">
-              <li class="companion__countrues-item companion__countrues-item--sri-lanka">Шри-Ланка</li>
-              <li class="companion__countries-item companion__countrues-item--thailand">Таиланд</li>
-              <li class="companion__countries-item companion__countrues-item--seychelles">Сейшельские Острова</li>
-            </ul>
-            <ul class="companion__hashtags-list hashtags-list">
-              <li class="hashtags-list__item">
-                <a href="" class="hashtags-list__link link">#ЗОЖ</a>
-              </li>
-              <li class="hashtags-list__item">
-                <a href="" class="hashtags-list__link link">#ПП</a>
-              </li>
-              <li class="hashtags-list__item">
-                <a href="" class="hashtags-list__link link">#Фитнес</a>
-              </li>
-              <li class="hashtags-list__item">
-                <a href="" class="hashtags-list__link link">#пляж</a>
-              </li>
-              <li class="hashtags-list__item">
-                <a href="" class="hashtags-list__link link">#авокадо</a>
-              </li>
-              <li class="hashtags-list__item">
-                <a href="" class="hashtags-list__link link">#смузи</a>
-              </li>
-            </ul>
-            <p class="visually-hidden">транспорт:</p>
-            <ul class="companion__transport-list transport-list">
-              <li class="transport-list__item transport-list__item--plane">Самолёт</li>
-              <li class="transport-list__item transport-list__item--car" aria-hidden="true">Машина</li>
-              <li class="transport-list__item transport-list__item--bicycle" aria-hidden="true">Велосипед</li>
-              <li class="transport-list__item transport-list__item--walk" aria-hidden="true">Прогулка</li>
-            </ul>
-            <p class="companion__level level">
+          <li class="companions__item short-companion">
+            <img src="https://via.placeholder.com/270x270" alt="Фотография Татьяны Фирсовой" width="270" height="270" class="short-companion__image">
+            <div class="short-companion__wrapper">
+              <h3 class="short-companion__name">
+                <a class="short-companion__link link link--blue" href="">Таня Фирсова</a>
+              </h3>
+              <p class="visually-hidden">хочет посетить:</p>
+              <ul class="short-companion__countries-list">
+                <li class="short-companion__countries-item short-companion__countrues-item--sri-lanka">Шри-Ланка</li>
+                <li class="short-companion__countries-item short-companion__countrues-item--thailand">Таиланд</li>
+                <li class="short-companion__countries-item short-companion__countrues-item--seychelles">Сейшельские Острова</li>
+              </ul>
+              <ul class="short-companion__hashtags-list">
+                <li class="short-companion__hashtags-item">
+                  <a class="short-companion__hashtags-link link" href="">#ЗОЖ</a>
+                </li>
+                <li class="short-companion__hashtags-item">
+                  <a class="short-companion__hashtags-link link" href="">#ПП</a>
+                </li>
+                <li class="short-companion__hashtags-item">
+                  <a class="short-companion__hashtags-link link" href="">#Фитнес</a>
+                </li>
+                <li class="short-companion__hashtags-item">
+                  <a class="short-companion__hashtags-link link" href="">#пляж</a>
+                </li>
+                <li class="short-companion__hashtags-item">
+                  <a class="short-companion__hashtags-link link" href="">#авокадо</a>
+                </li>
+                <li class="short-companion__hashtags-item">
+                  <a class="short-companion__hashtags-link link" href="">#смузи</a>
+                </li>
+              </ul>
+              <p class="visually-hidden">транспорт:</p>
+              <ul class="short-companion__transport-list">
+                <li class="short-companion__transport-item short-companion__transport-item--plane">
+                  Авиаперелёт
+                  <svg class="short-companion__transport-icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 19 21" width="19" height="21">
+                    <path d="M18.9,18.9c-0.1-0.3-3.7-10.1-3.7-10.1c0,0,0,0,0,0c-0.1-0.5,0.1-0.7,0.3-1.1c0,0,2.1-3.5,2.8-4.6c0.7-1.2,0.6-2.3-0.1-2.8c-0.7-0.5-1.7-0.1-2.5,1c-0.8,1.1-3,4.5-3,4.5c-0.3,0.4-0.4,0.7-0.9,0.8c0,0,0,0,0,0C11.7,6.5,1.5,7,1.2,7c-0.3,0-0.7,0.1-1,0.6C-0.2,8.3,0,8.5,0.4,8.6c0,0,8,2.6,8.3,2.7C9,11.3,9,11.5,8.9,11.9c-0.2,0.4-1.4,2.3-1.6,2.6c-0.1,0.2-0.2,0.2-0.4,0.3l-2.8,1c-0.1,0-0.3,0.1-0.4,0.3c0,0-0.2,0.3-0.4,0.6c-0.2,0.3-0.1,0.5,0.2,0.5c0.3,0.1,2.1,0.2,2.1,0.2c0,0,0.3,0.1,0.4,0.1c0.2,0.1,0.4,0.3,0.2,0.6c-0.3,0.6-0.4,1.2-0.2,1.3s0.6-0.2,1-0.7c0.2-0.3,0.4-0.2,0.6,0C7.8,18.6,8,18.8,8,18.8c0,0,0.8,1.6,1,1.9c0.2,0.3,0.4,0.3,0.6,0c0.2-0.3,0.4-0.6,0.4-0.6c0.1-0.1,0.1-0.3,0.1-0.5l-0.3-3.1c0-0.2,0-0.2,0.1-0.5c0.1-0.2,1.4-2.2,1.6-2.5c0.2-0.3,0.4-0.3,0.6-0.1c0.2,0.2,5.7,6.7,5.7,6.7c0.3,0.3,0.5,0.4,0.9-0.2C19.1,19.5,19,19.1,18.9,18.9z"/>
+                  </svg>
+                </li>
+                <li class="short-companion__transport-item short-companion__transport-item--car" aria-hidden="true">
+                  Автотранспорт
+                  <svg class="short-companion__transport-icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 17 21" width="17" height="21">
+                    <path d="M16.2,3.1c-0.2-1.2-1-1.6-2.1-2.1C13,0.6,10.4,0,8.5,0C6.6,0,4,0.6,2.9,1C1.8,1.5,1.1,1.9,0.8,3.1L0,9.5v8.8h1.4v1.4c0,1.7,2.5,1.7,2.5,0v-1.4h4.5h0h4.7v1.4c0,1.7,2.5,1.7,2.5,0v-1.4H17V9.5L16.2,3.1z M5,1.6h3.4H12c0.7,0,0.7,1,0,1H8.4H5C4.3,2.7,4.3,1.6,5,1.6z M2.7,15.6c-0.6,0-1.2-0.5-1.2-1.2c0-0.7,0.5-1.2,1.2-1.2c0.6,0,1.2,0.5,1.2,1.2C3.8,15,3.3,15.6,2.7,15.6zM8.4,10.2H2.2c-0.6,0-0.7-0.4-0.7-0.9l0.6-4.7c0.1-0.6,0.3-0.9,1-0.9h5.3h5.4c0.7,0,0.9,0.4,1,0.9l0.6,4.7c0.1,0.4-0.1,0.9-0.7,0.9H8.4z M14.3,15.6c-0.6,0-1.2-0.5-1.2-1.2c0-0.7,0.5-1.2,1.2-1.2c0.6,0,1.2,0.5,1.2,1.2C15.5,15,15,15.6,14.3,15.6z"/>
+                  </svg>
+                </li>
+                <li class="short-companion__transport-item short-companion__transport-item--bicycle" aria-hidden="true">
+                  Велосипед
+                  <svg class="short-companion__transport-icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 24 21" width="24" height="21">
+                    <path d="M16,3.6c1,0,1.8-0.8,1.8-1.8S17,0,16,0s-1.8,0.8-1.8,1.8S15,3.6,16,3.6z M19,11c-2.8,0-5,2.3-5,5s2.2,5,5,5s5-2.3,5-5S21.8,11,19,11z M19,19.6c-1.9,0-3.5-1.6-3.5-3.5s1.6-3.5,3.5-3.5s3.5,1.6,3.5,3.5S20.9,19.6,19,19.6z M14.8,8.9H19V7.1h-3.2l-1.9-3.3C13.6,3.3,13.1,3,12.4,3c-0.5,0-0.9,0.2-1.2,0.5L7.5,7.2C7.2,7.5,7,7.9,7,8.4C7,9,7.3,9.6,7.8,9.9l3.3,2v5H13v-6.5l-2.2-1.7l2.3-2.4L14.8,8.9z M5,11c-2.8,0-5,2.3-5,5s2.2,5,5,5s5-2.3,5-5S7.8,11,5,11z M5,19.6c-1.9,0-3.5-1.6-3.5-3.5s1.6-3.5,3.5-3.5s3.5,1.5,3.5,3.5S6.9,19.6,5,19.6z"/>
+                  </svg>
+                </li>
+                <li class="short-companion__transport-item short-companion__transport-item--walk" aria-hidden="true">
+                  Пешком
+                  <svg class="short-companion__transport-icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 20 21" width="20" height="21">
+                    <g>
+                      <ellipse cx="14.3" cy="2" rx="2.1" ry="2"/>
+                      <path d="M19.4,4.6c-0.5-0.2-1.2-0.1-1.4,0.4l-0.9,1.6L13,4.3c-0.2-0.1-0.3-0.1-0.6-0.1H7.9C7.5,4.2,7.2,4.3,7,4.7L5.3,7.6C5,8.1,5.2,8.7,5.7,8.9C5.9,9,6.1,9,6.2,9C6.6,9,7,8.8,7.2,8.5l1.4-2.4h1.6l-4.7,8.1H1.1c-0.6,0-1.1,0.4-1.1,1s0.5,1,1.1,1h5c0.4,0,0.7-0.2,0.9-0.5l1.9-3.2l3,2.6L11.7,20c-0.1,0.5,0.4,1,1,1c0,0,0,0,0.1,0c0.6,0,1-0.4,1.1-0.9l0.3-5.4c0-0.3-0.1-0.6-0.3-0.8l-2.6-2.2l2.7-4.6l3.1,1.8C17.1,9,17.5,9.1,17.7,9c0.3-0.1,0.5-0.2,0.7-0.5L19.9,6C20.2,5.5,20,4.9,19.4,4.6z"/>
+                    </g>
+                  </svg>
+                </li>
+              </ul>
+            </div>
+            <p class="short-companion__level level">
               99
               <span class="level__description">level</span>
             </p>
           </li>
-          <li class="companions__item companion companion--short">
-            <img src="https://via.placeholder.com/270x270" alt="Фотография Пети Дёмина" width="270" height="270" class="companion__image">
-            <h3 class="companion__name">Петя Демин</h3>
-            <p class="visually-hidden">хочет посетить:</p>
-            <ul class="companion__countries-list">
-              <li class="companion__countrues-item companion__countrues-item--belgium">Бельгия</li>
-              <li class="companion__countries-item companion__countrues-item--czech">Чехия</li>
-            </ul>
-            <ul class="companion__hashtags-list hashtags-list">
-              <li class="hashtags-list__item">
-                <a href="" class="hashtags-list__link link">#бургер</a>
-              </li>
-              <li class="hashtags-list__item">
-                <a href="" class="hashtags-list__link link">#бар</a>
-              </li>
-              <li class="hashtags-list__item">
-                <a href="" class="hashtags-list__link link">#футбол</a>
-              </li>
-              <li class="hashtags-list__item">
-                <a href="" class="hashtags-list__link link">#концерт</a>
-              </li>
-              <li class="hashtags-list__item">
-                <a href="" class="hashtags-list__link link">#крафт</a>
-              </li>
-            </ul>
-            <p class="visually-hidden">транспорт:</p>
-            <ul class="companion__transport-list transport-list">
-              <li class="transport-list__item transport-list__item--plane">Самолёт</li>
-              <li class="transport-list__item transport-list__item--car" aria-hidden="true">Машина</li>
-              <li class="transport-list__item transport-list__item--bicycle" aria-hidden="true">Велосипед</li>
-              <li class="transport-list__item transport-list__item--walk" aria-hidden="true">Прогулка</li>
-            </ul>
-            <p class="companion__level level">
+          <li class="companions__item short-companion">
+            <img src="https://via.placeholder.com/270x270" alt="Фотография Пети Дёмина" width="270" height="270" class="short-companion__image">
+            <div class="short-companion__wrapper">
+              <h3 class="short-companion__name">
+                <a class="short-companion__link link link--blue" href="">Петя Демин</a>
+              </h3>
+              <p class="visually-hidden">хочет посетить:</p>
+              <ul class="short-companion__countries-list">
+                <li class="short-companion__countries-item short-companion__countries-item--belgium">Бельгия</li>
+                <li class="short-companion__countries-item short-companion__countries-item--czech">Чехия</li>
+              </ul>
+              <ul class="short-companion__hashtags-list">
+                <li class="short-companion__hashtags-item">
+                  <a href="" class="short-companion__hashtags-link link">#бургер</a>
+                </li>
+                <li class="short-companion__hashtags-item">
+                  <a href="" class="short-companion__hashtags-link link">#бар</a>
+                </li>
+                <li class="short-companion__hashtags-item">
+                  <a href="" class="short-companion__hashtags-link link">#футбол</a>
+                </li>
+                <li class="short-companion__hashtags-item">
+                  <a href="" class="short-companion__hashtags-link link">#концерт</a>
+                </li>
+                <li class="short-companion__hashtags-item">
+                  <a href="" class="short-companion__hashtags-link link">#крафт</a>
+                </li>
+              </ul>
+              <p class="visually-hidden">транспорт:</p>
+              <ul class="short-companion__transport-list">
+                <li class="short-companion__transport-item short-companion__transport-item--plane">
+                  Авиаперелёт
+                  <svg class="short-companion__transport-icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 19 21" width="19" height="21">
+                    <path d="M18.9,18.9c-0.1-0.3-3.7-10.1-3.7-10.1c0,0,0,0,0,0c-0.1-0.5,0.1-0.7,0.3-1.1c0,0,2.1-3.5,2.8-4.6c0.7-1.2,0.6-2.3-0.1-2.8c-0.7-0.5-1.7-0.1-2.5,1c-0.8,1.1-3,4.5-3,4.5c-0.3,0.4-0.4,0.7-0.9,0.8c0,0,0,0,0,0C11.7,6.5,1.5,7,1.2,7c-0.3,0-0.7,0.1-1,0.6C-0.2,8.3,0,8.5,0.4,8.6c0,0,8,2.6,8.3,2.7C9,11.3,9,11.5,8.9,11.9c-0.2,0.4-1.4,2.3-1.6,2.6c-0.1,0.2-0.2,0.2-0.4,0.3l-2.8,1c-0.1,0-0.3,0.1-0.4,0.3c0,0-0.2,0.3-0.4,0.6c-0.2,0.3-0.1,0.5,0.2,0.5c0.3,0.1,2.1,0.2,2.1,0.2c0,0,0.3,0.1,0.4,0.1c0.2,0.1,0.4,0.3,0.2,0.6c-0.3,0.6-0.4,1.2-0.2,1.3s0.6-0.2,1-0.7c0.2-0.3,0.4-0.2,0.6,0C7.8,18.6,8,18.8,8,18.8c0,0,0.8,1.6,1,1.9c0.2,0.3,0.4,0.3,0.6,0c0.2-0.3,0.4-0.6,0.4-0.6c0.1-0.1,0.1-0.3,0.1-0.5l-0.3-3.1c0-0.2,0-0.2,0.1-0.5c0.1-0.2,1.4-2.2,1.6-2.5c0.2-0.3,0.4-0.3,0.6-0.1c0.2,0.2,5.7,6.7,5.7,6.7c0.3,0.3,0.5,0.4,0.9-0.2C19.1,19.5,19,19.1,18.9,18.9z"/>
+                  </svg>
+                </li>
+                <li class="short-companion__transport-item short-companion__transport-item--car">
+                  Автотранспорт
+                  <svg class="short-companion__transport-icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 17 21" width="17" height="21">
+                    <path d="M16.2,3.1c-0.2-1.2-1-1.6-2.1-2.1C13,0.6,10.4,0,8.5,0C6.6,0,4,0.6,2.9,1C1.8,1.5,1.1,1.9,0.8,3.1L0,9.5v8.8h1.4v1.4c0,1.7,2.5,1.7,2.5,0v-1.4h4.5h0h4.7v1.4c0,1.7,2.5,1.7,2.5,0v-1.4H17V9.5L16.2,3.1z M5,1.6h3.4H12c0.7,0,0.7,1,0,1H8.4H5C4.3,2.7,4.3,1.6,5,1.6z M2.7,15.6c-0.6,0-1.2-0.5-1.2-1.2c0-0.7,0.5-1.2,1.2-1.2c0.6,0,1.2,0.5,1.2,1.2C3.8,15,3.3,15.6,2.7,15.6zM8.4,10.2H2.2c-0.6,0-0.7-0.4-0.7-0.9l0.6-4.7c0.1-0.6,0.3-0.9,1-0.9h5.3h5.4c0.7,0,0.9,0.4,1,0.9l0.6,4.7c0.1,0.4-0.1,0.9-0.7,0.9H8.4z M14.3,15.6c-0.6,0-1.2-0.5-1.2-1.2c0-0.7,0.5-1.2,1.2-1.2c0.6,0,1.2,0.5,1.2,1.2C15.5,15,15,15.6,14.3,15.6z"/>
+                  </svg>
+                </li>
+                <li class="short-companion__transport-item short-companion__transport-item--bicycle" aria-hidden="true">
+                  Велосипед
+                  <svg class="short-companion__transport-icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 24 21" width="24" height="21">
+                    <path d="M16,3.6c1,0,1.8-0.8,1.8-1.8S17,0,16,0s-1.8,0.8-1.8,1.8S15,3.6,16,3.6z M19,11c-2.8,0-5,2.3-5,5s2.2,5,5,5s5-2.3,5-5S21.8,11,19,11z M19,19.6c-1.9,0-3.5-1.6-3.5-3.5s1.6-3.5,3.5-3.5s3.5,1.6,3.5,3.5S20.9,19.6,19,19.6z M14.8,8.9H19V7.1h-3.2l-1.9-3.3C13.6,3.3,13.1,3,12.4,3c-0.5,0-0.9,0.2-1.2,0.5L7.5,7.2C7.2,7.5,7,7.9,7,8.4C7,9,7.3,9.6,7.8,9.9l3.3,2v5H13v-6.5l-2.2-1.7l2.3-2.4L14.8,8.9z M5,11c-2.8,0-5,2.3-5,5s2.2,5,5,5s5-2.3,5-5S7.8,11,5,11z M5,19.6c-1.9,0-3.5-1.6-3.5-3.5s1.6-3.5,3.5-3.5s3.5,1.5,3.5,3.5S6.9,19.6,5,19.6z"/>
+                  </svg>
+                </li>
+                <li class="short-companion__transport-item short-companion__transport-item--walk">
+                  Пешком
+                  <svg class="short-companion__transport-icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 20 21" width="20" height="21">
+                    <g>
+                      <ellipse cx="14.3" cy="2" rx="2.1" ry="2"/>
+                      <path d="M19.4,4.6c-0.5-0.2-1.2-0.1-1.4,0.4l-0.9,1.6L13,4.3c-0.2-0.1-0.3-0.1-0.6-0.1H7.9C7.5,4.2,7.2,4.3,7,4.7L5.3,7.6C5,8.1,5.2,8.7,5.7,8.9C5.9,9,6.1,9,6.2,9C6.6,9,7,8.8,7.2,8.5l1.4-2.4h1.6l-4.7,8.1H1.1c-0.6,0-1.1,0.4-1.1,1s0.5,1,1.1,1h5c0.4,0,0.7-0.2,0.9-0.5l1.9-3.2l3,2.6L11.7,20c-0.1,0.5,0.4,1,1,1c0,0,0,0,0.1,0c0.6,0,1-0.4,1.1-0.9l0.3-5.4c0-0.3-0.1-0.6-0.3-0.8l-2.6-2.2l2.7-4.6l3.1,1.8C17.1,9,17.5,9.1,17.7,9c0.3-0.1,0.5-0.2,0.7-0.5L19.9,6C20.2,5.5,20,4.9,19.4,4.6z"/>
+                    </g>
+                  </svg>
+                </li>
+              </ul>
+            </div>
+            <p class="short-companion__level level">
               80
               <span class="level__description">level</span>
             </p>
           </li>
         </ul>
-        <a href="" class="companions__button button">Показать всех</a>
+        <a href="" class="companions__button button  button--rect">
+          Показать всех
+          <svg class="button__icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 10 14">
+            <polygon points="0,14 0,0.1 10,7.1"/>
+          </svg>
+        </a>
       </section>
-      <section class="rates">
+      <section class="main__rates rates container">
         <h2 class="visually-hidden">Тарифы</h2>
         <p class="rates__descriprtion">Добавьте свой профиль</p>
-        <ul class="rates__list">
+        <ul class="rates__list rates__list--counter">
           <li class="rates__item">
-            Базовое размещение
-            Бесплатно
+            <p class="rates__service">Базовое размещение</p>
+            <p class="rates__price">Бесплатно</p>
           </li>
           <li class="rates__item">
-            Вывод на первых позициях
-            99 руб./мес
+            <p class="rates__service">Вывод на первых позициях</p>
+            <p class="rates__price">99 руб./мес</p>
           </li>
           <li class="rates__item">
-            Кастомный цвет карточки
-            59 руб./мес
+            <p class="rates__service">Кастомный цвет карточки</p>
+            <p class="rates__price">59 руб./мес</p>
           </li>
         </ul>
-        <a href="" class="rates__link link">Показать тарифы для бизнеса</a>
+        <a href="" class="rates__link link link--blue">Показать тарифы для бизнеса</a>
+        <div class="rates__modal modal">
+          <h3 class="rates__subtitle title">Бизнес-тарифы</h3>
+          <ul class="rates__list">
+            <li class="rates__item">
+              <p class="rates__service">Реклама у блоггера</p>
+              <p class="rates__price">300 000 руб./пост</p>
+            </li>
+            <li class="rates__item">
+              <p class="rates__service">Накрутка подписчиков</p>
+              <p class="rates__price">от 1 руб./шт.</p>
+            </li>
+            <li class="rates__item">
+              <p class="rates__service">Лайки от ботов</p>
+              <p class="rates__price">от 20 коп./лайк</p>
+            </li>
+            <li class="rates__item">
+              <p class="rates__service">Ваш продакт-плейсмент</p>
+              <p class="rates__price">Индивидуально</p>
+            </li>
+          </ul>
+          <button class="modal__button--close button">Закрыть окно</button>
+        </div>
       </section>
-      <section class="registration">
-        <h2 class="registration__title title">Заинтересоваись?</h2>
+      <section class="main__registration registration container">
+        <h2 class="visually-hidden">Регистрация</h2>
+        <p class="registration__title title">Заинтересовались?</p>
         <p class="registration__description">
           Зарегистрируйтесь,
           это быстро и бесплатно!
@@ -240,44 +413,81 @@
           <input type="submit" value="Отправить">
         </form>
       </section>
-      <section class="main__contacts contacts">
+      <section class="main__contacts contacts container">
         <h2 class="contacts__title visually-hidden">Наши контакты</h2>
         <p class="contacts__description">Остались вопросы?</p>
         <p class="contacts__description">Мы с радостью на них ответим!</p>
         <ul class="contacts__list contacts__list--direct direct-contacts">
           <li class="direct-contacts__item direct-contacts__item--tel">
-            <a href="tel:+78005558628" class="direct-contacts__link link">8 800 555-86-28</a>
+            <a href="tel:+78005558628" class="direct-contacts__link link">
+              <div class="direct-contacts__icon-wrapper">
+                <svg class="direct-contacts__icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 36 36" width="18" height="18">
+                  <path class="st0" d="M18,0C11.6,0,5.2,1.1,2.8,3.4C0.9,5.3,0.2,8.7,0,10.8c0,0,0,0.2,0,0.3c0,0.8,0.7,1.5,1.5,1.5c0.1,0,3.7-0.3,5.9-0.5c0.1,0,0.1,0,0.2,0c0.8,0,1.5-0.7,1.5-1.5l0-3C9,6.7,9.7,6,10.7,6h14.7C26.2,6,27,6.7,27,7.7l0,3c0,0.8,0.7,1.5,1.5,1.5c0.1,0,0.1,0,0.2,0c2.2,0.2,5.8,0.5,5.9,0.5c0.8,0,1.5-0.7,1.5-1.5c0-0.1,0-0.3,0-0.3c-0.2-2.1-0.9-5.5-2.8-7.4C30.8,1.1,24.4,0,18,0z M18,19.5c-1.7,0-3,1.3-3,3s1.3,3,3,3c1.7,0,3-1.3,3-3S19.7,19.5,18,19.5zM15.7,12.7v-1.9c0-1-0.8-1.9-1.9-1.9S12,9.8,12,10.9v1.9L1.9,23.6c-0.7,0.7-1.1,1.6-1.1,2.7v3c0,1.7,1.3,3,3,3h0.8v1.9c0,1,0.8,1.9,1.9,1.9s1.9-0.8,1.9-1.9v-1.9h19.5v1.9c0,1,0.8,1.9,1.9,1.9c1,0,1.9-0.8,1.9-1.9v-1.9h0.8c1.7,0,3-1.3,3-3v-3c0-1.1-0.4-2-1.1-2.7L24,12.7v-1.9c0-1-0.8-1.9-1.9-1.9s-1.9,0.8-1.9,1.9v1.9H15.7z M18,16.5c3.3,0,6,2.7,6,6c0,3.3-2.7,6-6,6c-3.3,0-6-2.7-6-6C12,19.2,14.7,16.5,18,16.5z"/>
+                </svg>
+              </div>
+              8 800 555-86-28
+            </a>
           </li>
           <li class="direct-contacts__item direct-contacts__item--email">
-            <a href="mailto:mail@htmlacademy.ru" class="direct-contacts__link link">mail@htmlacademy.ru</a>
+            <a href="mailto:mail@htmlacademy.ru" class="direct-contacts__link link">
+              <div class="direct-contacts__icon-wrapper">
+                <svg class="direct-contacts__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 36 26" width="18" height="13">
+                  <path class="st0" d="M0,23c0,1.6,1.3,3,3,3h30c1.7,0,3-1.3,3-3V3c0-1.6-1.3-3-3-3H3C1.3,0,0,1.3,0,3L0,23L0,23z M11,13L4.2,6.2
+                  c-0.6-0.6-0.6-1.5,0-2c0.6-0.6,1.5-0.6,2.1,0l11,10.9c0.4,0.4,1.2,0.4,1.6,0l11-10.9c0.6-0.6,1.5-0.6,2.1,0c0.6,0.6,0.6,1.5,0,2
+                  L25,13l6.9,6.8c0.6,0.6,0.6,1.5,0,2c-0.6,0.6-1.5,0.6-2.1,0l-6.9-6.8c0,0-2.1,2.2-2.5,2.5c-0.6,0.6-1.4,1-2.4,1
+                  c-0.9,0-1.8-0.4-2.4-1c-0.4-0.4-2.5-2.5-2.5-2.5l-6.9,6.8c-0.6,0.6-1.5,0.6-2.1,0c-0.6-0.6-0.6-1.5,0-2L11,13z"/>
+                </svg>
+              </div>
+              mail@htmlacademy.ru
+            </a>
           </li>
         </ul>
         <div class="contacts__wrapper">
           <p class="contacts__adress">ул. Большая Конюшенная, 19/8</p>
-          <button class="contacts__button" type="button">Проложить маршрут</button>
-          <img class="contacts__map" src="https://via.placeholder.com/96x15" alt="ул. Большая Конюшенная, 19/8" width="320" height="546">
+          <button class="contacts__button button" type="button">Проложить маршрут</button>
+          <!-- <img class="contacts__map" src="https://via.placeholder.com/96x15" alt="ул. Большая Конюшенная, 19/8" width="320" height="546"> -->
         </div>
       </section>
     </main>
-    <footer class="main-footer">
+    <footer class="main-footer container">
       <img src="https://via.placeholder.com/96x15" alt="Логотип сервиса «Погнали»" width="96" height="15" class="main-footer__img main-footer__img--logo">
       <ul class="main-footer__social social-contacts">
-        <li class="social-contacts__item social-contacts__item--fb">
-          <a href="">Facebook</a>
+        <li class="social-contacts__item">
+          <a href="" class="social-contacts__button social-contacts__button--fb button">
+            <svg class="social-contacts__icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 11 21" width="11" height="21">
+              <g>
+                <path d="M7.8,21H2.2v-9.8H0V6.4h2.1C2,4.2,2.4,2.6,3.4,1.5C4.2,0.6,5.5,0.1,7.1,0L11,0v4.7H7.9C7.8,4.9,7.7,5.5,7.7,6.4H11v4.8H7.8V21z M3.4,19.9h3.1v-9.8h3.2V7.5H6.5l0-0.6c0-1.5,0-2.9,0.8-3.4l0.2-0.1h2.3V1.1H7.1C5.9,1.2,4.9,1.6,4.3,2.3C3.5,3.2,3.2,4.8,3.4,6.9l0.1,0.6H1.2v2.6h2.2V19.9z"/>
+              </g>
+            </svg>
+            Facebook
+          </a>
         </li>
-        <li class="social-contacts__item social-contacts__item--vk">
-          <a href="">Вконтакте</a>
+        <li class="social-contacts__item">
+          <a href="" class="social-contacts__button social-contacts__button--vk button">
+            <svg class="social-contacts__icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+            viewBox="0 0 30 15.8" width="23" height="12">
+              <g>
+                <path d="M23.9,15.8c-0.4,0-1.2-0.1-2.1-0.6c-0.6-0.4-1.2-1-1.8-1.5c-0.4-0.4-1.2-1.2-1.4-1.2c-0.3,0.1-0.5,0.9-0.5,1.6c0,0.1,0,0.8-0.5,1.2c-0.4,0.4-1.1,0.5-1.2,0.5l-1.9,0c-1,0-4.4-0.2-7.4-3c-3.7-3.4-6.8-9.8-7-10.1C0,2.2-0.1,1.5,0.3,1.1c0.4-0.4,1.1-0.5,1.4-0.5l4.1,0l0.1,0c0.1,0,0.6,0.1,1,0.3c0.4,0.2,0.6,0.7,0.6,0.7c0,0,0.6,1.4,1.5,2.7c1.3,2,1.9,2.5,2.1,2.6c0.2-0.4,0.3-1.7,0.2-2.9c0-0.5-0.1-1.1-0.3-1.3c-0.1-0.1-0.4-0.3-0.8-0.3L9.5,1.8c-0.1-0.7,0.6-1.2,1.1-1.4C11.3,0.1,12.4,0,13.7,0l0.7,0c1.2,0,1.6,0.1,2.1,0.2c1.7,0.4,1.6,1.7,1.6,3.3c0,0.5,0,1,0,1.6c0,0.2,0,0.3,0,0.5c0,0.4,0,1,0.1,1.3c0.2-0.1,0.9-0.7,2.1-2.5c0.8-1.2,1.4-2.5,1.5-2.8l0,0c0.2-0.4,0.6-0.9,1.6-0.9l4.3,0c0,0,0.2,0,0.4,0c1,0,1.6,0.3,1.8,0.9c0.3,0.6,0.2,1.7-2.4,4.6c-0.4,0.4-0.7,0.8-1,1.1c-0.6,0.7-1.2,1.4-1.2,1.6C25.4,9,26,9.5,26.6,10c1.5,1.2,2.5,2.3,3,3.1c0.5,0.8,0.4,1.3,0.3,1.7c-0.4,0.9-1.6,1-1.9,1l-3.8,0C24.1,15.8,24.1,15.8,23.9,15.8z M18.6,10.9c0.9,0,1.7,0.8,2.5,1.6c0.5,0.5,1,1,1.5,1.3c0.7,0.4,1.3,0.4,1.4,0.4l0.1,0l3.8,0c0.2,0,0.4-0.1,0.5-0.1c0,0,0-0.1-0.1-0.2c-0.4-0.7-1.4-1.7-2.7-2.7c-1.2-1-1.8-1.5-1.9-2.2c-0.1-0.8,0.5-1.4,1.6-2.7c0.3-0.3,0.6-0.7,1-1.1c1.6-1.8,2-2.6,2.1-3c-0.2,0-0.6,0-0.7,0l-4.4,0c-0.2,0-0.2,0-0.2,0c-0.2,0.4-0.8,1.8-1.6,3c-1.9,2.8-2.8,3.2-3.4,3.2c-0.2,0-0.4,0-0.6-0.1c-1-0.6-1-1.8-0.9-2.8c0-0.1,0-0.3,0-0.4c0-0.6,0-1.2,0-1.7c0.1-1.7,0-1.7-0.4-1.8c-0.4-0.1-0.7-0.1-1.9-0.2l-0.7,0c-0.6,0-1.3,0-1.9,0.1c0.1,0.1,0.2,0.2,0.3,0.3c0.6,0.7,0.6,2,0.6,2.2c0.1,1.6,0.1,3.8-1,4.3c-0.2,0.1-0.4,0.1-0.6,0.1c-0.9,0-1.9-0.9-3.4-3.3C6.8,3.9,6.1,2.4,6.1,2.3c0,0-0.1-0.1-0.1-0.1C5.9,2.2,5.8,2.1,5.7,2.1l-4,0c0,0,0,0-0.1,0C2.2,3.3,5,8.7,8.1,11.6c2.7,2.5,5.8,2.6,6.4,2.6l1.9,0c0,0,0.2-0.1,0.3-0.1c0,0,0-0.1,0-0.1c0-0.3,0-2.6,1.6-3C18.4,10.9,18.5,10.9,18.6,10.9z"/>
+              </g>
+            </svg>
+            Вконтакте
+          </a>
         </li>
-        <li class="social-contacts__item social-contacts__item--insta">
-          <a href="">Instagram</a>
+        <li class="social-contacts__item">
+          <a href="" class="social-contacts__button  social-contacts__button--insta button">
+            <svg class="social-contacts__icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 23 23" width="18" height="18">
+              <path class="st0" d="M17,1.5c2.5,0,4.5,2,4.5,4.5v11c0,2.5-2,4.5-4.5,4.5H6c-2.5,0-4.5-2-4.5-4.5V6c0-2.5,2-4.5,4.5-4.5L17,1.5M17,0H6C2.7,0,0,2.7,0,6v11c0,3.3,2.7,6,6,6h11c3.3,0,6-2.7,6-6V6C23,2.7,20.3,0,17,0L17,0z"/>
+              <path class="st0" d="M11.5,7.1c2.4,0,4.4,2,4.4,4.4c0,2.4-2,4.4-4.4,4.4c-2.4,0-4.4-2-4.4-4.4C7.1,9.1,9.1,7.1,11.5,7.1 M11.5,5.6c-3.3,0-5.9,2.7-5.9,5.9s2.7,5.9,5.9,5.9s5.9-2.7,5.9-5.9S14.8,5.6,11.5,5.6L11.5,5.6z"/>
+              <circle class="st0" cx="17.6" cy="5.4" r="1.3"/>
+            </svg>
+            Instagram
+          </a>
         </li>
       </ul>
-      <p class="main-footer__copyright">
-        Разработано
-        <a href="https://htmlacademy.ru/intensive/adaptive">
-          <img src="https://via.placeholder.com/27x34" alt="HTML Academy" class="main-footer__img main-footer__img--copiryght" width="27" height="34">
-        </a>
-      </p>
+      <a class="main-footer__copyright-link copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
+        <span class="copyright__text">Разработано</span>
+        <img src="https://via.placeholder.com/27x34" alt="HTML Academy" class="copiryght__image" width="27" height="34">
+      </a>
     </footer>
   </body>
 </html>

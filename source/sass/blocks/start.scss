@@ -1,0 +1,69 @@
+.start {
+  position: relative;
+
+  counter-reset: start-counter;
+
+  @include list-reset;
+}
+
+.start__item {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 110px;
+  padding: 21px 25px;
+  padding-bottom: 40px;
+
+  list-style: none;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  color: $dark-two;
+  text-transform: none;
+
+  border-radius: 10px;
+
+  &::before {
+    content: counter(start-counter);
+    position: absolute;
+    top: 21px;
+    right: 20px;
+
+    color: $white;
+
+    counter-increment: start-counter;
+  }
+
+  &:nth-of-type(1) {
+    background-color: $mango;
+  }
+
+  &:nth-of-type(2) {
+    top: 80px;
+
+    background-color: $mango-three;
+  }
+
+  &:nth-of-type(3) {
+    top: 160px;
+
+    background-color: $mango-two;
+  }
+
+  &:nth-of-type(4) {
+    top: 240px;
+
+    padding-bottom: 23px;
+
+    background-color: $gold;
+  }
+}
+
+.start__text-wrapper {
+  margin: 0;
+  width: 160px;
+}

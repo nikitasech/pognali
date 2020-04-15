@@ -1,0 +1,46 @@
+.main {
+  position: relative;
+  z-index: 0;
+  background-color: $basis-background;
+
+  &--catalog-page {
+    padding-bottom: 285px;
+  }
+}
+
+.main__intro {
+  position: relative;
+  z-index: 6;
+}
+
+.main__about {
+  position: relative;
+  z-index: 5;
+}
+
+.main__directions {
+  position: relative;
+  z-index: 4;
+}
+
+.main__companions {
+  position: relative;
+  z-index: 3;
+
+  margin-top: -30px;
+}
+
+.main__rates {
+  position: relative;
+  z-index: 3;
+}
+
+.main__registration {
+  position: relative;
+  z-index: 1;
+}
+
+.main__contacts {
+  position: relative;
+  z-index: 0;
+}
