@@ -20,8 +20,8 @@
   font-weight: 300;
   color: $white;
   text-transform: none;
-}
 
-.about__text--bold {
-  font-weight: 700;
+  &--bold {
+    font-weight: 700;
+  }
 }

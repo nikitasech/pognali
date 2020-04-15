@@ -1,35 +1,3 @@
-@keyframes before-hamburger {
-  50% {
-    transform: translateY(4px);
-    transform-origin: 50% 50%;
-
-    transition-timing-function: ease-in-out;
-  }
-
-  100% {
-    transform: translateY(4px) rotate(45deg);
-    transform-origin: 50% 50%;
-
-    transition-timing-function: ease-in-out;
-  }
-}
-
-@keyframes after-hamburger {
-  50% {
-    transform: translateY(-4px);
-    transform-origin: 50% 50%;
-
-    transition-timing-function: ease-in-out;
-  }
-
-  100% {
-    transform: translateY(-4px) rotate(-45deg);
-    transform-origin: 50% 50%;
-
-    transition-timing-function: ease-in-out;
-  }
-}
-
 .main-header {
   position: relative;
 }
@@ -118,22 +86,4 @@
   margin-top: 53px;
   padding-top: 10px;
   padding-bottom: 10px;
-}
-
-.contacts__list--direct {
-  margin-top: 50px;
-}
-
-.contacts__list--direct .direct-contacts__link {
-  color: $blue-grey;
-}
-
-.contacts__list--socials {
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
-}
-
-.contacts__list--socials .social-contacts__button {
-  background-color: transparent;
 }

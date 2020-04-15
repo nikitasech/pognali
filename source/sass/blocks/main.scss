@@ -2,6 +2,10 @@
   position: relative;
   z-index: 0;
   background-color: $basis-background;
+
+  &--catalog-page {
+    padding-bottom: 285px;
+  }
 }
 
 .main__intro {
