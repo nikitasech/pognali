@@ -36,3 +36,16 @@ img {
   box-sizing: border-box;
   padding: 0 25px;
 }
+
+@media (min-width: 768px) {
+  html,
+  body {
+    font-size: 28px;
+    line-height: 33px;
+  }
+
+  .container {
+    box-sizing: border-box;
+    padding: 0 40px;
+  }
+}

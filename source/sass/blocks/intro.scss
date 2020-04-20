@@ -1,20 +1,23 @@
 .intro {
   padding-top: 12px;
-  padding-bottom: 80px;
+  padding-bottom: 50px;
 
   color: $white;
 
   background-color: $blue;
+  background-image: url("../img/traveller-illustration-mobile@1x.png"), url("../img/globe-back-mobile@1x.jpg"), linear-gradient(to bottom, $blue 0 621px, $blue-grey 621px);
+  background-repeat: no-repeat;
+  background-position: 62% 144px, center -170px;
 }
 
 .intro__slogan {
-  margin: 0;
-  padding-left: 10px;
-  padding-right: 10px;
-  text-align: center;
+  width: 250px;
+  margin: 0 auto;
+
+  font-weight: 700;
   font-size: 36px;
   line-height: 40px;
-  font-weight: 700;
+  text-align: center;
   text-transform: none;
 }
 
@@ -28,4 +31,33 @@
 
 .intro__start {
   margin-top: 31px;
+}
+
+@media (min-width: 768px) {
+  .intro {
+    padding-bottom: 96px;
+    background-color: $blue-grey;
+    background-image: url("../img/traveller-illustration-tablet@1x.png"), url("../img/globe-back-tablet@1x.jpg");
+    background-position: 72% 273px, center 253px;
+  }
+
+  .intro__slogan {
+    margin-top: 16px;
+    width: 400px;
+
+    font-size: 60px;
+    line-height: 70px;
+  }
+
+  .intro__actions {
+    display: none;
+  }
+
+  .intro__quote {
+    margin-top: 88px;
+  }
+
+  .intro__start {
+    margin-top: 214px;
+  }
 }

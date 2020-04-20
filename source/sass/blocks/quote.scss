@@ -11,6 +11,7 @@
   margin: 0;
 
   font-weight: 300;
+
   quotes: "\00ab" "\00bb";
 
   &::before {
@@ -27,4 +28,22 @@
   margin-top: 18px;
 
   font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .quote {
+    padding-left: 35px;
+  }
+
+  .quote__text {
+    width: 260px;
+  }
+
+  .quote__author {
+    width: 260px;
+    margin-top: 43px;
+
+    font-size: 21px;
+    line-height: 25px;
+  }
 }

@@ -44,3 +44,12 @@
   position: relative;
   z-index: 0;
 }
+
+@media (min-width: 768px) {
+  .main__companions {
+    position: relative;
+    z-index: 3;
+
+    margin-top: -55px;
+  }
+}

@@ -42,6 +42,8 @@
 
   padding: 10px 0;
 
+  font-weight: 300;
+
   border-top: 1px solid rgba(#000000, 0.05);
 }
 
@@ -111,4 +113,76 @@
   margin: 0;
 
   text-align: center;
+}
+
+@media (min-width: 768px) {
+  .rates {
+    padding-top: 42px;
+    padding-right: 75px;
+    padding-bottom: 88px;
+    padding-left: 75px;
+
+    background-image: url("../img/rates@1x.png"), url("../img/bg-rect-grey.svg");
+    background-repeat: no-repeat;
+    background-position: 87% 410px, 93% 149px;
+    background-size: 99px, 198px 285px;
+  }
+
+  .rates__descriprtion {
+    justify-content: center;
+    padding: 0;
+
+    font-size: 45px;
+    line-height: 45px;
+
+    background-image: none;
+  }
+
+  .rates__list {
+    margin: 0;
+    padding: 0;
+  }
+
+  .rates__list--counter {
+    margin: 0;
+    margin-top: 50px;
+    padding: 0;
+    padding-left: 55px;
+
+    counter-reset: rates-counter;
+  }
+
+  .rates__item {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+    padding-bottom: 17px;
+  }
+
+  .rates__list--counter .rates__item::after {
+    top: 0;
+    left: -91px;
+
+    width: 67px;
+    height: 67px;
+  }
+
+  .rates__link {
+    display: flex;
+    align-items: center;
+    margin-top: 57px;
+
+    font-size: 20px;
+    line-height: 20px;
+    text-align: start;
+  }
+
+  .rates__modal {
+    top: 0;
+    right: 40px;
+    left: 40px;
+
+    max-width: none;
+    padding-bottom: 80px;
+  }
 }

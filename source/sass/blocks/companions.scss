@@ -3,12 +3,17 @@
   padding-bottom: 30px;
 
   background-color: $blue-grey;
+  background-image: url("../img/bg-rect.svg"), url("../img/smolov-back-desktop@1x.png"), url("../img/rogovaya-back-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: -21px 70px, 87% 70px, -10px 315px;
+  background-size: 132px 132px, auto, auto;
   border-radius: 0 0 30px 30px;
 
   &--catalog-page {
+    padding-top: 0;
+
     background-color: $pale-grey;
     border-radius: 0;
-    padding-top: 0;
   }
 }
 
@@ -103,4 +108,60 @@
 
   background-color: transparent;
   border-radius: 0;
+}
+
+.companions__button--deploy {
+  margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+  .companions {
+    padding-top: 85px;
+    padding-right: 75px;
+    padding-bottom: 89px;
+    padding-left: 75px;
+
+    background-image: url("../img/bg-rect.svg"), url("../img/rogovaya-back-desktop@1x.png"), url("../img/smolov-back-desktop@1x.png");
+    background-repeat: no-repeat;
+    background-position: 40px 70px, 87% 70px, -10px 315px;
+    background-size: 213px 213px, auto, auto;
+    border-radius: 0 0 60px 60px;
+  }
+
+  .companions__title {
+    margin-top: 107px;
+    margin-left: 32px;
+  }
+
+  .companions__description {
+    margin-top: 57px;
+    margin-right: 180px;
+    margin-left: 0;
+  }
+
+  .companions__description--bold {
+    margin-top: 41px;
+    margin-right: 360px;
+
+    font-size: 21px;
+    line-height: 25px;
+  }
+
+  .companions__list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+  }
+
+  .companions__item {
+    margin-top: 0;
+  }
+
+  .companions__item:first-child {
+    margin-top: 0;
+  }
+
+  .companions__button--deploy {
+    margin-top: 80px;
+  }
 }

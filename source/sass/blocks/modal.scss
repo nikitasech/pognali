@@ -32,3 +32,9 @@
     background-color: darken($pale-grey-five, 2%);
   }
 }
+
+@media (min-width: 768px) {
+  .modal {
+    border-radius: 30px;
+  }
+}
