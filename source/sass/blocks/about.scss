@@ -63,3 +63,33 @@
     width: 274px;
   }
 }
+
+@media (min-width: 1440px) {
+  .about {
+    padding: 38px 135px;
+    padding-right: 392px;
+    padding-bottom: 89px;
+
+    background-color: $blue-grey;
+    background-image: url("../img/about-desktop@1x.png"), url("../img/bg-rect.svg");
+  }
+
+  .about__text {
+    margin-right: 280px;
+
+    text-transform: none;
+
+    &--bold {
+      margin-right: 450px;
+
+      font-size: 21px;
+      line-height: 25px;
+    }
+  }
+
+  .about__button {
+    display: block;
+    margin-top: 52px;
+    width: 274px;
+  }
+}
