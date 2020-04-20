@@ -165,3 +165,50 @@
     margin-top: 80px;
   }
 }
+
+@media (min-width: 1440px) {
+  .companions {
+    padding-top: 85px;
+    padding-right: 75px;
+    padding-bottom: 89px;
+    padding-left: 75px;
+
+    background-image: url("../img/bg-rect.svg"), url("../img/rogovaya-back-desktop@1x.png"), url("../img/smolov-back-desktop@1x.png");
+    background-repeat: no-repeat;
+    background-position: 40px 70px, 87% 70px, -10px 315px;
+    background-size: 213px 213px, auto, auto;
+    border-radius: 0 0 60px 60px;
+  }
+
+  .companions__title {
+    margin-top: 107px;
+    margin-left: 32px;
+  }
+
+  .companions__description {
+    margin-right: 850px;
+  }
+
+  .companions__description--bold {
+    margin-right: 900px;
+  }
+
+  .companions__list {
+    position: absolute;
+    top: 133px;
+    right: 60px;
+  }
+
+  .companions__item {
+    margin-left: 60px;
+  }
+
+  .companions__item:first-child {
+    margin-left: 0;
+  }
+
+  .companions__button--deploy {
+    width: 280px;
+    margin-top: 80px;
+  }
+}
