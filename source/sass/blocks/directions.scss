@@ -94,3 +94,38 @@
     margin-top: 47px;
   }
 }
+
+@media (min-width: 1440px) {
+  .directions {
+    position: relative;
+    padding-top: 161px;
+    background-position: 92% 80px, 40px 406px;
+    background-size: auto, 141px 141px;
+  }
+
+  .directions__title {
+    padding-left: 821px;
+    margin: 0;
+  }
+
+  .directions__description {
+    padding-left: 821px;
+    margin-right: 130px;
+  }
+
+  .directions__list {
+    position: absolute;
+    top: 161px;
+    left: 91px;
+    margin-top: 0;
+  }
+
+  .directions__item {
+    width: 560px;
+  }
+
+  .direction__button {
+    width: 274px;
+    margin-left: 821px;
+  }
+}
