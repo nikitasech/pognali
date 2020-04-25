@@ -66,19 +66,30 @@
 
 @media (min-width: 1440px) {
   .about {
-    padding: 38px 135px;
+    padding: 128px 130px;
     padding-right: 392px;
-    padding-bottom: 89px;
+    padding-bottom: 164px;
 
     background-color: $blue-grey;
     background-image: url("../img/about-desktop@1x.png"), url("../img/bg-rect.svg");
+    background-position: 93% 85px, 60px 70px;
+    background-size: auto, 213px 213px;
+    border-radius: 0 0 60px 60px;
   }
 
   .about__text {
+    margin-top: 59px;
     margin-right: 280px;
 
     &--bold {
+      margin-top: 40px;
       margin-right: 450px;
     }
+  }
+
+  .about__button {
+    display: block;
+    margin-top: 85px;
+    width: 274px;
   }
 }

@@ -1,5 +1,5 @@
 .companions {
-  padding-top: 85px;
+  padding-top: 82px;
   padding-bottom: 30px;
 
   background-color: $blue-grey;
@@ -50,66 +50,6 @@
   margin-top: 10px;
 }
 
-.companions__container {
-  position: relative;
-
-  display: flex;
-  margin-top: 20px;
-
-  background-color: $white;
-  border-radius: 20px;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: calc(50% - 1px);
-
-    display: block;
-    width: 1px;
-    height: 100%;
-
-    background-color: $pale-grey;
-  }
-}
-
-.companions__button--add {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 30px;
-  color: $blue-slate;
-  text-transform: uppercase;
-  text-decoration: none;
-
-  &::before {
-    content: "";
-
-    display: block;
-    width: 18px;
-    height: 18px;
-    margin-right: 10px;
-  }
-}
-
-.companions__button--right,
-.companions__button--left {
-  display: flex;
-  flex-grow: 1;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
-
-  font-size: 0;
-
-  background-color: transparent;
-  border-radius: 0;
-}
-
 .companions__button--deploy {
   margin-top: 20px;
 }
@@ -130,7 +70,7 @@
 
   .companions__title {
     margin-top: 107px;
-    margin-left: 32px;
+    margin-left: 0;
   }
 
   .companions__description {
@@ -168,9 +108,11 @@
 
 @media (min-width: 1440px) {
   .companions {
-    padding-top: 85px;
+    position: relative;
+
+    padding-top: 73px;
     padding-right: 75px;
-    padding-bottom: 89px;
+    padding-bottom: 135px;
     padding-left: 75px;
 
     background-image: url("../img/bg-rect.svg"), url("../img/rogovaya-back-desktop@1x.png"), url("../img/smolov-back-desktop@1x.png");
@@ -182,11 +124,12 @@
 
   .companions__title {
     margin-top: 107px;
-    margin-left: 32px;
+    margin-left: 54px;
   }
 
   .companions__description {
-    margin-right: 850px;
+    margin-right: 800px;
+    margin-left: 54px;
   }
 
   .companions__description--bold {
@@ -195,7 +138,7 @@
 
   .companions__list {
     position: absolute;
-    top: 133px;
+    top: 128px;
     right: 60px;
   }
 
@@ -209,6 +152,7 @@
 
   .companions__button--deploy {
     width: 280px;
-    margin-top: 80px;
+    margin-top: 85px;
+    margin-left: 54px;
   }
 }

@@ -3,9 +3,36 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Погнали</title>
+  <!-- Pixel Glass -->
+  <style>
+    html {
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      /* По умолчанию показывается мобильный макет */
+      background-image: url("img/pognali-index-mobile.png");
+    }
+    /* Планшет */
+    @media (min-width: 768px) {
+      html {
+        /* Планшетный макет */
+        background-image: url("img/pognali-index-tablet.png");
+      }
+    }
+    /* Десктоп */
+    @media (min-width: 1440px) {
+      html {
+        /* Десктопный макет */
+        background-image: url("img/pognali-index-desktop.png");
+      }
+    }
+  </style>
+  <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
+  <script src="../node_modules/pixel-glass/script.js"></script>
+  <!-- // Pixel Glass -->
   </head>
   <body>
     <header class="main-header container">
@@ -124,7 +151,7 @@
         </section>
       </div>
     </header>
-    <main class="main catalog">
+    <main class="main main--index">
       <h1 class="visually-hidden">Сервис «Погнали»</h1>
       <section class="main__intro intro container">
         <h2 class="visually-hidden">Основная информация</h2>
@@ -481,7 +508,7 @@
         </div>
       </section>
     </main>
-    <footer class="main-footer container">
+    <footer class="main-footer main-footer--index container">
       <img src="https://via.placeholder.com/96x15" alt="Логотип сервиса «Погнали»" width="96" height="15" class="main-footer__img main-footer__img--logo">
       <ul class="main-footer__social social-contacts">
         <li class="social-contacts__item">

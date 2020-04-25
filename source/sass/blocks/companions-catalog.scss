@@ -1,0 +1,21 @@
+.companions-catalog__list {
+  @include list-reset;
+}
+
+.companions-catalog__item {
+  margin-top: 10px;
+}
+
+.companions-catalog__item:first-child {
+  margin-top: 0;
+}
+
+.companions-catalog__pagination {
+  margin-top: 20px;
+}
+
+@media (min-width: 1440px) {
+  .companions-catalog__list {
+    max-width: 950px;
+  }
+}

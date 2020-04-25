@@ -14,7 +14,7 @@
 .directions__description {
   margin: 0;
   margin-top: 20px;
-  margin-right: 50px;
+  margin-right: 45px;
   margin-left: 25px;
 }
 
@@ -99,24 +99,25 @@
   .directions {
     position: relative;
     padding-top: 161px;
+    padding-bottom: 140px;
     background-position: 92% 80px, 40px 406px;
     background-size: auto, 141px 141px;
   }
 
   .directions__title {
-    padding-left: 821px;
     margin: 0;
+    margin-left: 786px;
   }
 
   .directions__description {
-    padding-left: 821px;
-    margin-right: 130px;
+    margin-left: 786px;
+    margin-right: 160px;
   }
 
   .directions__list {
     position: absolute;
     top: 161px;
-    left: 91px;
+    left: 130px;
     margin-top: 0;
   }
 
@@ -126,6 +127,7 @@
 
   .direction__button {
     width: 274px;
-    margin-left: 821px;
+    margin-left: 786px;
+    margin-top: 102px;
   }
 }

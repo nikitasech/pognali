@@ -107,18 +107,6 @@
     display: flex;
   }
 
-  .main-header__actions .actions__item--call {
-    display: none;
-  }
-
-  .main-header__actions .actions__item--write {
-    display: none;
-  }
-
-  .main-header__actions .actions__item--auth {
-    width: 188px;
-  }
-
   .main-header__menu {
     top: 120px;
   }
@@ -137,6 +125,10 @@
     background-color: $blue;
   }
 
+  .main-header__logo-link {
+    width: 200px;
+  }
+
   .main-header__button-menu {
     display: none;
   }
@@ -145,19 +137,12 @@
     order: 1;
   }
 
-  .main-header__actions .actions__item--call {
-    display: block;
-  }
-
-  .main-header__actions .actions__item--write {
-    display: block;
-  }
-
   .main-header__menu {
     position: static;
 
     display: block;
     padding: 0;
+    margin-left: 39px;
 
     background-color: transparent;
   }

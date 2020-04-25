@@ -186,3 +186,61 @@
     padding-bottom: 80px;
   }
 }
+
+@media (min-width: 1440px) {
+  .rates {
+    padding-top: 75px;
+    padding-bottom: 20px;
+    background-image: url("../img/rates@1x.png"), url("../img/bg-rect-grey.svg");
+    background-position: 89% 285px, 75% 234px;
+    background-size: 198px, 444px 300px;
+  }
+
+  .rates__list {
+    margin: 0;
+    padding: 0;
+  }
+
+  .rates__list--counter {
+    margin-right: 330px;
+    margin-top: 109px;
+    padding: 0;
+    padding-left: 146px;
+
+    counter-reset: rates-counter;
+  }
+
+  .rates__item {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+    padding-bottom: 17px;
+  }
+
+  .rates__list--counter .rates__item::after {
+    top: 0;
+    left: -91px;
+
+    width: 67px;
+    height: 67px;
+  }
+
+  .rates__link {
+    display: flex;
+    align-items: center;
+    margin-top: 57px;
+
+    font-size: 20px;
+    line-height: 20px;
+    text-align: start;
+  }
+
+  .rates__modal {
+    top: 0;
+    right: 40px;
+    left: 40px;
+
+    max-width: none;
+    padding-bottom: 80px;
+  }
+}
