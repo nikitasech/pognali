@@ -112,6 +112,7 @@
 
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     flex-wrap: wrap;
     padding-top: 73px;
     padding-right: 60px;
@@ -126,7 +127,8 @@
   }
 
   .companions__info {
-    width: 675px;
+    max-width: 655px;
+    flex-grow: 1;
   }
 
   .companions__title {
@@ -135,14 +137,14 @@
   }
 
   .companions__description {
+    box-sizing: border-box;
     margin-right: 150px;
     margin-left: 54px;
-    box-sizing: border-box;
   }
 
   .companions__description--bold {
-    margin-right: 200px;
     box-sizing: border-box;
+    margin-right: 200px;
   }
 
   .companions__list {
