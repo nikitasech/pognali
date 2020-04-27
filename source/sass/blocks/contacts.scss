@@ -1,5 +1,7 @@
 .contacts__list--direct {
   margin-top: 50px;
+
+  text-transform: uppercase;
 }
 
 .direct-contacts__link--header {
@@ -14,4 +16,16 @@
 
 .social-contacts__button--header {
   background-color: transparent;
+}
+
+@media (min-width: 768px) {
+  .contacts__list--direct {
+    margin-top: 50px;
+    margin-left: 60px;
+  }
+
+  .contacts__list--socials {
+    justify-content: flex-start;
+    margin-left: 60px;
+  }
 }

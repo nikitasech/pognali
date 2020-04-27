@@ -29,14 +29,16 @@
 
 .country-card__link {
   flex-grow: 1;
+
+  font-weight: 700;
   font-size: 21px;
   line-height: 21px;
-  font-weight: 700;
-  text-decoration: none;
   color: $dark-two;
+  text-decoration: none;
 
   &::before {
     content: "";
+
     display: block;
   }
 }
@@ -44,22 +46,90 @@
 .country-card__description {
   margin: 0;
   margin-top: 5px;
+
+  font-weight: 500;
   font-size: 16px;
   line-height: 18px;
-  font-weight: 500;
   color: rgba($grey, 0.3);
 }
 
 .country-card__companions-counter {
   margin: 0;
 
-  opacity: 0.3;
+  color: rgba($grey, 0.3);
 
   &::before {
-    display: inline-block;
     content: url("../img/user.svg");
+
+    display: inline-block;
+    vertical-align: middle;
     width: 11px;
     height: 11px;
     margin-right: 8px;
+    opacity: 0.1;
+  }
+}
+
+@media (min-width: 768px) {
+  .country-card {
+    display: flex;
+
+    border-radius: 20px;
+  }
+
+  .country-card__image {
+    display: block;
+    order: 1;
+    width: 186px;
+    height: 140px;
+
+    border-radius: 0 20px 20px 0;
+  }
+
+  .country-card__wrapper {
+    position: relative;
+
+    flex-grow: 1;
+    flex-direction: column;
+    margin: 0;
+    padding: 29px 30px;
+    padding-bottom: 19px;
+
+    border-radius: 20px 0 0 20px;
+  }
+
+  .country-card__link {
+    font-size: 24px;
+    line-height: 24px;
+    color: $dark-two;
+
+    &::before {
+      content: "";
+
+      display: block;
+    }
+  }
+
+  .country-card__description {
+    font-size: 20px;
+    line-height: 17px;
+  }
+
+  .country-card__companions-counter {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+
+    font-size: 20px;
+    line-height: 30px;
+
+    &::before {
+      content: url("../img/user.svg");
+
+      display: block;
+      width: 21px;
+      height: 24px;
+      margin-right: 8px;
+    }
   }
 }

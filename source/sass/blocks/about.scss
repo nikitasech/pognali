@@ -1,17 +1,18 @@
 .about {
-  // z-index: 5;
-
-  padding: 290px 50px;
-  padding-right: 60px;
+  padding: 20px 50px;
+  padding-right: 46px;
   padding-bottom: 65px;
 
   background-color: $blue-grey;
+  background-image: url("../img/about-mobile@1x.png"), url("../img/bg-rect.svg");
+  background-repeat: no-repeat;
+  background-position: center 0, -8px 0;
+  background-size: auto, 113px 132px;
   border-radius: 0 0 30px 30px;
 }
 
 .about__title {
   margin: 0;
-  margin-top: 20px;
 }
 
 .about__text {
@@ -23,5 +24,72 @@
 
   &--bold {
     font-weight: 700;
+  }
+}
+
+.about__button {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .about {
+    padding: 38px 75px;
+    padding-right: 392px;
+    padding-bottom: 89px;
+
+    background-color: $blue-grey;
+    background-image: url("../img/about-tablet@1x.png"), url("../img/bg-rect.svg");
+    background-position: right 8px top 48px, 40px 0;
+    background-size: auto, 90% 213px;
+    border-radius: 0 0 60px 60px;
+  }
+
+  .about__text {
+    margin-top: 40px;
+
+    text-transform: none;
+
+    &--bold {
+      margin-top: 34px;
+
+      font-size: 21px;
+      line-height: 25px;
+    }
+  }
+
+  .about__button {
+    display: block;
+    margin-top: 52px;
+    width: 274px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .about {
+    padding: 128px 130px;
+    padding-right: 392px;
+    padding-bottom: 164px;
+
+    background-color: $blue-grey;
+    background-image: url("../img/about-desktop@1x.png"), url("../img/bg-rect.svg");
+    background-position: right 60px top 85px, 60px 70px;
+    background-size: auto, 213px 213px;
+    border-radius: 0 0 60px 60px;
+  }
+
+  .about__text {
+    margin-top: 59px;
+    margin-right: 280px;
+
+    &--bold {
+      margin-top: 40px;
+      margin-right: 450px;
+    }
+  }
+
+  .about__button {
+    display: block;
+    margin-top: 85px;
+    width: 274px;
   }
 }

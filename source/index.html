@@ -8,13 +8,44 @@
     <title>HTML Academy: Погнали</title>
   </head>
   <body>
-    <header class="main-header">
-      <div class="main-header__wrapper container">
-        <a class="main-header__logo-link">
-          <img class="main-header__logo logo" src="https://via.placeholder.com/100x19" alt="Логотип сервиса «Погнали»" width="100" height="19">
-        </a>
-        <button type="button" class="main-header__button-menu main-header__button-menu--opened">Открыть меню</button>
-      </div>
+    <header class="main-header container">
+      <a class="main-header__logo-link">
+        <img class="main-header__logo logo" src="https://via.placeholder.com/100x19" alt="Логотип сервиса «Погнали»" width="100" height="19">
+      </a>
+      <button type="button" class="main-header__button-menu main-header__button-menu--opened">Открыть меню</button>
+      <ul class="main-header__actions actions">
+        <li class="actions__item actions__item--header actions__item--call">
+          <a href="tel:+78005558628" class="actions__button actions__button--cal button">
+            <svg class="actions__icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 18 18" width="18" height="18">
+              <g>
+                <g>
+                  <g>
+                    <path class="st0" d="M12.6,18c-0.3,0-0.5,0-0.8,0c-3.6-0.4-6.2-2.1-8.1-4.3C1.8,11.6,0.3,8.8,0,5c0-0.3,0-0.7,0-1c0.1-0.7,0.4-1.1,0.8-1.5C1.2,2,2,1.4,2.6,1.3c0.5,0,1.3,0.3,1.6,0.8c0.3,0.4,0.4,1.2,0.6,1.8c0.1,0.6,0.4,1.4,0.4,2C5,6.8,3.9,7.2,3.5,7.8c1.1,2.8,3,4.8,5.4,6.2c0.6-0.3,1.2-1.4,2-1.4c0.3,0,0.7,0.2,1,0.3c0.3,0.1,0.6,0.2,1,0.4c0.5,0.2,1.4,0.5,1.7,0.9c0.3,0.4,0.5,1.2,0.4,1.7C14.9,16.7,13.4,17.7,12.6,18z"/>
+                  </g>
+                </g>
+                <path class="st0" d="M9.1,1.1c4.3,0,7.8,3.6,7.8,8H18c0-5-4-9.1-8.9-9.1L9.1,1.1z"/>
+                <path class="st0" d="M9.1,6.9V8c0.6,0,1,0.5,1,1.1h1.1C11.2,7.9,10.3,6.9,9.1,6.9z"/>
+                <path class="st0" d="M9.1,4.6c2.4,0,4.4,2,4.4,4.5h1.2c0-3.1-2.5-5.7-5.5-5.7V4.6L9.1,4.6z"/>
+              </g>
+            </svg>
+            Позвонить
+          </a>
+        </li>
+        <li class="actions__item actions__item--header actions__item--write">
+          <a href="mailto:mail@htmlacademy.ru" class="actions__button actions__button--write button">
+            <svg class="actions__icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 36 26" width="18" height="13">
+              <path class="st0" d="M0,23c0,1.6,1.3,3,3,3h30c1.7,0,3-1.3,3-3V3c0-1.6-1.3-3-3-3H3C1.3,0,0,1.3,0,3L0,23L0,23z M11,13L4.2,6.2
+              c-0.6-0.6-0.6-1.5,0-2c0.6-0.6,1.5-0.6,2.1,0l11,10.9c0.4,0.4,1.2,0.4,1.6,0l11-10.9c0.6-0.6,1.5-0.6,2.1,0c0.6,0.6,0.6,1.5,0,2
+              L25,13l6.9,6.8c0.6,0.6,0.6,1.5,0,2c-0.6,0.6-1.5,0.6-2.1,0l-6.9-6.8c0,0-2.1,2.2-2.5,2.5c-0.6,0.6-1.4,1-2.4,1
+              c-0.9,0-1.8-0.4-2.4-1c-0.4-0.4-2.5-2.5-2.5-2.5l-6.9,6.8c-0.6,0.6-1.5,0.6-2.1,0c-0.6-0.6-0.6-1.5,0-2L11,13z"/>
+            </svg>
+            Написать
+          </a>
+        </li>
+        <li class="actions__item actions__item--header actions__item--auth">
+          <a href="" class="actions__button actions__button--auth button">Авторизация</a>
+        </li>
+      </ul>
       <div class="main-header__menu container">
         <nav class="main-header__navigation navigation">
           <ul class="navigation__list">
@@ -29,7 +60,7 @@
             </li>
           </ul>
         </nav>
-        <a href="" class="main-header__button button">Авторизация</a>
+        <a href="" class="main-header__button main-header__button--auth button">Авторизация</a>
         <section class="main-header__contacts contacts">
           <h2 class="contacts__title visually-hidden">Наши контакты</h2>
           <ul class="contacts__list contacts__list--direct direct-contacts">
@@ -93,7 +124,7 @@
         </section>
       </div>
     </header>
-    <main class="main catalog">
+    <main class="main main--index">
       <h1 class="visually-hidden">Сервис «Погнали»</h1>
       <section class="main__intro intro container">
         <h2 class="visually-hidden">Основная информация</h2>
@@ -135,6 +166,8 @@
           <p class="quote__text">Лучшее приложение, что я видел в жизни!</p>
           <p class="quote__author">
             Мурат Эльтазин
+          </p>
+          <p class="quote__position">
             главный редактор
             газеты «гаджетлайф»
           </p>
@@ -164,12 +197,15 @@
           близкого по духу — скорее
           зовите в совместный трип!
         </p>
+        <a class="about__button button button--rect" href="">Подробнее</a>
       </section>
       <section class="main__directions directions container">
-        <h2 class="directions__title title">Направления</h2>
-        <p class="directions__description">
-          Мы не продаем туры и&nbsp;ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.
-        </p>
+        <div class="directions__info">
+          <h2 class="directions__title title">Направления</h2>
+          <p class="directions__description">
+            Мы не продаем туры и&nbsp;ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.
+          </p>
+        </div>
         <ul class="directions__list">
           <li class="directions__item country-card">
             <img class="country-card__image" src="https://via.placeholder.com/270x110" alt="Фотография скалы посреди моря в Таиланде" width="270" height="110">
@@ -210,13 +246,15 @@
         </a>
       </section>
       <section class="main__companions companions container">
-        <h2 class="companions__title title">Попутчики</h2>
-        <p class="companions__description">
-          Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.
-        </p>
-        <p class="companions__description companions__description--bold">
-          Теперь можно легко найти единомышленников!
-        </p>
+        <div class="companions__info">
+          <h2 class="companions__title title">Попутчики</h2>
+          <p class="companions__description">
+            Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.
+          </p>
+          <p class="companions__description companions__description--bold">
+            Теперь можно легко найти единомышленников!
+          </p>
+        </div>
         <ul class="companions__list">
           <li class="companions__item short-companion">
             <img src="https://via.placeholder.com/270x270" alt="Фотография Татьяны Фирсовой" width="270" height="270" class="short-companion__image">
@@ -351,7 +389,7 @@
             </p>
           </li>
         </ul>
-        <a href="" class="companions__button button  button--rect">
+        <a href="" class="companions__button companions__button--deploy button button--rect">
           Показать всех
           <svg class="button__icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 10 14">
             <polygon points="0,14 0,0.1 10,7.1"/>
@@ -449,7 +487,7 @@
         </div>
       </section>
     </main>
-    <footer class="main-footer container">
+    <footer class="main-footer main-footer--index container">
       <img src="https://via.placeholder.com/96x15" alt="Логотип сервиса «Погнали»" width="96" height="15" class="main-footer__img main-footer__img--logo">
       <ul class="main-footer__social social-contacts">
         <li class="social-contacts__item">

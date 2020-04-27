@@ -44,3 +44,24 @@
   position: relative;
   z-index: 0;
 }
+
+// .main * {
+//   opacity: 0;
+// }
+
+@media (min-width: 768px) {
+  .main__companions {
+    position: relative;
+    z-index: 3;
+
+    margin-top: -55px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .main {
+    &--index {
+      background-image: linear-gradient(to bottom, $blue-grey 0 750px, $basis-background 550px 1250px);
+    }
+  }
+}

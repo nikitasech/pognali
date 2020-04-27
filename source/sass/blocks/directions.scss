@@ -14,7 +14,7 @@
 .directions__description {
   margin: 0;
   margin-top: 20px;
-  margin-right: 50px;
+  margin-right: 45px;
   margin-left: 25px;
 }
 
@@ -52,4 +52,86 @@
 .direction__button {
   width: 100%;
   margin-top: 28px;
+}
+
+@media (min-width: 768px) {
+  .directions {
+    padding-top: 70px;
+    padding-right: 75px;
+    padding-bottom: 81px;
+    padding-left: 75px;
+
+    background-image: url("../img/flags-back@1x.png"), url("../img/bg-rect-grey.svg");
+    background-repeat: no-repeat;
+    background-position: right 40px top 80px, 40px 406px;
+    background-size: auto, 141px 141px;
+    border-radius: 60px;
+  }
+
+  .directions__title {
+    margin: 0;
+  }
+
+  .directions__description {
+    margin: 0;
+    margin-top: 57px;
+    margin-right: 270px;
+  }
+
+  .directions__list {
+    margin-top: 108px;
+  }
+
+  .directions__item {
+    margin-top: 10px;
+  }
+
+  .directions__item:first-child {
+    margin-top: 0;
+  }
+
+  .direction__button {
+    margin-top: 47px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .directions {
+    position: relative;
+
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 161px;
+    padding-bottom: 140px;
+
+    background-position: right 60px top 88px, 40px 406px;
+    background-size: auto, 141px 141px;
+  }
+
+  .directions__info {
+    width: 600px;
+    padding-left: 171px;
+    box-sizing: border-box;
+  }
+
+  .directions__description {
+    margin-top: 60px;
+    margin-right: 80px;
+  }
+
+  .directions__list {
+    order: -1;
+    margin-top: 0;
+    margin-left: 56px;
+  }
+
+  .directions__item {
+    width: 560px;
+  }
+
+  .direction__button {
+    width: 274px;
+    margin-top: -71px;
+    margin-left: 789px;
+  }
 }

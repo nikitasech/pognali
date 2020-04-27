@@ -8,28 +8,59 @@
     <title>HTML Academy: Погнали</title>
   </head>
   <body>
-    <header class="main-header">
-      <div class="main-header__wrapper">
-        <a class="main-header__logo-link" href="index.html">
-          <img src="https://via.placeholder.com/100x19" alt="Логотип сервиса «Погнали»" class="logo" width="100" height="19">
-        </a>
-        <button type="button" class="main-header__button main-header__button--open-menu">Открыть меню</button>
-      </div>
-      <div class="main-header__menu">
+    <header class="main-header container">
+      <a class="main-header__logo-link" href="index.html">
+        <img class="main-header__logo logo" src="https://via.placeholder.com/100x19" alt="Логотип сервиса «Погнали»" width="100" height="19">
+      </a>
+      <button type="button" class="main-header__button-menu main-header__button-menu--opened">Открыть меню</button>
+      <ul class="main-header__actions actions">
+        <li class="actions__item actions__item--call">
+          <a href="tel:+78005558628" class="actions__button actions__button--cal button">
+            <svg class="actions__icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 18 18" width="18" height="18">
+              <g>
+                <g>
+                  <g>
+                    <path class="st0" d="M12.6,18c-0.3,0-0.5,0-0.8,0c-3.6-0.4-6.2-2.1-8.1-4.3C1.8,11.6,0.3,8.8,0,5c0-0.3,0-0.7,0-1c0.1-0.7,0.4-1.1,0.8-1.5C1.2,2,2,1.4,2.6,1.3c0.5,0,1.3,0.3,1.6,0.8c0.3,0.4,0.4,1.2,0.6,1.8c0.1,0.6,0.4,1.4,0.4,2C5,6.8,3.9,7.2,3.5,7.8c1.1,2.8,3,4.8,5.4,6.2c0.6-0.3,1.2-1.4,2-1.4c0.3,0,0.7,0.2,1,0.3c0.3,0.1,0.6,0.2,1,0.4c0.5,0.2,1.4,0.5,1.7,0.9c0.3,0.4,0.5,1.2,0.4,1.7C14.9,16.7,13.4,17.7,12.6,18z"/>
+                  </g>
+                </g>
+                <path class="st0" d="M9.1,1.1c4.3,0,7.8,3.6,7.8,8H18c0-5-4-9.1-8.9-9.1L9.1,1.1z"/>
+                <path class="st0" d="M9.1,6.9V8c0.6,0,1,0.5,1,1.1h1.1C11.2,7.9,10.3,6.9,9.1,6.9z"/>
+                <path class="st0" d="M9.1,4.6c2.4,0,4.4,2,4.4,4.5h1.2c0-3.1-2.5-5.7-5.5-5.7V4.6L9.1,4.6z"/>
+              </g>
+            </svg>
+            Позвонить
+          </a>
+        </li>
+        <li class="actions__item actions__item--write">
+          <a href="mailto:mail@htmlacademy.ru" class="actions__button actions__button--write button">
+            <svg class="actions__icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 36 26" width="18" height="13">
+              <path class="st0" d="M0,23c0,1.6,1.3,3,3,3h30c1.7,0,3-1.3,3-3V3c0-1.6-1.3-3-3-3H3C1.3,0,0,1.3,0,3L0,23L0,23z M11,13L4.2,6.2
+              c-0.6-0.6-0.6-1.5,0-2c0.6-0.6,1.5-0.6,2.1,0l11,10.9c0.4,0.4,1.2,0.4,1.6,0l11-10.9c0.6-0.6,1.5-0.6,2.1,0c0.6,0.6,0.6,1.5,0,2
+              L25,13l6.9,6.8c0.6,0.6,0.6,1.5,0,2c-0.6,0.6-1.5,0.6-2.1,0l-6.9-6.8c0,0-2.1,2.2-2.5,2.5c-0.6,0.6-1.4,1-2.4,1
+              c-0.9,0-1.8-0.4-2.4-1c-0.4-0.4-2.5-2.5-2.5-2.5l-6.9,6.8c-0.6,0.6-1.5,0.6-2.1,0c-0.6-0.6-0.6-1.5,0-2L11,13z"/>
+            </svg>
+            Написать
+          </a>
+        </li>
+        <li class="actions__item actions__item--auth">
+          <a href="" class="actions__button actions__button--auth button">Авторизация</a>
+        </li>
+      </ul>
+      <div class="main-header__menu container">
         <nav class="main-header__navigation navigation">
           <ul class="navigation__list">
             <li class="navigation__item">
-              <a href="index.html" class="navigation__link link">О сервисе</a>
+              <a href="index.html" class="navigation__link link link--blue">О сервисе</a>
             </li>
             <li class="navigation__item">
-              <a href="form.html" class="navigation__link link">Направления</a>
+              <a href="form.html" class="navigation__link link link--blue">Направления</a>
             </li>
             <li class="navigation__item">
-              <a href="catalog.html" class="navigation__link link">Попутчики</a>
+              <a href="catalog.html" class="navigation__link link link--blue">Попутчики</a>
             </li>
           </ul>
         </nav>
-        <a href="" class="main-header__button main-header__button--auth button button--auth">Авторизация</a>
+        <a href="" class="main-header__button main-header__button--auth button">Авторизация</a>
         <section class="main-header__contacts contacts">
           <h2 class="contacts__title visually-hidden">Наши контакты</h2>
           <ul class="contacts__list contacts__list--direct direct-contacts">
@@ -46,7 +77,7 @@
             <li class="direct-contacts__item direct-contacts__item--email">
               <a href="mailto:mail@htmlacademy.ru" class="direct-contacts__link direct-contacts__link--header link">
                 <div class="direct-contacts__icon-wrapper">
-                  <svg class="direct-contacts__icon" version="1.1" xmlns="http://www.w3.org/2000/svg"x="0px" y="0px" viewBox="0 0 36 26" width="18" height="13">
+                  <svg class="direct-contacts__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 36 26" width="18" height="13">
                     <path class="st0" d="M0,23c0,1.6,1.3,3,3,3h30c1.7,0,3-1.3,3-3V3c0-1.6-1.3-3-3-3H3C1.3,0,0,1.3,0,3L0,23L0,23z M11,13L4.2,6.2
                     c-0.6-0.6-0.6-1.5,0-2c0.6-0.6,1.5-0.6,2.1,0l11,10.9c0.4,0.4,1.2,0.4,1.6,0l11-10.9c0.6-0.6,1.5-0.6,2.1,0c0.6,0.6,0.6,1.5,0,2
                     L25,13l6.9,6.8c0.6,0.6,0.6,1.5,0,2c-0.6,0.6-1.5,0.6-2.1,0l-6.9-6.8c0,0-2.1,2.2-2.5,2.5c-0.6,0.6-1.4,1-2.4,1
@@ -59,7 +90,7 @@
           </ul>
           <ul class="contacts__list contacts__list--socials social-contacts">
             <li class="social-contacts__item">
-              <a href="" class="social-contacts__button  social-contacts__button--header social-contacts__button--fb button">
+              <a href="" class="social-contacts__button social-contacts__button--header social-contacts__button--fb button">
                 <svg class="social-contacts__icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 11 21" width="11" height="21">
                   <g>
                     <path d="M7.8,21H2.2v-9.8H0V6.4h2.1C2,4.2,2.4,2.6,3.4,1.5C4.2,0.6,5.5,0.1,7.1,0L11,0v4.7H7.9C7.8,4.9,7.7,5.5,7.7,6.4H11v4.8H7.8V21z M3.4,19.9h3.1v-9.8h3.2V7.5H6.5l0-0.6c0-1.5,0-2.9,0.8-3.4l0.2-0.1h2.3V1.1H7.1C5.9,1.2,4.9,1.6,4.3,2.3C3.5,3.2,3.2,4.8,3.4,6.9l0.1,0.6H1.2v2.6h2.2V19.9z"/>
@@ -69,7 +100,7 @@
               </a>
             </li>
             <li class="social-contacts__item">
-              <a href="" class="social-contacts__button social-contacts__button--header social-contacts__button--vk button">
+              <a href="" class="social-contacts__button  social-contacts__button--header social-contacts__button--vk button">
                 <svg class="social-contacts__icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                 viewBox="0 0 30 15.8" width="23" height="12">
                   <g>
@@ -80,7 +111,7 @@
               </a>
             </li>
             <li class="social-contacts__item">
-              <a href="" class="social-contacts__button social-contacts__button--header social-contacts__button--insta button">
+              <a href="" class="social-contacts__button  social-contacts__button--header social-contacts__button--insta button">
                 <svg class="social-contacts__icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 23 23" width="18" height="18">
                   <path class="st0" d="M17,1.5c2.5,0,4.5,2,4.5,4.5v11c0,2.5-2,4.5-4.5,4.5H6c-2.5,0-4.5-2-4.5-4.5V6c0-2.5,2-4.5,4.5-4.5L17,1.5M17,0H6C2.7,0,0,2.7,0,6v11c0,3.3,2.7,6,6,6h11c3.3,0,6-2.7,6-6V6C23,2.7,20.3,0,17,0L17,0z"/>
                   <path class="st0" d="M11.5,7.1c2.4,0,4.4,2,4.4,4.4c0,2.4-2,4.4-4.4,4.4c-2.4,0-4.4-2-4.4-4.4C7.1,9.1,9.1,7.1,11.5,7.1 M11.5,5.6c-3.3,0-5.9,2.7-5.9,5.9s2.7,5.9,5.9,5.9s5.9-2.7,5.9-5.9S14.8,5.6,11.5,5.6L11.5,5.6z"/>
@@ -93,7 +124,7 @@
         </section>
       </div>
     </header>
-    <main class="main">
+    <main class="main main--form">
       <section class="main__title main-title">
         <h1 class="main-title__text">Направления</h1>
       </section>
