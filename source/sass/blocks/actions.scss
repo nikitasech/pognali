@@ -41,25 +41,19 @@
 }
 
 @media (min-width: 768px) {
-  .main-header__actions .actions__item--call {
+  .actions__item--header.actions__item--call,
+  .actions__item--header.actions__item--write {
     display: none;
   }
 
-  .main-header__actions .actions__item--write {
-    display: none;
-  }
-
-  .main-header__actions .actions__item--auth {
+  .actions__item--header.actions__item--auth {
     width: 188px;
   }
 }
 
 @media (min-width: 1440px) {
-  .main-header__actions .actions__item--call {
-    display: block;
-  }
-
-  .main-header__actions .actions__item--write {
+  .actions__item--header.actions__item--call,
+  .actions__item--header.actions__item--write {
     display: block;
   }
 

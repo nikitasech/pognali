@@ -98,27 +98,31 @@
 @media (min-width: 1440px) {
   .directions {
     position: relative;
+
+    display: flex;
+    flex-wrap: wrap;
     padding-top: 161px;
     padding-bottom: 140px;
+
     background-position: right 60px top 88px, 40px 406px;
     background-size: auto, 141px 141px;
   }
 
-  .directions__title {
-    margin: 0;
-    margin-left: 786px;
+  .directions__info {
+    width: 600px;
+    padding-left: 171px;
+    box-sizing: border-box;
   }
 
   .directions__description {
-    margin-left: 786px;
-    margin-right: 160px;
+    margin-top: 60px;
+    margin-right: 80px;
   }
 
   .directions__list {
-    position: absolute;
-    top: 161px;
-    left: 130px;
+    order: -1;
     margin-top: 0;
+    margin-left: 56px;
   }
 
   .directions__item {
@@ -127,7 +131,7 @@
 
   .direction__button {
     width: 274px;
-    margin-left: 786px;
-    margin-top: 102px;
+    margin-top: -71px;
+    margin-left: 789px;
   }
 }

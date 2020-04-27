@@ -4,10 +4,10 @@
 
 .companions-catalog__item {
   margin-top: 10px;
-}
 
-.companions-catalog__item:first-child {
-  margin-top: 0;
+  &:first-child {
+    margin-top: 0;
+  }
 }
 
 .companions-catalog__pagination {
