@@ -3,36 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Погнали</title>
-  <!-- Pixel Glass -->
-  <style>
-    html {
-      background-repeat: no-repeat;
-      background-position: 50% 0;
-      /* По умолчанию показывается мобильный макет */
-      background-image: url("img/pognali-index-mobile.png");
-    }
-    /* Планшет */
-    @media (min-width: 768px) {
-      html {
-        /* Планшетный макет */
-        background-image: url("img/pognali-index-tablet.png");
-      }
-    }
-    /* Десктоп */
-    @media (min-width: 1440px) {
-      html {
-        /* Десктопный макет */
-        background-image: url("img/pognali-index-desktop.png");
-      }
-    }
-  </style>
-  <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
-  <script src="../node_modules/pixel-glass/script.js"></script>
-  <!-- // Pixel Glass -->
   </head>
   <body>
     <header class="main-header container">
@@ -192,7 +165,9 @@
         <blockquote class="intro__quote quote">
           <p class="quote__text">Лучшее приложение, что я видел в жизни!</p>
           <p class="quote__author">
-            Мурат Эльтазин<br>
+            Мурат Эльтазин
+          </p>
+          <p class="quote__position">
             главный редактор
             газеты «гаджетлайф»
           </p>
@@ -222,7 +197,7 @@
           близкого по духу — скорее
           зовите в совместный трип!
         </p>
-        <button class="about__button button button--rect">Подробнее</button>
+        <a class="about__button button button--rect" href="">Подробнее</a>
       </section>
       <section class="main__directions directions container">
         <h2 class="directions__title title">Направления</h2>

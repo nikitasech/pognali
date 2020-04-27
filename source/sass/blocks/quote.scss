@@ -23,11 +23,17 @@
   }
 }
 
-.quote__author {
+.quote__author,
+.quote__position {
   width: 180px;
   margin-top: 18px;
+  margin-bottom: 0;
 
   font-weight: 700;
+}
+
+.quote__position {
+  margin-top: 0;
 }
 
 @media (min-width: 768px) {
@@ -39,11 +45,16 @@
     width: 260px;
   }
 
-  .quote__author {
+  .quote__author,
+  .quote__position {
     width: 260px;
     margin-top: 43px;
 
     font-size: 21px;
     line-height: 25px;
+  }
+
+  .quote__position {
+    margin-top: 0;
   }
 }

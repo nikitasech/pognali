@@ -6,7 +6,7 @@
   background-color: $blue-grey;
   background-image: url("../img/about-mobile@1x.png"), url("../img/bg-rect.svg");
   background-repeat: no-repeat;
-  background-position: 71% 0, -8px 0;
+  background-position: center 0, -8px 0;
   background-size: auto, 113px 132px;
   border-radius: 0 0 30px 30px;
 }
@@ -39,7 +39,7 @@
 
     background-color: $blue-grey;
     background-image: url("../img/about-tablet@1x.png"), url("../img/bg-rect.svg");
-    background-position: 98% 48px, 40px 0;
+    background-position: right 8px top 48px, 40px 0;
     background-size: auto, 90% 213px;
     border-radius: 0 0 60px 60px;
   }
@@ -72,7 +72,7 @@
 
     background-color: $blue-grey;
     background-image: url("../img/about-desktop@1x.png"), url("../img/bg-rect.svg");
-    background-position: 93% 85px, 60px 70px;
+    background-position: right 60px top 85px, 60px 70px;
     background-size: auto, 213px 213px;
     border-radius: 0 0 60px 60px;
   }

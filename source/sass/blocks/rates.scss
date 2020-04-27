@@ -3,6 +3,10 @@
   padding-bottom: 20px;
 
   background-color: $basis-background;
+  background-image: url("../img/rates@1x.png");
+  background-repeat: no-repeat;
+  background-position: right 26px top 39px;
+  background-size: 99px;
 }
 
 .rates__descriprtion {
@@ -17,11 +21,6 @@
   font-size: 24px;
   line-height: 24px;
   color: $mango;
-
-  background-image: url("../img/rates@1x.png");
-  background-repeat: no-repeat;
-  background-position: right center;
-  background-size: 99px;
 }
 
 .rates__list {
@@ -124,7 +123,7 @@
 
     background-image: url("../img/rates@1x.png"), url("../img/bg-rect-grey.svg");
     background-repeat: no-repeat;
-    background-position: 87% 410px, 93% 149px;
+    background-position: right 86px top 409px, right 40px top 149px;
     background-size: 99px, 198px 285px;
   }
 
@@ -191,8 +190,9 @@
   .rates {
     padding-top: 75px;
     padding-bottom: 20px;
+
     background-image: url("../img/rates@1x.png"), url("../img/bg-rect-grey.svg");
-    background-position: 89% 285px, 75% 234px;
+    background-position: right 134px top 286px, right 246px top 234px;
     background-size: 198px, 444px 300px;
   }
 
@@ -202,8 +202,8 @@
   }
 
   .rates__list--counter {
-    margin-right: 330px;
     margin-top: 109px;
+    margin-right: 330px;
     padding: 0;
     padding-left: 146px;
 
