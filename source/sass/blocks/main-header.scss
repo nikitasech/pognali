@@ -8,9 +8,13 @@
   padding-bottom: 27px;
 
   background-color: $blue;
+
+  &--white {
+    background-color: $white;
+  }
 }
 
-.main-header__button-menu {
+.main-header__toggle {
   position: relative;
 
   width: 25px;
@@ -50,11 +54,7 @@
   }
 }
 
-.main-header__actions {
-  display: none;
-}
-
-.main-header__button-menu--open {
+.main-header__toggle--opened {
   &::before {
     background-color: darken($white, 20%);
     transform: translateY(4px) rotate(45deg);
@@ -64,6 +64,10 @@
     background-color: darken($white, 20%);
     transform: translateY(-4px) rotate(-45deg);
   }
+}
+
+.main-header__actions {
+  display: none;
 }
 
 .main-header__menu {
@@ -84,7 +88,7 @@
   display: block;
 }
 
-.main-header__button {
+.main-header__auth-button {
   width: 100%;
   margin-top: 53px;
   padding-top: 10px;
@@ -97,6 +101,10 @@
     padding-bottom: 40px;
 
     background-color: $blue-grey;
+
+    &--white {
+      background-color: $white;
+    }
   }
 
   .main-header__logo-link {
@@ -111,7 +119,7 @@
     top: 120px;
   }
 
-  .main-header__button--auth {
+  .main-header__auth-button {
     display: none;
   }
 }
@@ -129,7 +137,7 @@
     width: 200px;
   }
 
-  .main-header__button-menu {
+  .main-header__toggle {
     display: none;
   }
 
