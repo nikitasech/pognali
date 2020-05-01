@@ -18,7 +18,7 @@
   background-color: transparent;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .contacts__list--direct {
     margin-top: 50px;
     margin-left: 60px;

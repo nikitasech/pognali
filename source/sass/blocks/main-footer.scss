@@ -25,7 +25,7 @@
   margin-top: 37px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .main-footer {
     display: flex;
     flex-direction: row;
@@ -57,7 +57,7 @@
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: $desktop-width) {
   .main-footer__img--logo {
     width: 198px;
     height: 52px;

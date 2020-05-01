@@ -40,7 +40,7 @@
   width: 100%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .main-header__actions .actions__item--call,
   .main-header__actions .actions__item--write {
     display: none;
@@ -51,7 +51,7 @@
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: $desktop-width) {
   .main-header__actions .actions__item--call,
   .main-header__actions .actions__item--write {
     display: block;

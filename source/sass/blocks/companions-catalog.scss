@@ -14,7 +14,7 @@
   margin-top: 20px;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: $desktop-width) {
   .companions-catalog__list {
     max-width: 950px;
   }

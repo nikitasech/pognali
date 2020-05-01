@@ -29,14 +29,14 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .main-title {
     background-color: $blue-grey;
     border-radius: 0 0 30px 30px;
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: $desktop-width) {
   .main-title {
     background-color: $dark-two;
     border-radius: 0 0 60px 60px;

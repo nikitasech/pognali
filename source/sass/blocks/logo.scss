@@ -1,4 +1,4 @@
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .logo {
     display: block;
     width: 164px;
@@ -6,7 +6,7 @@
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: $desktop-width) {
   .logo {
     display: block;
     width: 200px;
