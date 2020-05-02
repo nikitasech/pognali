@@ -7,6 +7,10 @@
   background-repeat: no-repeat;
   background-position: right 26px top 39px;
   background-size: 99px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/rates@2x.png");
+  }
 }
 
 .rates__descriprtion {
@@ -114,7 +118,7 @@
   text-align: center;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .rates {
     padding-top: 42px;
     padding-right: 75px;
@@ -125,6 +129,10 @@
     background-repeat: no-repeat;
     background-position: right 86px top 409px, right 40px top 149px;
     background-size: 99px, 198px 285px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/rates@2x.png"), url("../img/bg-rect-grey.svg");
+    }
   }
 
   .rates__descriprtion {
@@ -186,12 +194,11 @@
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: $desktop-width) {
   .rates {
     padding-top: 75px;
     padding-bottom: 20px;
 
-    background-image: url("../img/rates@1x.png"), url("../img/bg-rect-grey.svg");
     background-position: right 134px top 286px, right 246px top 234px;
     background-size: 198px, 444px 300px;
   }

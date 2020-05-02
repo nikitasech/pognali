@@ -14,6 +14,14 @@
   }
 }
 
+.main-header__logo {
+  display: none;
+}
+
+.main-header__logo--selected {
+  display: block;
+}
+
 .main-header__toggle {
   position: relative;
 
@@ -72,7 +80,7 @@
 
 .main-header__menu {
   position: absolute;
-  top: 79px;
+  top: 72px;
   left: 0;
   z-index: 1;
 
@@ -95,7 +103,7 @@
   padding-bottom: 10px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .main-header {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -116,7 +124,7 @@
   }
 
   .main-header__menu {
-    top: 120px;
+    top: 129px;
   }
 
   .main-header__auth-button {
@@ -124,7 +132,7 @@
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: $desktop-width) {
   .main-header {
     display: flex;
     padding-top: 47px;

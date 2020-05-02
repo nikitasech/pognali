@@ -62,17 +62,20 @@
     content: url("../img/user.svg");
 
     display: inline-block;
-    vertical-align: middle;
     width: 11px;
     height: 11px;
     margin-right: 8px;
+
+    vertical-align: middle;
+
     opacity: 0.1;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .country-card {
     display: flex;
+    flex-direction: row-reverse;
 
     border-radius: 20px;
   }

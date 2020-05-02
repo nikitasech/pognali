@@ -45,11 +45,7 @@
   z-index: 0;
 }
 
-// .main * {
-//   opacity: 0;
-// }
-
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .main__companions {
     position: relative;
     z-index: 3;
@@ -58,7 +54,7 @@
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: $desktop-width) {
   .main {
     &--index {
       background-image: linear-gradient(to bottom, $blue-grey 0 750px, $basis-background 550px 1250px);
