@@ -14,6 +14,14 @@
   }
 }
 
+.main-header__logo {
+  display: none;
+}
+
+.main-header__logo--selected {
+  display: block;
+}
+
 .main-header__toggle {
   position: relative;
 
@@ -72,7 +80,7 @@
 
 .main-header__menu {
   position: absolute;
-  top: 79px;
+  top: 72px;
   left: 0;
   z-index: 1;
 
@@ -116,7 +124,7 @@
   }
 
   .main-header__menu {
-    top: 120px;
+    top: 129px;
   }
 
   .main-header__auth-button {
