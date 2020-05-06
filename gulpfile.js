@@ -58,6 +58,23 @@ gulp.task("optiimg", function() {
   .pipe(gulp.dest("source/img"));
 });
 
+gulp.task("svgo", function() {
+  return gulp.src("source/img/**/*.svg")
+  .pipe(imagemin([
+    imagemin.svgo({
+      plugins: [
+        {removeXMLProcInst: true},
+        {removeComments: true},
+        {minifyStyles: true},
+        {convertStyleToAttrs: true},
+        {removeUselessStrokeAndFill: true}
+      ]
+    })
+  ]))
+  .pipe(gulpIgnore.include("source/img/**/sprite.svg"))
+  .pipe(gulp.dest("source/img"));
+});
+
 gulp.task("webp", function() {
   return gulp.src("source/img/**/*.{png,jpg}")
     .pipe(webp({quality: 85}))

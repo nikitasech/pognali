@@ -38,8 +38,27 @@
   height: 24px;
   margin-left: 18px;
 
-  background-color: $blue;
   border-radius: 5px;
+
+  &--sri-lanka {
+    background-image: url("../img/flag-sri-lanka.svg");
+  }
+
+  &--thailand {
+    background-image: url("../img/flag-thailand.svg");
+  }
+
+  &--seychelles {
+    background-image: url("../img/flag-seychelles.svg");
+  }
+
+  &--belgium {
+    background-image: url("../img/flag-belgium.svg");
+  }
+
+  &--czech {
+    background-image: url("../img/flag-czech.svg");
+  }
 }
 
 .short-companion__countries-item:first-child {
@@ -140,6 +159,7 @@
 
   .short-companion__hashtags-list {
     margin-top: 21px;
+
     font-size: 20px;
     line-height: 24px;
   }
