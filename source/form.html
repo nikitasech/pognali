@@ -12,7 +12,7 @@
       <include src="build/img/sprite.svg"></include>
     </div>
     <header class="main-header container">
-      <a class="main-header__logo-link">
+      <a class="main-header__logo-link" href="index.html">
         <picture>
           <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x">
           <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x">
@@ -58,13 +58,13 @@
         <nav class="main-header__navigation navigation">
           <ul class="navigation__list">
             <li class="navigation__item">
-              <a href="index.html" class="navigation__link link link--blue">О сервисе</a>
+              <a href="index.html" class="navigation__link">О сервисе</a>
             </li>
             <li class="navigation__item">
-              <a href="form.html" class="navigation__link link link--blue">Направления</a>
+              <a href="form.html" class="navigation__link">Направления</a>
             </li>
             <li class="navigation__item">
-              <a href="catalog.html" class="navigation__link link link--blue">Попутчики</a>
+              <a href="catalog.html" class="navigation__link">Попутчики</a>
             </li>
           </ul>
         </nav>
@@ -139,7 +139,7 @@
         <input class="visually-hidden" type="file" name="profile__change-image" id="profile__change-image">
         <p class="form__paragraph">
           <label class="form__title form__title--border" for="profile__tags">Теги</label>
-          <textarea class="form__field" type="text" name="profile__tags" id="profile__tags">#бургер #бар #футбол #концерт #крафт</textarea>
+          <textarea class="form__field" name="profile__tags" id="profile__tags">#бургер #бар #футбол #концерт #крафт</textarea>
         </p>
         <p class="form__paragraph">
           <span class="form__title form__title--border">Транспорт</span>
@@ -500,15 +500,17 @@
       </section>
     </main>
     <footer class="main-footer main-footer--index container">
-      <picture>
-        <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.webp 1x, img/logo-desktop-blue@2x.webp 2x">
-        <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x">
-        <source type="image/webp" srcset="img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x">
+      <a class="main-footer__logo-link" href="index.html">
+        <picture>
+          <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.webp 1x, img/logo-desktop-blue@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x">
+          <source type="image/webp" srcset="img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x">
 
-        <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
-        <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
-        <img class="main-footer__logo logo" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" alt="Логотип сервиса «Погнали»" width="96" height="15">
-      </picture>
+          <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
+          <img class="main-footer__logo logo" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" alt="Логотип сервиса «Погнали»" width="96" height="15">
+        </picture>
+      </a>
       <ul class="main-footer__social social-contacts">
         <li class="social-contacts__item">
           <a href="" class="social-contacts__button social-contacts__button--fb button">

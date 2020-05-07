@@ -1,7 +1,7 @@
 "use strict";
 
 var gulp = require("gulp");
-var gulpIgnore = require('gulp-ignore');
+var gulpIgnore = require("gulp-ignore");
 var plumber = require("gulp-plumber");
 var sourcemap = require("gulp-sourcemaps");
 var sass = require("gulp-sass");
@@ -22,7 +22,12 @@ gulp.task("html", function() {
     .pipe(posthtml([
       include()
     ]))
-    .pipe(gulp.dest("build"))
+    .pipe(gulp.dest("build"));
+});
+
+gulp.task("js", function() {
+  return gulp.src("source/js/*.js")
+    .pipe(gulp.dest("build/js"));
 });
 
 gulp.task("css", function() {
@@ -131,6 +136,7 @@ gulp.task("server", function() {
   gulp.watch("source/sass/**/*.scss", gulp.series("css"));
   gulp.watch("source/img/**/icon-*.svg", gulp.series("sprite", "html", "refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
+  gulp.watch("source/js/**/*.js", gulp.series("js", "refresh"));
 });
 
 gulp.task("start", gulp.series("css", "server"));
