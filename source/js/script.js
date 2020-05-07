@@ -16,7 +16,6 @@ toggleMenu.addEventListener('click', function() {
       toggleMenu.classList.remove('main-header__toggle--opened');
       toggleMenu.classList.add('main-header__toggle--closed');
       toggleMenu.classList.remove('main-header__toggle--close-animation');
-      console.log("Закрытие меню!");
     }, 450);
   } else {
     header.classList.add('main-header--white');
@@ -29,7 +28,6 @@ toggleMenu.addEventListener('click', function() {
       toggleMenu.classList.remove('main-header__toggle--closed');
       toggleMenu.classList.add('main-header__toggle--opened');
       toggleMenu.classList.remove('main-header__toggle--open-animation');
-      console.log("Открытие меню!");
     }, 450);
   }
 });
