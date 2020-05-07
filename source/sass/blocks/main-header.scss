@@ -33,7 +33,23 @@
   background-color: transparent;
   border: none;
 
-  &::before {
+  &--open-animation::before {
+    animation: open-before-hamburger 0.5s;
+  }
+
+  &--open-animation::after {
+    animation: open-after-hamburger 0.5s;
+  }
+
+  &--close-animation::before {
+    animation: close-before-hamburger 0.5s;
+  }
+
+  &--close-animation::after {
+    animation: close-after-hamburger 0.5s;
+  }
+
+  &--closed::before {
     content: "";
     position: absolute;
     top: 0;
@@ -47,7 +63,7 @@
     border-radius: 5px;
   }
 
-  &::after {
+  &--closed::after {
     content: "";
     position: absolute;
     right: 0;
@@ -60,16 +76,34 @@
     background-color: $white;
     border-radius: 5px;
   }
-}
 
-.main-header__toggle--opened {
-  &::before {
+  &--opened::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+    width: 25px;
+    height: 3px;
+
     background-color: darken($white, 20%);
+    border-radius: 5px;
     transform: translateY(4px) rotate(45deg);
   }
 
-  &::after {
+  &--opened::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    display: block;
+    width: 25px;
+    height: 3px;
+
     background-color: darken($white, 20%);
+    border-radius: 5px;
     transform: translateY(-4px) rotate(-45deg);
   }
 }
@@ -157,8 +191,8 @@
     position: static;
 
     display: block;
-    padding: 0;
     margin-left: 39px;
+    padding: 0;
 
     background-color: transparent;
   }

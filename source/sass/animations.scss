@@ -1,5 +1,15 @@
-@keyframes before-hamburger {
+@keyframes open-before-hamburger {
+  0% {
+    background-color: $white;
+    transform: rotate(0) translateY(0);
+  }
+
+  15% {
+    background-color: darken($white, 20%);
+  }
+
   50% {
+    background-color: darken($white, 20%);
     transform: translateY(4px);
     transform-origin: 50% 50%;
 
@@ -7,6 +17,7 @@
   }
 
   100% {
+    background-color: darken($white, 20%);
     transform: translateY(4px) rotate(45deg);
     transform-origin: 50% 50%;
 
@@ -14,8 +25,18 @@
   }
 }
 
-@keyframes after-hamburger {
+@keyframes open-after-hamburger {
+  0% {
+    background-color: $white;
+    transform: rotate(0) translateY(0);
+  }
+
+  15% {
+    background-color: darken($white, 20%);
+  }
+
   50% {
+    background-color: darken($white, 20%);
     transform: translateY(-4px);
     transform-origin: 50% 50%;
 
@@ -23,7 +44,68 @@
   }
 
   100% {
+    background-color: darken($white, 20%);
     transform: translateY(-4px) rotate(-45deg);
+    transform-origin: 50% 50%;
+
+    transition-timing-function: ease-in-out;
+  }
+}
+
+@keyframes close-before-hamburger {
+  0% {
+    background-color: darken($white, 20%);
+    transform: translateY(4px) rotate(45deg);
+    transform-origin: 50% 50%;
+
+    transition-timing-function: ease-in-out;
+  }
+
+  15% {
+    background-color: $white;
+  }
+
+  50% {
+    background-color: $white;
+    transform: translateY(4px) rotate(0);
+    transform-origin: 50% 50%;
+
+    transition-timing-function: ease-in-out;
+  }
+
+  100% {
+    background-color: $white;
+    transform: rotate(0) translateY(0);
+    transform-origin: 50% 50%;
+
+    transition-timing-function: ease-in-out;
+  }
+}
+
+@keyframes close-after-hamburger {
+  0% {
+    background-color: darken($white, 20%);
+    transform: translateY(-4px) rotate(-45deg);
+    transform-origin: 50% 50%;
+
+    transition-timing-function: ease-in-out;
+  }
+
+  15% {
+    background-color: $white;
+  }
+
+  50% {
+    background-color: $white;
+    transform: translateY(-4px) rotate(0);
+    transform-origin: 50% 50%;
+
+    transition-timing-function: ease-in-out;
+  }
+
+  100% {
+    background-color: $white;
+    transform: rotate(0) translateY(0);
     transform-origin: 50% 50%;
 
     transition-timing-function: ease-in-out;

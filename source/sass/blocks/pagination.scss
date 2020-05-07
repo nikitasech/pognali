@@ -1,15 +1,37 @@
+.pagination {
+  display: flex;
+  flex-direction: column;
+}
+
 .pagination__deploy {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
+  margin-right: auto;
+  margin-left: auto;
 
+  text-align: center;
   font-weight: 700;
   font-size: 17px;
   line-height: 30px;
   color: $blue-slate;
   text-transform: uppercase;
   text-decoration: none;
+
+  &:hover {
+    color: rgba($blue-slate, 0.6);
+  }
+
+  &:active {
+    color: rgba($blue-slate, 0.3);
+  }
+}
+
+.pagination__deploy-icon {
+  margin-right: 10px;
+
+  fill: currentColor;
 }
 
 .pagination__wrapper {
@@ -67,6 +89,11 @@
 
 .pagination__icon {
   fill: $blue-grey;
+
+  &--next {
+    transform: rotate(180deg);
+    transform-origin: center;
+  }
 }
 
 .pagination__button:hover > .pagination__icon {

@@ -59,7 +59,7 @@
   color: rgba($grey, 0.3);
 
   &::before {
-    content: url("../img/user.svg");
+    content: url("../img/icon-user.svg");
 
     display: inline-block;
     width: 11px;
@@ -127,7 +127,7 @@
     line-height: 30px;
 
     &::before {
-      content: url("../img/user.svg");
+      content: url("../img/icon-user.svg");
 
       display: block;
       width: 21px;

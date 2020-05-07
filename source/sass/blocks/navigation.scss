@@ -6,11 +6,35 @@
 }
 
 .navigation__link {
+  display: inline-block;
+  overflow: hidden;
+
   font-weight: 500;
   font-size: 30px;
   line-height: 36px;
   color: $blue-grey;
   text-decoration: none;
+
+  &:hover .navigation__link-text {
+    transform: translateY(-100%);
+  }
+}
+
+.navigation__link-text {
+  position: relative;
+
+  display: inline-block;
+
+  transition: transform 0.3s;
+
+  &::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    color: $gold;
+  }
 }
 
 @media (min-width: $tablet-width) {

@@ -11,14 +11,23 @@ toggleMenu.addEventListener('click', function() {
     whiteLogo.classList.add('main-header__logo--selected');
     blueLogo.classList.remove('main-header__logo--selected');
 
-    if (toggleMenu.classList.contains('main-header__toggle--opened')) {
+    toggleMenu.classList.add('main-header__toggle--close-animation');
+    setTimeout(function () {
       toggleMenu.classList.remove('main-header__toggle--opened');
-    }
+      toggleMenu.classList.add('main-header__toggle--closed');
+      toggleMenu.classList.remove('main-header__toggle--close-animation');
+    }, 450);
   } else {
     header.classList.add('main-header--white');
     menu.classList.add('main-header__menu--opened');
-    toggleMenu.classList.add('main-header__toggle--opened');
     whiteLogo.classList.remove('main-header__logo--selected');
     blueLogo.classList.add('main-header__logo--selected');
+
+    toggleMenu.classList.add('main-header__toggle--open-animation');
+    setTimeout(function () {
+      toggleMenu.classList.remove('main-header__toggle--closed');
+      toggleMenu.classList.add('main-header__toggle--opened');
+      toggleMenu.classList.remove('main-header__toggle--open-animation');
+    }, 450);
   }
 });
