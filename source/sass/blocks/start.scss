@@ -3,7 +3,7 @@
 
   position: relative;
 
-  background-image: linear-gradient(to bottom, $mango 0 90px, $mango-three 90px 180px, $mango-two 180px 360px);
+  background-image: linear-gradient(to bottom, $mango 0, $mango 90px, $mango-three 90px, $mango-three 180px, $mango-two 180px, $mango-two 360px);
   border-radius: 10px;
 
   counter-reset: start-counter;
@@ -123,21 +123,35 @@
 
 @media (min-width: $desktop-width) {
   .start {
+    flex-wrap: nowrap;
     width: 100%;
 
-    background-image: linear-gradient(to right, $mango 0 30%, $mango-three 30% 60%, $mango-two 60% 90%);
+    background-image: linear-gradient(to right, $mango 30%, $mango-three 30%, $mango-three 60%, $mango-two 60%, $mango-two 90%);
   }
 
   .start__item {
-    width: 25%;
+    flex-grow: 1;
     min-width: 315px;
-    padding-bottom: 30px;
+    padding-top: 27px;
+    padding-bottom: 32px;
+    padding-left: 30px;
 
     &::before {
-      top: 21px;
-      right: 20px;
+      top: 27px;
+      right: 33px;
       bottom: auto;
       left: auto;
+
+      font-size: 24px;
+    }
+
+    &:first-child {
+      width: 315px;
+      padding-left: 35px;
+    }
+
+    &:last-child {
+      width: 315px;
     }
 
     &:nth-of-type(1) {

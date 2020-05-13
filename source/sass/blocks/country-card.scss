@@ -35,11 +35,37 @@
   line-height: 21px;
   color: $dark-two;
   text-decoration: none;
+}
+
+.country-card__title {
+  position: relative;
+
+  margin: 0;
+
+  font-size: 21px;
+  line-height: 21px;
 
   &::before {
     content: "";
+    position: absolute;
+    top: -35px;
+    left: 0;
 
     display: block;
+    width: 35px;
+    height: 24px;
+  }
+
+  &--thailand::before {
+    content: url("../img/flag-thailand.svg");
+  }
+
+  &--france::before {
+    content: url("../img/flag-france.svg");
+  }
+
+  &--сzech::before {
+    content: url("../img/flag-czech.svg");
   }
 }
 
@@ -66,7 +92,7 @@
     height: 11px;
     margin-right: 8px;
 
-    vertical-align: middle;
+    vertical-align: top;
 
     opacity: 0.1;
   }
@@ -110,6 +136,30 @@
       content: "";
 
       display: block;
+    }
+  }
+
+  .country-card__title {
+    &::before {
+      top: 0;
+      right: -65px;
+      left: auto;
+
+      display: block;
+      width: 70px;
+      height: 47px;
+    }
+
+    &--thailand::before {
+      content: url("../img/flag-thailand.svg");
+    }
+
+    &--france::before {
+      content: url("../img/flag-france.svg");
+    }
+
+    &--сzech::before {
+      content: url("../img/flag-czech.svg");
     }
   }
 

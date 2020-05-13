@@ -137,6 +137,14 @@
   padding-bottom: 10px;
 }
 
+.main-header__contacts {
+  margin-top: 30px;
+}
+
+.main-header__socials {
+  margin-top: 30px;
+}
+
 @media (min-width: $tablet-width) {
   .main-header {
     padding-top: 40px;
@@ -192,12 +200,17 @@
 
     display: block;
     margin-left: 39px;
+    margin-top: 10px;
     padding: 0;
 
     background-color: transparent;
   }
 
   .main-header__contacts {
+    display: none;
+  }
+
+  .main-header__socials {
     display: none;
   }
 }

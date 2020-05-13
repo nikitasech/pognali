@@ -34,6 +34,9 @@
   width: 10px;
   height: 14px;
 
+  transform: rotate(180deg);
+  transform-origin: center;
+
   fill: $blue-slate;
 }
 
@@ -51,6 +54,10 @@
   border-radius: 10px;
 }
 
+.button--border {
+  box-shadow: inset 0 0 0 3px #121b42;
+}
+
 @media (min-width: $tablet-width) {
   .button {
     padding: 10px 0;
@@ -66,10 +73,5 @@
     line-height: 24px;
 
     border-radius: 20px;
-  }
-
-  .button__icon {
-    transform-origin: center;
-    transform: rotate(180deg);
   }
 }

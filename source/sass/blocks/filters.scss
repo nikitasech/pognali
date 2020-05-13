@@ -1,0 +1,75 @@
+.filters {
+  margin-right: 25px;
+  margin-left: 25px;
+  padding-top: 22px;
+  padding-right: 25px;
+  padding-bottom: 22px;
+  padding-left: 25px;
+
+  background-color: $gold;
+  border-radius: 20px;
+}
+
+.filters__description {
+  font-size: 23px;
+  line-height: 23px;
+  font-weight: 700;
+  color: $blue-slate;
+  margin-right: 20%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.filters__form {
+  margin-top: 20px;
+}
+
+.filters__set {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 19px;
+
+  border: none;
+  border-top: 1px solid $macaroni-and-cheese;
+}
+
+.filters__legend {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  float: left;
+  width: 100%;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: $blue-slate;
+  text-transform: uppercase;
+  cursor: default;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.filters__set-button {
+  padding: 17px 17px;
+
+  font-size: 0;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.filters__set-button-icon {
+  fill: currentColor;
+
+  &--opened {
+    transform: rotate(180deg);
+  }
+}

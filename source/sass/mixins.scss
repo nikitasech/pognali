@@ -21,3 +21,21 @@
   clip: rect(0 0 0 0);
   clip-path: inset(100%);
 }
+
+@mixin mobile-container {
+  box-sizing: border-box;
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+@mixin tablet-container {
+  box-sizing: border-box;
+  padding-right: 40px;
+  padding-left: 40px;
+}
+
+@mixin desktop-container {
+  box-sizing: border-box;
+  padding-right: 60px;
+  padding-left: 60px;
+}

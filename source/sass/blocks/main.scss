@@ -1,11 +1,8 @@
 .main {
   position: relative;
   z-index: 0;
-  background-color: $basis-background;
 
-  &--catalog-page {
-    padding-bottom: 285px;
-  }
+  background-color: $basis-background;
 }
 
 .main__intro {
@@ -27,17 +24,19 @@
   position: relative;
   z-index: 3;
 
-  margin-top: -30px;
+  margin-top: -35px;
 }
 
 .main__rates {
   position: relative;
-  z-index: 3;
+  z-index: 2;
 }
 
 .main__registration {
   position: relative;
   z-index: 1;
+
+  margin-top: -35px;
 }
 
 .main__contacts {
@@ -45,19 +44,31 @@
   z-index: 0;
 }
 
+.main__countries-filters {
+  position: relative;
+  z-index: -1;
+
+  margin-top: -25px;
+}
+
 @media (min-width: $tablet-width) {
   .main__companions {
-    position: relative;
-    z-index: 3;
+    margin-top: -55px;
+  }
 
+  .main__registration {
     margin-top: -55px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .main {
-    &--index {
-      background-image: linear-gradient(to bottom, $blue-grey 0 750px, $basis-background 550px 1250px);
-    }
+  .main__companions {
+    margin-top: -65px;
+    padding-top: 82px;
+  }
+
+  .main__registration {
+    margin-top: -65px;
+    padding-top: 82px;
   }
 }

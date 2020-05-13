@@ -1,3 +1,4 @@
+@import "pixel-glass.scss";
 @import "fonts.scss";
 @import "variables.scss";
 @import "mixins.scss";
@@ -7,11 +8,11 @@
 @import "blocks/title.scss";
 @import "blocks/link.scss";
 @import "blocks/button.scss";
+@import "blocks/form.scss";
 @import "blocks/logo.scss";
 @import "blocks/modal.scss";
 @import "blocks/level.scss";
-@import "blocks/social-contacts.scss";
-@import "blocks/direct-contacts.scss";
+@import "blocks/socials.scss";
 @import "blocks/contacts.scss";
 @import "blocks/actions.scss";
 @import "blocks/quote.scss";
@@ -32,3 +33,9 @@
 @import "blocks/companions.scss";
 @import "blocks/rates.scss";
 @import "blocks/companions-catalog.scss";
+@import "blocks/registration.scss";
+@import "blocks/main-contacts.scss";
+@import "blocks/countries-filters.scss";
+@import "blocks/alphabet.scss";
+@import "blocks/filters.scss";
+@import "blocks/double-range.scss";

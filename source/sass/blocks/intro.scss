@@ -1,17 +1,17 @@
 .intro {
-  padding-top: 12px;
+  padding-top: 17px;
   padding-bottom: 50px;
 
   color: $white;
 
   background-color: $blue;
-  background-image: url("../img/traveller-illustration-mobile@1x.png"), url("../img/globe-back-mobile@1x.jpg"), linear-gradient(to bottom, $blue 0 621px, $blue-grey 621px);
+  background-image: url("../img/traveller-illustration-mobile@1x.png"), url("../img/globe-back-mobile@1x.jpg"), linear-gradient(to bottom, $blue 0, $blue 621px, $blue-grey 621px);
   background-repeat: no-repeat;
-  background-position: 62% 144px, center -170px;
+  background-position: 62% 150px, center -73px;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/traveller-illustration-mobile@2x.png"), url("../img/globe-back-mobile@2x.jpg"), linear-gradient(to bottom, $blue 0 621px, $blue-grey 621px);
-    background-size: 192px 255px, 320px 569px;
+    background-image: url("../img/traveller-illustration-mobile@2x.png"), url("../img/globe-back-mobile@2x.jpg"), linear-gradient(to bottom, $blue 0, $blue 621px, $blue-grey 621px);
+    background-size: 192px 255px, 320px 478px, auto;
   }
 }
 
@@ -40,6 +40,7 @@
 
 @media (min-width: $tablet-width) {
   .intro {
+    padding-top: 12px;
     padding-bottom: 96px;
 
     background-color: $blue-grey;
@@ -96,6 +97,7 @@
     margin-top: 74px;
     margin-left: 67px;
     padding: 0;
+
     text-align: left;
   }
 

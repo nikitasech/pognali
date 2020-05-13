@@ -6,6 +6,33 @@
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="css/style.min.css">
     <title>HTML Academy: Погнали</title>
+    <!-- Pixel Glass -->
+    <style>
+      html {
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        /* Mobile layout by default */
+        background-image: url("img/index-320.png");
+      }
+
+      /* Tablet */
+      @media (min-width: 768px) {
+        html {
+          /* Tablet layout */
+          background-image: url("img/index-768.png");
+        }
+      }
+
+      /* Desktop */
+      @media (min-width: 1440px) {
+        html {
+          /* Desktop layout */
+          background-image: url("img/index-1440.png");
+        }
+      }
+    </style>
+    <script src="js/pixel-glass.js"></script>
+    <!-- // Pixel Glass -->
   </head>
   <body>
     <div style="display: none;">
@@ -35,15 +62,15 @@
       <button type="button" class="main-header__toggle main-header__toggle--closed">Открыть меню</button>
       <ul class="main-header__actions actions">
         <li class="actions__item actions__item--header actions__item--call">
-          <a href="tel:+78005558628" class="actions__button actions__button--cal button">
-            <svg class="actions__icon" width="18" height="18">
+          <a class="actions__button actions__button--cal button">
+            <svg class="actions__icon" href="tel:+78005558628" width="18" height="18">
               <use xlink:href="#icon-topmenu-phone"></use>
             </svg>
             Позвонить
           </a>
         </li>
         <li class="actions__item actions__item--header actions__item--write">
-          <a href="mailto:mail@htmlacademy.ru" class="actions__button actions__button--write button">
+          <a class="actions__button actions__button--write button" href="mailto:mail@htmlacademy.ru">
             <svg class="actions__icon" width="18" height="13">
               <use xlink:href="#icon-topmenu-mail"></use>
             </svg>
@@ -51,80 +78,78 @@
           </a>
         </li>
         <li class="actions__item actions__item--header actions__item--auth">
-          <a href="" class="actions__button actions__button--auth button">Авторизация</a>
+          <a class="actions__button actions__button--auth button" href="">Авторизация</a>
         </li>
       </ul>
       <div class="main-header__menu container">
         <nav class="main-header__navigation navigation">
           <ul class="navigation__list">
             <li class="navigation__item">
-              <a href="index.html" class="navigation__link">
+              <a class="navigation__link" href="index.html">
                 <span class="navigation__link-text" data-text="О сервисе">О сервисе</span>
               </a>
             </li>
             <li class="navigation__item">
-              <a href="form.html" class="navigation__link">
+              <a class="navigation__link" href="form.html">
                 <span class="navigation__link-text" data-text="Направления">Направления</span>
               </a>
             </li>
             <li class="navigation__item">
-              <a href="catalog.html" class="navigation__link">
-                <span class="navigation__link-text" data-text="Направления">Попутчики</span>
+              <a class="navigation__link" href="catalog.html">
+                <span class="navigation__link-text" data-text="Попутчики">Попутчики</span>
             </li>
           </ul>
         </nav>
-        <a href="" class="main-header__auth-button button">Авторизация</a>
-        <section class="main-header__contacts contacts">
-          <h2 class="contacts__title visually-hidden">Наши контакты</h2>
-          <ul class="contacts__list contacts__list--direct direct-contacts">
-            <li class="direct-contacts__item direct-contacts__item--tel">
-              <a href="tel:+78005558628" class="direct-contacts__link direct-contacts__link--header link">
-                <div class="direct-contacts__icon-wrapper">
-                  <svg class="direct-contacts__icon" width="18" height="18">
-                    <use xlink:href="#icon-contacts-phone"></use>
-                  </svg>
-                </div>
-                8 800 555-86-28
-              </a>
-            </li>
-            <li class="direct-contacts__item direct-contacts__item--email">
-              <a href="mailto:mail@htmlacademy.ru" class="direct-contacts__link direct-contacts__link--header link">
-                <div class="direct-contacts__icon-wrapper">
-                  <svg class="direct-contacts__icon" width="18" height="13">
-                    <use xlink:href="#icon-contacts-mail"></use>
-                  </svg>
-                </div>
-                mail@htmlacademy.ru
-              </a>
-            </li>
-          </ul>
-          <ul class="contacts__list contacts__list--socials social-contacts">
-            <li class="social-contacts__item">
-              <a href="" class="social-contacts__button social-contacts__button--header social-contacts__button--fb button">
-                <svg class="social-contacts__icon" width="11" height="21">
-                  <use xlink:href="#icon-facebook"></use>
+        <a class="main-header__auth-button button" href="">Авторизация</a>
+        <h2 class="visually-hidden">Наши контакты</h2>
+        <ul class="main-header__contacts contacts">
+          <li class="contacts__item">
+            <a class="contacts__link" href="tel:+78005558628">
+              <div class="contacts__icon-wrapper">
+                <svg class="contacts__icon contacts__icon--phone" width="18" height="18">
+                  <use xlink:href="#icon-contacts-phone"></use>
                 </svg>
-                Facebook
-              </a>
-            </li>
-            <li class="social-contacts__item">
-              <a href="" class="social-contacts__button  social-contacts__button--header social-contacts__button--vk button">
-                <svg class="social-contacts__icon" width="23" height="12">
-                  <use xlink:href="#icon-vk"></use>
+              </div>
+              8 800 555-86-28
+            </a>
+          </li>
+          <li class="contacts__item">
+            <a class="contacts__link" href="mailto:mail@htmlacademy.ru">
+              <div class="contacts__icon-wrapper">
+                <svg class="contacts__icon contacts__icon--mail" width="18" height="13">
+                  <use xlink:href="#icon-contacts-mail"></use>
                 </svg>
-                Вконтакте
-              </a>
-            </li>
-            <li class="social-contacts__item">
-              <a href="" class="social-contacts__button  social-contacts__button--header social-contacts__button--insta button">
-                <svg class="social-contacts__icon" width="18" height="18">
-                  <use xlink:href="#icon-instagram"></use>
-                </svg>
-                Instagram
-              </a>
-            </li>
-          </ul>
-        </section>
+              </div>
+              mail@htmlacademy.ru
+            </a>
+          </li>
+        </ul>
+        <ul class="main-header__socials socials">
+          <li class="socials__item">
+            <a class="socials__button socials__button--fb" href="">
+              <svg class="socials__icon" width="11" height="21">
+                <use xlink:href="#icon-facebook"></use>
+              </svg>
+              Facebook
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__button socials__button--vk" href="">
+              <svg class="socials__icon" width="23" height="12">
+                <use xlink:href="#icon-vk"></use>
+              </svg>
+              Вконтакте
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__button socials__button--insta" href="">
+              <svg class="socials__icon" width="18" height="18">
+                <use xlink:href="#icon-instagram"></use>
+              </svg>
+              Instagram
+            </a>
+          </li>
+        </ul>
       </div>
     </header>
     <main class="main main--index">
@@ -134,7 +159,7 @@
         <p class="intro__slogan">В путешествие с крутыми попутчиками!</p>
         <ul class="intro__actions actions">
           <li class="actions__item">
-            <a href="tel:+78005558628" class="actions__button actions__button--cal button">
+            <a class="actions__button actions__button--cal button" href="tel:+78005558628">
               <svg class="actions__icon" width="18" height="18">
                 <use xlink:href="#icon-topmenu-phone"></use>
               </svg>
@@ -142,7 +167,7 @@
             </a>
           </li>
           <li class="actions__item">
-            <a href="mailto:mail@htmlacademy.ru" class="actions__button actions__button--write button">
+            <a class="actions__button actions__button--write button" href="mailto:mail@htmlacademy.ru">
               <svg class="actions__icon" width="18" height="13">
                 <use xlink:href="#icon-topmenu-mail"></use>
               </svg>
@@ -150,7 +175,7 @@
             </a>
           </li>
           <li class="actions__item actions__item--auth">
-            <a href="" class="actions__button actions__button--auth button">Авторизация</a>
+            <a class="actions__button actions__button--auth button" href="">Авторизация</a>
           </li>
         </ul>
         <blockquote class="intro__quote quote">
@@ -188,7 +213,7 @@
           близкого по духу — скорее
           зовите в совместный трип!
         </p>
-        <a href="" class="about__button button button--rect">
+        <a class="about__button button button--rect" href="">
           Подробнее
           <svg class="button__icon" width="10" height="14">
             <use xlink:href="#icon-triangle-arrow"></use>
@@ -215,7 +240,7 @@
             </picture>
             <div class="country-card__wrapper">
               <a class="country-card__link link link--blue" href="">
-                Таиланд
+                <h3 class="country-card__title country-card__title--thailand">Таиланд</h3>
                 <p class="country-card__description">Джунгли зовут!</p>
               </a>
               <p class="country-card__companions-counter">18321</p>
@@ -233,7 +258,7 @@
             </picture>
             <div class="country-card__wrapper">
               <a class="country-card__link link link--blue" href="">
-                Франция
+                <h3 class="country-card__title country-card__title--france">Франция</h3>
                 <p class="country-card__description">Трэ бьен манифик!</p>
               </a>
               <p class="country-card__companions-counter">12518</p>
@@ -251,14 +276,14 @@
             </picture>
             <div class="country-card__wrapper">
               <a class="country-card__link link link--blue" href="">
-                Чехия
+                <h3 class="country-card__title country-card__title--сzech">Чехия</h3>
                 <p class="country-card__description">Закоулки старой Европы</p>
               </a>
               <p class="country-card__companions-counter">5326</p>
             </div>
           </li>
         </ul>
-        <a href="" class="direction__button button button--rect">
+        <a class="direction__button button button--rect" href="">
           Показать все
           <svg class="button__icon" width="10" height="14">
             <use xlink:href="#icon-triangle-arrow"></use>
@@ -361,19 +386,19 @@
               </ul>
               <ul class="short-companion__hashtags-list">
                 <li class="short-companion__hashtags-item">
-                  <a href="" class="short-companion__hashtags-link link">#бургер</a>
+                  <a class="short-companion__hashtags-link link" href="">#бургер</a>
                 </li>
                 <li class="short-companion__hashtags-item">
-                  <a href="" class="short-companion__hashtags-link link">#бар</a>
+                  <a class="short-companion__hashtags-link link" href="">#бар</a>
                 </li>
                 <li class="short-companion__hashtags-item">
-                  <a href="" class="short-companion__hashtags-link link">#футбол</a>
+                  <a class="short-companion__hashtags-link link" href="">#футбол</a>
                 </li>
                 <li class="short-companion__hashtags-item">
-                  <a href="" class="short-companion__hashtags-link link">#концерт</a>
+                  <a class="short-companion__hashtags-link link" href="">#концерт</a>
                 </li>
                 <li class="short-companion__hashtags-item">
-                  <a href="" class="short-companion__hashtags-link link">#крафт</a>
+                  <a class="short-companion__hashtags-link link" href="">#крафт</a>
                 </li>
               </ul>
               <p class="visually-hidden">транспорт:</p>
@@ -410,7 +435,7 @@
             </p>
           </li>
         </ul>
-        <a href="" class="companions__button companions__button--deploy button button--rect">
+        <a class="companions__button companions__button--deploy button button--rect" href="">
           Показать всех
           <svg class="button__icon" width="10" height="14">
             <use xlink:href="#icon-triangle-arrow"></use>
@@ -434,7 +459,14 @@
             <p class="rates__price">59 руб./мес</p>
           </li>
         </ul>
-        <a href="" class="rates__link link link--blue">Показать тарифы для бизнеса</a>
+        <a class="rates__link link link--blue" href="">
+          <div class="rates__icon-wrapper">
+            <svg class="rates__icon-link" width="17" height="21" fill="currentColor">
+              <use xlink:href="#icon-business"></use>
+            </svg>
+          </div>
+          Показать тарифы для бизнеса
+        </a>
         <div class="rates__modal modal">
           <h3 class="rates__subtitle title">Бизнес-тарифы</h3>
           <ul class="rates__list">
@@ -462,55 +494,78 @@
         <h2 class="visually-hidden">Регистрация</h2>
         <p class="registration__title title">Заинтересовались?</p>
         <p class="registration__description">
-          Зарегистрируйтесь,
-          это быстро и бесплатно!
-          Уже зарегистрированы? Тогда скорее <a href="" class="registration__link link">авторизуйтесь</a>.
+          Зарегистрируйтесь, это быстро и бесплатно!
+          Уже зарегистрированы? Тогда скорее <a class="registration__link link" href="">авторизуйтесь</a>.
         </p>
-        <form action="https://echo.htmlacademy.ru" method="get" class="registration__form form">
-          <label class="visually-hidden" for="registration-email">Введите ваш E-mail:</label>
-          <input class="registration__field registration__field--email" type="email" id="registration-email" placeholder="E-mail">
-          <input type="submit" value="Отправить">
+        <form class="registration__form form" action="https://echo.htmlacademy.ru" method="get">
+          <div class="form__field-wrapper">
+            <label class="visually-hidden" for="registration-email">Введите ваш E-mail:</label>
+            <input class="form__field form__field--email" type="email" id="registration-email" placeholder="E-mail">
+            <button class="form__submit form__submit--integrated button button--rect" type="submit">
+              Отправить
+              <svg class="button__icon" width="10" height="14">
+                <use xlink:href="#icon-triangle-arrow"></use>
+              </svg>
+            </button>
+          </div>
         </form>
       </section>
-      <section class="main__contacts contacts container">
-        <h2 class="contacts__title visually-hidden">Наши контакты</h2>
-        <p class="contacts__description">Остались вопросы?</p>
-        <p class="contacts__description">Мы с радостью на них ответим!</p>
-        <ul class="contacts__list contacts__list--direct direct-contacts">
-          <li class="direct-contacts__item direct-contacts__item--tel">
-            <a href="tel:+78005558628" class="direct-contacts__link link">
-              <div class="direct-contacts__icon-wrapper">
-                <svg class="direct-contacts__icon" width="18" height="18">
-                  <use xlink:href="#icon-contacts-phone"></use>
-                </svg>
-              </div>
-              8 800 555-86-28
-            </a>
-          </li>
-          <li class="direct-contacts__item direct-contacts__item--email">
-            <a href="mailto:mail@htmlacademy.ru" class="direct-contacts__link link">
-              <div class="direct-contacts__icon-wrapper">
-                <svg class="direct-contacts__icon" width="18" height="13">
-                  <use xlink:href="#icon-contacts-mail"></use>
-                </svg>
-              </div>
-              mail@htmlacademy.ru
-            </a>
-          </li>
-        </ul>
-        <div class="contacts__wrapper">
-          <p class="contacts__adress">ул. Большая Конюшенная, 19/8</p>
-          <button class="contacts__button button" type="button">Проложить маршрут</button>
-          <picture>
-            <source type="image/webp" media="(min-width: 1440px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x">
-
-            <source media="(min-width: 1440px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
-            <img class="contacts__map" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="ул. Большая Конюшенная, 19/8" width="320" height="546">
-          </picture>
+      <section class="main-contacts">
+        <div class="main-contacts__wrapper main-contacts__wrapper--blue">
+          <h2 class="visually-hidden">Наши контакты</h2>
+          <p class="main-contacts__description">Остались вопросы? Мы с радостью на них ответим!</p>
+          <ul class="main-contacts__direct contacts">
+            <li class="contacts__item">
+              <a class="contacts__link contacts__link--gold" href="tel:+78005558628">
+                <div class="contacts__icon-wrapper">
+                  <svg class="contacts__icon contacts__icon--phone" width="18" height="18">
+                    <use xlink:href="#icon-contacts-phone"></use>
+                  </svg>
+                </div>
+                <span class="contacts__text">8 800 555-86-28</span>
+              </a>
+            </li>
+            <li class="contacts__item">
+              <a class="contacts__link contacts__link--gold" href="mailto:mail@htmlacademy.ru">
+                <div class="contacts__icon-wrapper">
+                  <svg class="contacts__icon contacts__icon--mail" width="18" height="13">
+                    <use xlink:href="#icon-contacts-mail"></use>
+                  </svg>
+                </div>
+                <span class="contacts__text">mail@htmlacademy.ru</span>
+              </a>
+            </li>
+          </ul>
         </div>
+        <div class="main-contacts__wrapper main-contacts__wrapper--gold">
+          <ul class="main-contacts__location contacts">
+            <li class="contacts__item">
+              <a class="contacts__link contacts__link--location">
+                <div class="contacts__icon-wrapper">
+                  <svg class="contacts__icon contacts__icon--location" width="18" height="18">
+                    <use xlink:href="#icon-contacts-location"></use>
+                  </svg>
+                </div>
+                <span class="contacts__text">ул. Большая Конюшенная, 19/8</span>
+              </a>
+            </li>
+          </ul>
+          <button class="main-contacts__rout button button--rect button--border" type="button">
+            Проложить маршрут
+            <svg class="button__icon" width="10" height="14">
+              <use xlink:href="#icon-triangle-arrow"></use>
+            </svg>
+          </button>
+        </div>
+        <picture>
+          <source type="image/webp" media="(min-width: 1440px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x">
+
+          <source media="(min-width: 1440px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
+          <img class="main-contacts__map" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="ул. Большая Конюшенная, 19/8" width="320" height="546">
+        </picture>
       </section>
     </main>
     <footer class="main-footer main-footer--index container">
@@ -525,26 +580,26 @@
           <img class="main-footer__logo logo" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" alt="Логотип сервиса «Погнали»" width="96" height="15">
         </picture>
       </a>
-      <ul class="main-footer__social social-contacts">
-        <li class="social-contacts__item">
-          <a href="" class="social-contacts__button social-contacts__button--fb button">
-            <svg class="social-contacts__icon" width="11" height="21">
+      <ul class="main-footer__social socials">
+        <li class="socials__item">
+          <a class="socials__button socials__button--framing socials__button--fb" href="">
+            <svg class="socials__icon" width="11" height="21">
               <use xlink:href="#icon-facebook"></use>
             </svg>
             Facebook
           </a>
         </li>
-        <li class="social-contacts__item">
-          <a href="" class="social-contacts__button social-contacts__button--vk button">
-            <svg class="social-contacts__icon" width="23" height="12">
+        <li class="socials__item">
+          <a class="socials__button socials__button--framing socials__button--vk" href="">
+            <svg class="socials__icon" width="23" height="12">
               <use xlink:href="#icon-vk"></use>
             </svg>
             Вконтакте
           </a>
         </li>
-        <li class="social-contacts__item">
-          <a href="" class="social-contacts__button  social-contacts__button--insta button">
-            <svg class="social-contacts__icon" width="18" height="18">
+        <li class="socials__item">
+          <a class="socials__button socials__button--framing socials__button--insta" href="">
+            <svg class="socials__icon" width="18" height="18">
               <use xlink:href="#icon-instagram"></use>
             </svg>
             Instagram
