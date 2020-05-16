@@ -204,6 +204,30 @@
   .form__submit--integrated {
     border-radius: 0 20px 20px 0;
   }
+
+  .form__label {
+    font-size: 20px;
+    line-height: 20px;
+
+    &--transport {
+      font-size: 0;
+      line-height: 0;
+    }
+  }
+
+  .form__transport-list {
+    margin-top: 0;
+  }
+
+  .form__transport-item {
+    width: 43px;
+    height: 43px;
+  }
+
+  .form__transport-icon {
+    width: auto;
+    height: 21px;
+  }
 }
 
 @media (min-width: $desktop-width) {

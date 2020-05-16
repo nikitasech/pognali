@@ -71,4 +71,14 @@
     margin-top: -65px;
     padding-top: 82px;
   }
+
+  .main__catalog-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+  }
+
+  .main__filters {
+    order: 1;
+  }
 }

@@ -1,6 +1,4 @@
 .filters {
-  margin-right: 25px;
-  margin-left: 25px;
   padding-top: 22px;
   padding-right: 25px;
   padding-bottom: 22px;
@@ -56,10 +54,16 @@
   }
 }
 
+.filters__legend-colon {
+  display: none;
+}
+
 .filters__set-button {
   padding: 17px 17px;
+  flex-grow: 1;
 
   font-size: 0;
+  text-align: right;
 
   background-color: transparent;
   border: none;
@@ -71,5 +75,135 @@
 
   &--opened {
     transform: rotate(180deg);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .filters {
+    padding-top: 22px;
+    padding-right: 25px;
+    padding-bottom: 22px;
+    padding-left: 25px;
+  }
+  
+  .filters__form {
+    margin-top: 20px;
+  }
+  
+  .filters__set {
+    display: flex;
+    padding-bottom: 19px;
+
+    border-top: none;
+
+    &:first-of-type {
+      padding-top: 35px;
+      border-top: 1px solid $macaroni-and-cheese;
+    }
+
+    &:last-of-type {
+      padding-bottom: 35px;
+      border-bottom: 1px solid $macaroni-and-cheese;
+    }
+  }
+  
+  .filters__legend {
+    display: block;
+    width: 125px;
+  
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+  
+    &:hover {
+      opacity: 1;
+    }
+  
+    &:active {
+      opacity: 1;
+    }
+  }
+
+  .filters__legend-colon {
+    display: inline;
+  }
+  
+  .filters__set-button {
+    display: none;
+  }
+
+  .form__content {
+    width: 100%;
+  }
+
+  .filters__set-list {
+    display: flex;
+    
+    margin-top: 0;
+  }
+
+  .filters__set-item {
+    flex: 1;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .filters {
+    margin: 0;
+    padding: 48px;
+    width: 19.8vw;
+    box-sizing: border-box;
+  }
+  
+  .filters__form {
+    margin-top: 20px;
+  }
+  
+  .filters__set {
+    display: block;
+    padding-bottom: 19px;
+
+    border-top: none;
+
+    &:first-of-type {
+      padding-top: 0;
+      border-top: none;
+    }
+
+    &:last-of-type {
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+  }
+  
+  .filters__legend {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  
+    &:hover {
+      opacity: 0.6;
+    }
+  
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  .filters__legend-colon {
+    display: none;
+  }
+  
+  .filters__set-button {
+    display: block;
+  }
+
+  .filters__set-list {
+    display: block;
+    margin-top: 38px;
+  }
+
+  .filters__transport-list {
+    margin-top: 38px;
   }
 }

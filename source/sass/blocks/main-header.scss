@@ -4,10 +4,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 27px;
-  padding-bottom: 27px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+
 
   background-color: $blue;
+
+  &--index {
+    padding-top: 27px;
+    padding-bottom: 27px;
+  }
 
   &--white {
     background-color: $white;

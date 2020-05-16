@@ -3,7 +3,6 @@
 
   display: flex;
   flex-wrap: wrap;
-  height: 210px;
   padding: 0;
   padding-bottom: 270px;
 
@@ -16,7 +15,7 @@
 
 .alphabet__button {
   width: 100%;
-  height: 42px;
+  height: 41px;
 
   background-color: $white;
   border: none;
@@ -38,7 +37,7 @@
   @include list-reset;
 
   position: absolute;
-  bottom: 0;
+  bottom: 15px;
   left: 0;
 
   display: none;
@@ -53,4 +52,105 @@
 .alphabet__countries-link {
   color: $grey;
   text-decoration: none;
+}
+
+@media (min-width: $tablet-width) {
+  .alphabet {
+    padding-bottom: 0;
+    width: 425px;
+  }
+  
+  .atphabet__item {
+    width: 77px;
+    height: 83px;
+  }
+  
+  .alphabet__button {
+    height: 100%;
+  
+    color: rgba(black, 0.2);
+    font-size: 60px;
+    line-height: 24px;
+    font-weight: 700;
+
+    background-color: transparent;
+    box-shadow: none;
+  
+    &--selected {
+      color: $blue-grey;
+  
+      background-color: transparent;
+      box-shadow: none;
+    }
+  }
+  
+  .atphabet__countries-list {
+    top: 7px;
+    left: 465px;
+    overflow-y: auto;
+
+    width: 200px;
+  
+    font-size: 20px;
+    line-height: 30px;
+  
+    &--displayed {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .alphabet {
+    padding-bottom: 0;
+    width: 100%;
+  }
+  
+  .atphabet__item {
+    width: 250px;
+    height: auto;
+    margin-top: 48px;
+
+    &:nth-of-type(-n+5) {
+      margin-top: 0;
+    }
+  }
+  
+  .alphabet__button {
+    height: 70px;
+    padding-left: 0;
+    padding-right: 0;
+  
+    color: rgba(black, 0.2);
+    font-size: 60px;
+    line-height: 24px;
+    font-weight: 700;
+    text-align: left;
+
+    background-color: transparent;
+    box-shadow: none;
+  
+    &--selected {
+      color: $blue-grey;
+  
+      background-color: transparent;
+      box-shadow: none;
+    }
+  }
+  
+  .atphabet__countries-list {
+    position: static;
+    overflow-y: visible;
+
+    margin-top: 24px;
+    display: block;
+    width: 100%;
+  
+    font-size: 20px;
+    line-height: 30px;
+  
+    &--displayed {
+      display: block;
+    }
+  }
 }

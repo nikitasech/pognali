@@ -117,3 +117,36 @@
 .double-range__toggle_max {
   margin-right: -5px;
 }
+
+@media (min-width: $tablet-width) {
+  .double-range {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .double-range__controls {
+    order: 1;
+    width: 150px;
+    height: 46px;
+  }
+  
+  .double-range__scale {
+    width: 277px;
+    height: 3px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .double-range {
+    display: block;
+  }
+  .double-range__controls {
+    width: 100%;
+    height: 33px;
+  }
+  
+  .double-range__scale {
+    width: 100%;
+    height: 3px;
+  }
+}

@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 30px;
+  padding-top: 37px;
   padding-bottom: 12px;
 
   background-color: $dark-two;
@@ -41,28 +41,61 @@
 
 @media (min-width: $tablet-width) {
   .main-title {
+    padding-left: 75px;
+    padding-right: 75px;
+
     background-color: $blue-grey;
-    border-radius: 0 0 30px 30px;
+    border-radius: 0 0 60px 60px;
+  }
+
+  .main-title__text {
+    position: relative;
+  
+    display: inline-block;
+    margin: 0;
+    margin-top: 52px;
+    padding-bottom: 50px;
+  
+    font-size: 60px;
+    line-height: 70px;
+    vertical-align: middle;
+    color: $white;
   }
 
   .main-title__back {
     display: block;
+    margin-top: 7px;
+
     color: $white;
     text-decoration: none;
     font-weight: 700;
     font-size: 20px;
-    line-height: 22px;
+    line-height: 24px;
+    text-transform: uppercase;
   }
 
   .main-title__back-icon {
     fill: currentColor;
-    margin-left: 29px;
+    margin-left: 23px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .main-title {
+    padding-left: 126px;
+    padding-right: 123px;
+
     background-color: $dark-two;
     border-radius: 0 0 60px 60px;
+  }
+
+  .main-title__text {
+    margin-top: 62px;
+    padding-bottom: 50px;
+  }
+
+  .main-title__back {
+    display: block;
+    margin-top: 20px
   }
 }

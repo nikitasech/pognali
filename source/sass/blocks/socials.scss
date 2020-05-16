@@ -38,3 +38,14 @@
 .socials__icon {
   fill: currentColor;
 }
+
+@media (min-width: $tablet-width) {
+  .socials__button {
+    width: 60px;
+    height: 60px;
+  }
+
+  .socials__icon {
+    transform: scale(1.3);
+  }
+}
