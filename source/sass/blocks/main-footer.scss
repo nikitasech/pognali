@@ -6,13 +6,10 @@
   flex-direction: column;
   align-items: center;
   padding-top: 38px;
+  margin-top: -35px;
 
   background-color: $white;
   border-radius: 20px 20px 0 0;
-
-  &--index {
-    margin-top: -35px;
-  }
 }
 
 .main-footer__social {
@@ -31,12 +28,9 @@
     justify-content: space-between;
     padding-top: 47px;
     padding-bottom: 47px;
+    margin-top: -55px;
 
     border-radius: 60px 60px 0 0;
-
-    &--index {
-      margin-top: -55px;
-    }
   }
 
   .main-footer__social {
@@ -53,8 +47,6 @@
 
 @media (min-width: $desktop-width) {
   .main-footer {
-    &--index {
-      margin-top: -65px;
-    }
+    margin-top: -65px;
   }
 }

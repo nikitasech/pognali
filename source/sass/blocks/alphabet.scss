@@ -121,21 +121,11 @@
     padding-left: 0;
     padding-right: 0;
   
-    color: rgba(black, 0.2);
-    font-size: 60px;
-    line-height: 24px;
-    font-weight: 700;
+    color: $blue-grey;
     text-align: left;
 
     background-color: transparent;
     box-shadow: none;
-  
-    &--selected {
-      color: $blue-grey;
-  
-      background-color: transparent;
-      box-shadow: none;
-    }
   }
   
   .atphabet__countries-list {

@@ -75,7 +75,8 @@
   .main__catalog-inner {
     display: flex;
     justify-content: space-between;
-    align-items: start;
+    align-items: flex-start;
+    margin-top: 84px;
   }
 
   .main__filters {
