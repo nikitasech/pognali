@@ -3,15 +3,15 @@
   font-weight: 700;
   line-height: 24px;
   color: $mango;
-  text-transform: none;
+
+  &--blue {
+    color: $blue-slate;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .title {
     font-size: 45px;
-    font-weight: 700;
     line-height: 45px;
-    color: $mango;
-    text-transform: none;
   }
 }

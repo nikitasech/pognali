@@ -1,0 +1,55 @@
+.fieldset {
+  margin-right: 0;
+  margin-left: 0;
+  padding-bottom: 16px;
+
+  border: 1px solid $cloudy-blue;
+  border-radius: 10px;
+}
+
+.fieldset__title {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 18px;
+  padding-left: 18px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: $blue-slate;
+  text-transform: uppercase;
+}
+
+.fieldset__list {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .fieldset {
+    position: relative;
+
+    box-sizing: border-box;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  .fieldset__title {
+    position: absolute;
+    bottom: -9px;
+    left: calc(50% - 76px);
+
+    display: flex;
+    width: auto;
+    padding-right: auto;
+    padding-left: auto;
+
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 2px;
+
+    background-color: $basis-background;
+  }
+}

@@ -5,15 +5,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 38px;
   margin-top: -35px;
+  padding-top: 38px;
 
   background-color: $white;
   border-radius: 20px 20px 0 0;
 }
 
 .main-footer__social {
-  margin-top: 41px;
+  margin-top: 32px;
 }
 
 .main-footer__copyright-link {
@@ -26,19 +26,20 @@
   .main-footer {
     flex-direction: row;
     justify-content: space-between;
+    margin-top: -55px;
     padding-top: 47px;
     padding-bottom: 47px;
-    margin-top: -55px;
 
     border-radius: 60px 60px 0 0;
   }
 
   .main-footer__social {
     margin: 0;
+    margin-left: -10px;
   }
 
   .main-footer__copyright-link {
-    width: 200px;
+    width: 153px;
     margin: 0;
 
     border: none;
@@ -47,6 +48,12 @@
 
 @media (min-width: $desktop-width) {
   .main-footer {
-    margin-top: -65px;
+    margin-top: -60px;
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+
+  .main-footer__social {
+    margin-left: -48px;
   }
 }

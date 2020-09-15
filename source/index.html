@@ -9,10 +9,10 @@
     <!-- Pixel Glass -->
     <style>
       html {
-        background-repeat: no-repeat;
-        background-position: 50% 0;
         /* Mobile layout by default */
         background-image: url("img/index-320.png");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
       }
 
       /* Tablet */
@@ -30,6 +30,7 @@
           background-image: url("img/index-1440.png");
         }
       }
+
     </style>
     <script src="js/pixel-glass.js"></script>
     <!-- // Pixel Glass -->
@@ -38,7 +39,7 @@
     <div style="display: none;">
       <include src="build/img/sprite.svg"></include>
     </div>
-    <header class="main-header main-header--index container">
+    <header class="main-header main-header--index main-header--white main-header--no-js container">
       <a class="main-header__logo-link">
         <picture>
           <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x">
@@ -47,7 +48,7 @@
 
           <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
           <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
-          <img class="main-header__logo main-header__logo--blue logo" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" alt="Логотип сервиса «Погнали»" width="100" height="19">
+          <img class="main-header__logo main-header__logo--blue main-header__logo--selected logo" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" alt="Логотип сервиса «Погнали»" width="100" height="19">
         </picture>
         <picture>
           <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@2x.webp 2x">
@@ -56,14 +57,14 @@
 
           <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
           <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
-          <img class="main-header__logo main-header__logo--white main-header__logo--selected logo" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" alt="Логотип сервиса «Погнали»" width="100" height="19">
+          <img class="main-header__logo main-header__logo--white logo" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" alt="Логотип сервиса «Погнали»" width="100" height="19">
         </picture>
       </a>
       <button type="button" class="main-header__toggle main-header__toggle--closed">Открыть меню</button>
       <ul class="main-header__actions actions">
         <li class="actions__item actions__item--header actions__item--call">
-          <a class="actions__button actions__button--cal button">
-            <svg class="actions__icon" href="tel:+78005558628" width="18" height="18">
+          <a class="actions__button actions__button--cal button" href="tel:+78005558628">
+            <svg class="actions__icon" width="18" height="18">
               <use xlink:href="#icon-topmenu-phone"></use>
             </svg>
             Позвонить
@@ -81,7 +82,7 @@
           <a class="actions__button actions__button--auth button" href="">Авторизация</a>
         </li>
       </ul>
-      <div class="main-header__menu container">
+      <div class="main-header__menu main-header__menu--index main-header__menu--no-js container">
         <nav class="main-header__navigation navigation">
           <ul class="navigation__list">
             <li class="navigation__item">
@@ -97,30 +98,31 @@
             <li class="navigation__item">
               <a class="navigation__link" href="catalog.html">
                 <span class="navigation__link-text" data-text="Попутчики">Попутчики</span>
+              </a>
             </li>
           </ul>
         </nav>
         <a class="main-header__auth-button button" href="">Авторизация</a>
         <h2 class="visually-hidden">Наши контакты</h2>
-        <ul class="main-header__contacts contacts">
-          <li class="contacts__item">
-            <a class="contacts__link" href="tel:+78005558628">
-              <div class="contacts__icon-wrapper">
-                <svg class="contacts__icon contacts__icon--phone" width="18" height="18">
+        <ul class="main-header__direct">
+          <li class="main-header__direct-item">
+            <a class="contact contact--blue" href="tel:+78005558628">
+              <div class="contact__icon-wrapper">
+                <svg class="contact__icon contact__icon--phone" width="18" height="18">
                   <use xlink:href="#icon-contacts-phone"></use>
                 </svg>
               </div>
-              8 800 555-86-28
+              <span class="contact__text">8 800 555-86-28</span>
             </a>
           </li>
-          <li class="contacts__item">
-            <a class="contacts__link" href="mailto:mail@htmlacademy.ru">
-              <div class="contacts__icon-wrapper">
-                <svg class="contacts__icon contacts__icon--mail" width="18" height="13">
+          <li class="main-header__direct-item">
+            <a class="contact contact--blue" href="mailto:mail@htmlacademy.ru">
+              <div class="contact__icon-wrapper">
+                <svg class="contact__icon contact__icon--mail" width="18" height="18">
                   <use xlink:href="#icon-contacts-mail"></use>
                 </svg>
               </div>
-              mail@htmlacademy.ru
+              <span class="contact__text">mail@htmlacademy.ru</span>
             </a>
           </li>
         </ul>
@@ -206,7 +208,7 @@
       <section class="main__about about">
         <h2 class="about__title title">О сервисе</h2>
         <p class="about__text">
-          Любое путешествие веселее с&nbsp;попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.
+          Любое путешествие веселее с&nbsp;попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий<br class="about__br about__br--tablet"> и черпайте вдохновение в чужих.
         </p>
         <p class="about__text about__text--bold">
           А если найдете кого-то
@@ -294,10 +296,10 @@
         <div class="companions__info">
           <h2 class="companions__title title">Попутчики</h2>
           <p class="companions__description">
-            Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.
+            Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль,<br class="companions__br companions__br--tablet"> а другому маршрут для хайкинга.
           </p>
           <p class="companions__description companions__description--bold">
-            Теперь можно легко найти единомышленников!
+            Теперь можно легко<br class="companions__br companions__br--tablet"> найти единомышленников!
           </p>
         </div>
         <ul class="companions__list">
@@ -368,6 +370,9 @@
             <p class="short-companion__level level">
               99
               <span class="level__description">level</span>
+              <svg class="level__bar" width="60" height="60" viewBox="0 0 46 46">
+                <circle r="21" cx="23" cy="23" fill="none" stroke-width="2.2" stroke="#ff8d30" stroke-dasharray="132" stroke-dashoffset="1.5"/>
+              </svg>
             </p>
           </li>
           <li class="companions__item short-companion">
@@ -409,7 +414,7 @@
                     <use xlink:href="#icon-plane"></use>
                   </svg>
                 </li>
-                <li class="short-companion__transport-item short-companion__transport-item--car" aria-hidden="true">
+                <li class="short-companion__transport-item short-companion__transport-item--car">
                   Автотранспорт
                   <svg class="short-companion__transport-icon" width="17" height="21">
                     <use xlink:href="#icon-bus"></use>
@@ -421,7 +426,7 @@
                     <use xlink:href="#icon-bike"></use>
                   </svg>
                 </li>
-                <li class="short-companion__transport-item short-companion__transport-item--walk" aria-hidden="true">
+                <li class="short-companion__transport-item short-companion__transport-item--walk">
                   Пешком
                   <svg class="short-companion__transport-icon" width="20" height="21">
                     <use xlink:href="#icon-run"></use>
@@ -432,6 +437,9 @@
             <p class="short-companion__level level">
               80
               <span class="level__description">level</span>
+              <svg class="level__bar" width="60" height="60" viewBox="0 0 46 46">
+                <circle r="21" cx="23" cy="23" fill="none" stroke-width="2.2" stroke="#ff8d30" stroke-dasharray="132" stroke-dashoffset="26"/>
+              </svg>
             </p>
           </li>
         </ul>
@@ -494,15 +502,15 @@
         <h2 class="visually-hidden">Регистрация</h2>
         <p class="registration__title title">Заинтересовались?</p>
         <p class="registration__description">
-          Зарегистрируйтесь, это быстро и бесплатно!
+          Зарегистрируйтесь,<br class="registration__br registration__br--mobile"> это быстро и бесплатно!<br>
           Уже зарегистрированы? Тогда скорее <a class="registration__link link" href="">авторизуйтесь</a>.
         </p>
         <form class="registration__form form" action="https://echo.htmlacademy.ru" method="get">
           <div class="form__field-wrapper">
             <label class="visually-hidden" for="registration-email">Введите ваш E-mail:</label>
             <input class="form__field form__field--email" type="email" id="registration-email" placeholder="E-mail">
-            <button class="form__submit form__submit--integrated button button--rect" type="submit">
-              Отправить
+            <button class="form__submit form__submit--integrated" type="submit">
+              Регистрация
               <svg class="button__icon" width="10" height="14">
                 <use xlink:href="#icon-triangle-arrow"></use>
               </svg>
@@ -513,43 +521,39 @@
       <section class="main-contacts">
         <div class="main-contacts__wrapper main-contacts__wrapper--blue">
           <h2 class="visually-hidden">Наши контакты</h2>
-          <p class="main-contacts__description">Остались вопросы? Мы с радостью на них ответим!</p>
-          <ul class="main-contacts__direct contacts">
-            <li class="contacts__item">
-              <a class="contacts__link contacts__link--gold" href="tel:+78005558628">
-                <div class="contacts__icon-wrapper">
-                  <svg class="contacts__icon contacts__icon--phone" width="18" height="18">
+          <p class="main-contacts__description">Остались вопросы?<br class="main-contacts__br main-contacts__br--mobile"> Мы с радостью на них ответим!</p>
+          <ul class="main-contacts__direct">
+            <li class="main-contacts__direct-item">
+              <a class="contact" href="tel:+78005558628">
+                <div class="contact__icon-wrapper">
+                  <svg class="contact__icon contact__icon--phone" width="18" height="18">
                     <use xlink:href="#icon-contacts-phone"></use>
                   </svg>
                 </div>
-                <span class="contacts__text">8 800 555-86-28</span>
+                <span class="contact__text">8 800 555-86-28</span>
               </a>
             </li>
-            <li class="contacts__item">
-              <a class="contacts__link contacts__link--gold" href="mailto:mail@htmlacademy.ru">
-                <div class="contacts__icon-wrapper">
-                  <svg class="contacts__icon contacts__icon--mail" width="18" height="13">
+            <li class="main-contacts__direct-item">
+              <a class="contact" href="mailto:mail@htmlacademy.ru">
+                <div class="contact__icon-wrapper">
+                  <svg class="contact__icon contact__icon--mail" width="18" height="18">
                     <use xlink:href="#icon-contacts-mail"></use>
                   </svg>
                 </div>
-                <span class="contacts__text">mail@htmlacademy.ru</span>
+                <span class="contact__text">mail@htmlacademy.ru</span>
               </a>
             </li>
           </ul>
         </div>
         <div class="main-contacts__wrapper main-contacts__wrapper--gold">
-          <ul class="main-contacts__location contacts">
-            <li class="contacts__item">
-              <a class="contacts__link contacts__link--location">
-                <div class="contacts__icon-wrapper">
-                  <svg class="contacts__icon contacts__icon--location" width="18" height="18">
-                    <use xlink:href="#icon-contacts-location"></use>
-                  </svg>
-                </div>
-                <span class="contacts__text">ул. Большая Конюшенная, 19/8</span>
-              </a>
-            </li>
-          </ul>
+          <div class="main-contacts__location contact contact--blue contact--disabled-hover">
+            <div class="contact__icon-wrapper">
+              <svg class="contact__icon contact__icon--location" width="18" height="18">
+                <use xlink:href="#icon-contacts-location"></use>
+              </svg>
+            </div>
+            <span class="contact__text">ул. Большая Конюшенная, 19/8</span>
+          </div>
           <button class="main-contacts__rout button button--rect button--border" type="button">
             Проложить маршрут
             <svg class="button__icon" width="10" height="14">
@@ -557,15 +561,17 @@
             </svg>
           </button>
         </div>
-        <picture>
-          <source type="image/webp" media="(min-width: 1440px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
-          <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x">
-          <source type="image/webp" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x">
+        <div class="main-contacts__map">
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x">
 
-          <source media="(min-width: 1440px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
-          <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
-          <img class="main-contacts__map" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="ул. Большая Конюшенная, 19/8" width="320" height="546">
-        </picture>
+            <source media="(min-width: 1440px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
+            <img class="main-contacts__map-img" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="ул. Большая Конюшенная, 19/8" width="320" height="546">
+          </picture>
+        </div>
       </section>
     </main>
     <footer class="main-footer main-footer--index container">

@@ -1,5 +1,5 @@
 .companions {
-  padding-top: 82px;
+  padding-top: 89px;
   padding-bottom: 30px;
 
   background-color: $blue-grey;
@@ -35,6 +35,12 @@
   margin-left: 23px;
 
   color: $white;
+}
+
+.companions__br {
+  &--tablet {
+    display: none;
+  }
 }
 
 .companions__description--bold {
@@ -89,9 +95,15 @@
     margin-left: 0;
   }
 
+  .companions__br {
+    &--tablet {
+      display: block;
+    }
+  }
+
   .companions__description--bold {
     margin-top: 41px;
-    margin-right: 360px;
+    margin-right: 340px;
 
     font-size: 21px;
     line-height: 25px;
@@ -124,14 +136,14 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding-top: 73px;
+    padding-top: 82px;
     padding-right: 60px;
-    padding-bottom: 135px;
+    padding-bottom: 134px;
     padding-left: 75px;
 
     background-image: url("../img/bg-rect.svg"), url("../img/rogovaya-back-desktop@1x.png"), url("../img/smolov-back-desktop@1x.png");
     background-repeat: no-repeat;
-    background-position: 60px 123px, left 191px top 440px, 547px 188px;
+    background-position: 60px 131px, left 191px top 450px, 547px 198px;
     background-size: 213px 213px, auto, auto;
     border-radius: 0 0 60px 60px;
 

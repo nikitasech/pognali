@@ -1,6 +1,6 @@
 .rates {
   padding-top: 36px;
-  padding-bottom: 20px;
+  padding-bottom: 39px;
 
   background-color: $basis-background;
   background-image: url("../img/rates@1x.png");
@@ -127,14 +127,14 @@
   .rates {
     padding-top: 42px;
     padding-right: 75px;
-    padding-bottom: 88px;
+    padding-bottom: 66px;
     padding-left: 75px;
 
     background-image: url("../img/rates@1x.png"), url("../img/bg-rect-grey.svg");
     background-repeat: no-repeat;
     background-position: right 86px top 409px, right 40px top 149px;
     background-size: 99px, 198px 285px;
-    border-radius: 0 0 50px 50px;
+    border-radius: 0 0 60px 60px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/rates@2x.png"), url("../img/bg-rect-grey.svg");
@@ -183,12 +183,12 @@
   .rates__link {
     display: flex;
     align-items: center;
-    margin-top: 57px;
+    margin-top: 32px;
     margin-left: -36px;
 
     font-size: 20px;
     line-height: 20px;
-    text-align: start;
+    text-align: left;
   }
 
   .rates__icon-wrapper {
@@ -254,12 +254,12 @@
   .rates__link {
     display: flex;
     align-items: center;
-    margin-top: 57px;
+    margin-top: 35px;
     margin-left: 56px;
 
     font-size: 20px;
     line-height: 20px;
-    text-align: start;
+    text-align: left;
   }
 
   .rates__modal {

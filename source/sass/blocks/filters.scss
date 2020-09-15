@@ -9,41 +9,44 @@
 }
 
 .filters__description {
+  margin-top: 0;
+  margin-right: 20%;
+  margin-bottom: 0;
+
+  font-weight: 700;
   font-size: 23px;
   line-height: 23px;
-  font-weight: 700;
   color: $blue-slate;
-  margin-right: 20%;
-  margin-top: 0;
-  margin-bottom: 0;
 }
 
 .filters__form {
-  margin-top: 20px;
+  margin-top: 23px;
 }
 
-.filters__set {
-  margin: 0;
-  padding: 0;
-  padding-bottom: 19px;
+.filters__set-list {
+  @include list-reset;
+}
 
+.filters__set-item {
   border: none;
   border-top: 1px solid $macaroni-and-cheese;
 }
 
-.filters__legend {
+.filters__title {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  float: left;
   width: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
 
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
   color: $blue-slate;
   text-transform: uppercase;
-  cursor: default;
+
+  cursor: text;
 
   &:hover {
     opacity: 0.6;
@@ -54,13 +57,16 @@
   }
 }
 
-.filters__legend-colon {
+.filters__title-colon {
   display: none;
 }
 
-.filters__set-button {
-  padding: 17px 17px;
+.filters__title-button {
   flex-grow: 1;
+  padding-top: 17.5px;
+  padding-right: 0;
+  padding-bottom: 17.5px;
+  padding-left: 17px;
 
   font-size: 0;
   text-align: right;
@@ -70,140 +76,259 @@
   cursor: pointer;
 }
 
-.filters__set-button-icon {
+.filters__title-icon {
+  transform: rotate(180deg);
+
   fill: currentColor;
 
-  &--opened {
-    transform: rotate(180deg);
+  &--closed {
+    transform: rotate(0);
   }
+}
+
+.filters__checkboxes-list {
+  padding-left: 0;
+}
+
+.filters__item {
+  margin-top: 10px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.filters__transport-list {
+  display: flex;
+  padding-left: 0;
+}
+
+.filters__content {
+  margin-top: 3px;
+  padding-bottom: 20px;
+
+  &--closed {
+    display: none;
+  }
+}
+
+.filters__set-item:last-child .filters__content {
+  padding-bottom: 0;
+}
+
+.filters__submit {
+  margin-top: 6px;
 }
 
 @media (min-width: $tablet-width) {
   .filters {
-    padding-top: 22px;
-    padding-right: 25px;
-    padding-bottom: 22px;
-    padding-left: 25px;
+    padding-top: 34px;
+    padding-right: 10px;
+    padding-bottom: 38px;
+    padding-left: 34px;
   }
-  
+
+  .filters__description {
+    font-size: 30px;
+    line-height: 30px;
+  }
+
   .filters__form {
-    margin-top: 20px;
+    margin-top: 40px;
   }
-  
-  .filters__set {
-    display: flex;
+
+  .filters__set-list {
     padding-bottom: 19px;
 
     border-top: none;
 
-    &:first-of-type {
-      padding-top: 35px;
-      border-top: 1px solid $macaroni-and-cheese;
+    &::before {
+      content: "";
+
+      display: block;
+      width: calc(100% - 24px);
+      height: 1px;
+
+      background-color: $macaroni-and-cheese;
     }
 
-    &:last-of-type {
-      padding-bottom: 35px;
-      border-bottom: 1px solid $macaroni-and-cheese;
+    &::after {
+      content: "";
+
+      display: block;
+      width: calc(100% - 24px);
+      height: 1px;
+      margin-top: 37px;
+
+      background-color: $macaroni-and-cheese;
     }
   }
-  
-  .filters__legend {
+
+  .filters__set-item {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    min-height: 30px;
+    margin-top: 21px;
+
+    border: none;
+
+    &--range {
+      margin-top: 10px;
+      margin-right: 24px;
+    }
+
+    &:first-child {
+      margin-top: 30px;
+    }
+  }
+
+  .filters__title {
     display: block;
-    width: 125px;
-  
+    width: 127px;
+
     font-weight: 500;
     font-size: 20px;
     line-height: 30px;
-  
+
     &:hover {
       opacity: 1;
     }
-  
+
     &:active {
       opacity: 1;
     }
   }
 
-  .filters__legend-colon {
+  .filters__title-colon {
     display: inline;
   }
-  
-  .filters__set-button {
+
+  .filters__title-button {
     display: none;
   }
 
-  .form__content {
-    width: 100%;
+  .filters__title-icon {
+    width: 10px;
+    height: 5px;
   }
 
-  .filters__set-list {
+  .filters__checkboxes-list {
     display: flex;
-    
+    flex-wrap: wrap;
+    padding-bottom: 0;
+  }
+
+  .filters__content {
+    flex: 1;
+    margin-top: 0;
+    padding-bottom: 0;
+
+    &--closed {
+      display: flex;
+    }
+  }
+
+  .filters__item {
+    min-width: 170px;
     margin-top: 0;
   }
 
-  .filters__set-item {
-    flex: 1;
+  .filters__submit {
+    width: calc(100% - 24px);
+    margin-top: 17px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .filters {
+    box-sizing: border-box;
+    width: 19.8vw;
     margin: 0;
     padding: 48px;
-    width: 19.8vw;
-    box-sizing: border-box;
+    padding-top: 45px;
   }
-  
+
+  .filters__description {
+    font-size: 30px;
+    line-height: 30px;
+  }
+
   .filters__form {
-    margin-top: 20px;
+    margin-top: 25px;
   }
-  
-  .filters__set {
+
+  .filters__set-list {
     display: block;
     padding-bottom: 19px;
 
-    border-top: none;
-
-    &:first-of-type {
-      padding-top: 0;
-      border-top: none;
+    &:before {
+      content: none;
     }
 
-    &:last-of-type {
-      padding-bottom: 0;
-      border-bottom: none;
+    &:after {
+      content: none;
     }
   }
-  
-  .filters__legend {
+
+  .filters__set-item {
+    display: block;
+    min-height: 30px;
+    margin-top: 0;
+
+    border: none;
+
+    &--range {
+      margin-top: 0;
+      margin-right: 0;
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  .filters__title {
     display: flex;
     justify-content: space-between;
     width: 100%;
-  
+
     &:hover {
       opacity: 0.6;
     }
-  
+
     &:active {
       opacity: 0.3;
     }
   }
 
-  .filters__legend-colon {
+  .filters__title-colon {
     display: none;
   }
-  
-  .filters__set-button {
+
+  .filters__title-button {
     display: block;
   }
 
-  .filters__set-list {
-    display: block;
-    margin-top: 38px;
+  .filters__content {
+    margin-top: 15px;
+    margin-bottom: 19px;
+
+    &--closed {
+      display: none;
+    }
   }
 
-  .filters__transport-list {
-    margin-top: 38px;
+  .filters__item {
+    margin-top: 15px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  .filters__submit {
+    width: 103%;
+    margin-top: 4px;
   }
 }

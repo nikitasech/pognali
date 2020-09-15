@@ -6,12 +6,40 @@
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="css/style.min.css">
     <title>HTML Academy: Погнали</title>
+    <!-- Pixel Glass -->
+    <style>
+      html {
+        /* Mobile layout by default */
+        background-image: url("img/form-320.png");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+      }
+
+      /* Tablet */
+      @media (min-width: 768px) {
+        html {
+          /* Tablet layout */
+          background-image: url("img/form-768.png");
+        }
+      }
+
+      /* Desktop */
+      @media (min-width: 1440px) {
+        html {
+          /* Desktop layout */
+          background-image: url("img/form-1440.png");
+        }
+      }
+
+    </style>
+    <script src="js/pixel-glass.js"></script>
+    <!-- // Pixel Glass -->
   </head>
   <body>
     <div style="display: none;">
       <include src="build/img/sprite.svg"></include>
     </div>
-    <header class="main-header container">
+    <header class="main-header main-header--white main-header--no-js container">
       <a class="main-header__logo-link" href="index.html">
         <picture>
           <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x">
@@ -20,7 +48,7 @@
 
           <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
           <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
-          <img class="main-header__logo main-header__logo--blue logo" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" alt="Логотип сервиса «Погнали»" width="100" height="19">
+          <img class="main-header__logo main-header__logo--blue main-header__logo--selected logo" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" alt="Логотип сервиса «Погнали»" width="100" height="19">
         </picture>
         <picture>
           <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@2x.webp 2x">
@@ -29,13 +57,13 @@
 
           <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
           <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
-          <img class="main-header__logo main-header__logo--white main-header__logo--selected logo" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" alt="Логотип сервиса «Погнали»" width="100" height="19">
+          <img class="main-header__logo main-header__logo--white logo" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" alt="Логотип сервиса «Погнали»" width="100" height="19">
         </picture>
       </a>
       <button type="button" class="main-header__toggle main-header__toggle--closed">Открыть меню</button>
       <ul class="main-header__actions actions">
         <li class="actions__item actions__item--header actions__item--call">
-          <a href="tel:+78005558628" class="actions__button actions__button--cal button">
+          <a class="actions__button actions__button--cal button" href="tel:+78005558628">
             <svg class="actions__icon" width="18" height="18">
               <use xlink:href="#icon-topmenu-phone"></use>
             </svg>
@@ -43,7 +71,7 @@
           </a>
         </li>
         <li class="actions__item actions__item--header actions__item--write">
-          <a href="mailto:mail@htmlacademy.ru" class="actions__button actions__button--write button">
+          <a class="actions__button actions__button--write button" href="mailto:mail@htmlacademy.ru">
             <svg class="actions__icon" width="18" height="13">
               <use xlink:href="#icon-topmenu-mail"></use>
             </svg>
@@ -51,352 +79,419 @@
           </a>
         </li>
         <li class="actions__item actions__item--header actions__item--auth">
-          <a href="" class="actions__button actions__button--auth button">Авторизация</a>
+          <a class="actions__button actions__button--auth button" href="">Авторизация</a>
         </li>
       </ul>
-      <div class="main-header__menu container">
+      <div class="main-header__menu main-header__menu--no-js container">
         <nav class="main-header__navigation navigation">
           <ul class="navigation__list">
             <li class="navigation__item">
-              <a href="index.html" class="navigation__link">
+              <a class="navigation__link" href="index.html">
                 <span class="navigation__link-text" data-text="О сервисе">О сервисе</span>
               </a>
             </li>
             <li class="navigation__item">
-              <a href="form.html" class="navigation__link">
+              <a class="navigation__link" href="form.html">
                 <span class="navigation__link-text" data-text="Направления">Направления</span>
               </a>
             </li>
             <li class="navigation__item">
-              <a href="catalog.html" class="navigation__link">
-                <span class="navigation__link-text" data-text="Направления">Попутчики</span>
+              <a class="navigation__link" href="catalog.html">
+                <span class="navigation__link-text" data-text="Попутчики">Попутчики</span>
+              </a>
             </li>
           </ul>
         </nav>
-        <a href="" class="main-header__auth-button button">Авторизация</a>
-        <section class="main-header__contacts contacts">
-          <h2 class="contacts__title visually-hidden">Наши контакты</h2>
-          <ul class="contacts__list contacts__list--direct direct-contacts">
-            <li class="direct-contacts__item direct-contacts__item--tel">
-              <a href="tel:+78005558628" class="direct-contacts__link direct-contacts__link--header link">
-                <div class="direct-contacts__icon-wrapper">
-                  <svg class="direct-contacts__icon" width="18" height="18">
-                    <use xlink:href="#icon-contacts-phone"></use>
-                  </svg>
-                </div>
-                8 800 555-86-28
-              </a>
-            </li>
-            <li class="direct-contacts__item direct-contacts__item--email">
-              <a href="mailto:mail@htmlacademy.ru" class="direct-contacts__link direct-contacts__link--header link">
-                <div class="direct-contacts__icon-wrapper">
-                  <svg class="direct-contacts__icon" width="18" height="13">
-                    <use xlink:href="#icon-contacts-mail"></use>
-                  </svg>
-                </div>
-                mail@htmlacademy.ru
-              </a>
-            </li>
-          </ul>
-          <ul class="contacts__list contacts__list--socials social-contacts">
-            <li class="social-contacts__item">
-              <a href="" class="social-contacts__button social-contacts__button--header social-contacts__button--fb button">
-                <svg class="social-contacts__icon" width="11" height="21">
-                  <use xlink:href="#icon-facebook"></use>
+        <a class="main-header__auth-button button" href="">Авторизация</a>
+        <h2 class="visually-hidden">Наши контакты</h2>
+        <ul class="main-header__direct">
+          <li class="main-header__direct-item">
+            <a class="contact contact--blue" href="tel:+78005558628">
+              <div class="contact__icon-wrapper">
+                <svg class="contact__icon contact__icon--phone" width="18" height="18">
+                  <use xlink:href="#icon-contacts-phone"></use>
                 </svg>
-                Facebook
-              </a>
-            </li>
-            <li class="social-contacts__item">
-              <a href="" class="social-contacts__button  social-contacts__button--header social-contacts__button--vk button">
-                <svg class="social-contacts__icon" width="23" height="12">
-                  <use xlink:href="#icon-vk"></use>
+              </div>
+              <span class="contact__text">8 800 555-86-28</span>
+            </a>
+          </li>
+          <li class="main-header__direct-item">
+            <a class="contact contact--blue" href="mailto:mail@htmlacademy.ru">
+              <div class="contact__icon-wrapper">
+                <svg class="contact__icon contact__icon--mail" width="18" height="18">
+                  <use xlink:href="#icon-contacts-mail"></use>
                 </svg>
-                Вконтакте
-              </a>
-            </li>
-            <li class="social-contacts__item">
-              <a href="" class="social-contacts__button  social-contacts__button--header social-contacts__button--insta button">
-                <svg class="social-contacts__icon" width="18" height="18">
-                  <use xlink:href="#icon-instagram"></use>
-                </svg>
-                Instagram
-              </a>
-            </li>
-          </ul>
-        </section>
+              </div>
+              <span class="contact__text">mail@htmlacademy.ru</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="main-header__socials socials">
+          <li class="socials__item">
+            <a class="socials__button socials__button--fb" href="">
+              <svg class="socials__icon" width="11" height="21">
+                <use xlink:href="#icon-facebook"></use>
+              </svg>
+              Facebook
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__button socials__button--vk" href="">
+              <svg class="socials__icon" width="23" height="12">
+                <use xlink:href="#icon-vk"></use>
+              </svg>
+              Вконтакте
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__button socials__button--insta" href="">
+              <svg class="socials__icon" width="18" height="18">
+                <use xlink:href="#icon-instagram"></use>
+              </svg>
+              Instagram
+            </a>
+          </li>
+        </ul>
       </div>
     </header>
     <main class="main main--form">
-      <section class="main__title main-title">
+      <section class="main__title main-title container">
         <h1 class="main-title__text">Направления</h1>
       </section>
-      <form class="main__prifile profile form" action="https://echo.htmlacademy.ru/" method="get">
+      <form class="main__prifile profile form container" action="https://echo.htmlacademy.ru/" method="get">
         <h2 class="visually-hidden">Ваш профиль</h2>
-        <div class="profile__wrapper">
-          <p class="profile__level level">
-            80
-            <span class="level__description">level</span>
-          </p>
-          <img class="profile__image" src="https://via.placeholder.com/100x100" alt="Фотография вашего профиля">
-        </div>
-        <label class="form__input form__input--file" for="profile__change-image">Сменить фото</label>
+        <p class="profile__level level level--blue">
+          80
+          <span class="profile__level-description level__description level__description--grey">level</span>
+          <svg class="profile__level-bar level__bar" width="60" height="60" viewBox="0 0 46 46">
+            <circle r="21" cx="23" cy="23" fill="none" stroke-width="2.2" stroke="#ff8d30" stroke-dasharray="132" stroke-dashoffset="26.5"/>
+          </svg>
+        </p>
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/demin-tablet@1x.webp 1x, img/demin-tablet@2x.webp 2x">
+          <source media="(min-width: 768px)" srcset="img/photo-account-tablet@1x.webp 1x, img/photo-account-tablet@2x.webp 2x">
+          <source src="img/photo-account-mobile@1x.webp" srcset="img/photo-account-mobile@2x.webp 2x" alt="Фотография вашего профиля">
+
+          <source media="(min-width: 1440px)" srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/photo-account-tablet@1x.jpg 1x, img/photo-account-tablet@2x.jpg 2x">
+          <img class="profile__avatar" src="img/photo-account-mobile@1x.jpg" srcset="img/photo-account-mobile@2x.jpg 2x" alt="Фотография вашего профиля" width="100" height="100">
+        </picture>
+        <label class="form__file button" for="profile__change-image">
+          <span class="form__file-hidden">Сменить</span>
+          фото
+        </label>
         <input class="visually-hidden" type="file" name="profile__change-image" id="profile__change-image">
-        <p class="form__paragraph">
-          <label class="form__title form__title--border" for="profile__tags">Теги</label>
-          <textarea class="form__field" name="profile__tags" id="profile__tags">#бургер #бар #футбол #концерт #крафт</textarea>
-        </p>
-        <p class="form__paragraph">
-          <span class="form__title form__title--border">Транспорт</span>
-          <ul class="profile-form__transport-list transport-list">
-            <li class="transport-list__item transport-list__item--plane">
-              <input class="visually-hidden" type="checkbox" name="transport__plane" id="transport__plane">
-              <label class="form__label form__label--transport" for="transport__plane">Самолёт</label>
-            </li>
-            <li class="transport-list__item transport-list__item--car">
-              <input class="visually-hidden" type="checkbox" name="transport__car" id="transport__car">
-              <label class="form__label form__label--transport" for="transport__car">Машина</label>
-            </li>
-            <li class="transport-list__item transport-list__item--bicycle">
-              <input class="visually-hidden" type="checkbox" name="transport__bicycle" id="transport__bicycle">
-              <label class="form__label form__label--transport" for="transport__bicycle">Велосипед</label>
-            </li>
-            <li class="transport-list__item transport-list__item--walk">
-              <input class="visually-hidden" type="checkbox" name="transport__walk" id="transport__walk">
-              <label class="form__label form__label--transport" for="transport__walk">Прогулка</label>
-            </li>
-          </ul>
-        </p>
+        <div class="profile__tags textarea">
+          <label class="textarea__title textarea__title--integrated" for="profile__tags">Тэги</label>
+          <textarea class="textarea__field textarea__field--integrated" name="profile__tags" id="profile__tags">#бургер #бар #футбол #концерт #крафт</textarea>
+        </div>
+        <fieldset class="profile__transport fieldset">
+          <legend class="fieldset__title">Транспорт</legend>
+          <div class="profile__fieldset-content">
+            <ul class="profile__transport-list fieldset__list">
+              <li class="form__checkbox">
+                <input class="form__toggler" type="checkbox" name="transport__plane" id="transport__plane" checked>
+                <label class="form__label form__label--icon-checkbox" for="transport__plane">
+                  Авиаперелёт
+                  <svg class="form__checkbox-icon" width="14" height="16">
+                    <use xlink:href="#icon-plane"></use>
+                  </svg>
+                </label>
+              </li>
+              <li class="form__checkbox">
+                <input class="form__toggler" type="checkbox" name="transport__car" id="transport__car">
+                <label class="form__label form__label--icon-checkbox" for="transport__car">
+                  Автотранспорт
+                  <svg class="form__checkbox-icon" width="13" height="16">
+                    <use xlink:href="#icon-bus"></use>
+                  </svg>
+                </label>
+              </li>
+              <li class="form__checkbox">
+                <input class="form__toggler" type="checkbox" name="transport__bicycle" id="transport__bicycle">
+                <label class="form__label form__label--icon-checkbox" for="transport__bicycle">
+                  Велосипед
+                  <svg class="form__checkbox-icon" width="19" height="17">
+                    <use xlink:href="#icon-bike"></use>
+                  </svg>
+                </label>
+              </li>
+              <li class="form__checkbox">
+                <input class="form__toggler" type="checkbox" name="transport__walk" id="transport__walk">
+                <label class="form__label form__label--icon-checkbox" for="transport__walk">
+                  Пешком
+                  <svg class="form__checkbox-icon" width="15" height="17">
+                    <use xlink:href="#icon-run"></use>
+                  </svg>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </fieldset>
         <input class="visually-hidden" type="submit" value="Сохранить">
       </form>
-      <section class="main__plans plans">
-        <h2 class="plans__title title">Мои планы:</h2>
+      <section class="main__plans plans container">
+        <h2 class="plans__title title title--blue">Мои планы:</h2>
         <ol class="plans__list">
           <li class="plans__item plan">
             <h3 class="plan__title">Франция, Италия</h3>
-            <p class="plan__number-companions">3 попутчика</p>
-            <p class="plan__dates">26 мар — 29 мар</p>
-            <a class="plan__button plan__button--change" href="">Изменить</a>
+            <div class="plan__wrapper">
+              <p class="plan__number-companions">3 попутчика</p>
+              <p class="plan__dates">26 мар — 29 мар</p>
+              <a class="plan__change" href="">Изменить</a>
+            </div>
           </li>
           <li class="plans__item plan">
             <h3 class="plan__title">Тайланд, Индонезия</h3>
-            <p class="plan__number-companions">1 попутчик</p>
-            <p class="plan__dates">1 июл — 15 июл</p>
-            <a class="plan__button plan__button--change" href="">Изменить</a>
+            <div class="plan__wrapper">
+              <p class="plan__number-companions">1 попутчик</p>
+              <p class="plan__dates">1 июл — 15 июл</p>
+              <a class="plan__change" href="">Изменить</a>
+            </div>
           </li>
         </ol>
       </section>
-      <section class="main__add-plan add-plan">
-        <h2 class="add-plan__title title">Добавить план</h2>
-        <ul class="add-plan__list add-plan__list--slider">
-          <li class="add-plan__item">
-            <a href="" class="add-plan__link add-plan__link--slider">Первый шаг</a>
-          </li>
-          <li class="add-plan__item">
-            <a href="" class="add-plan__link add-plan__link--slider">Второй шаг</a>
-          </li>
-          <li class="add-plan__item">
-            <a href="" class="add-plan__link add-plan__link--slider">Третий шаг</a>
-          </li>
-        </ul>
+      <section class="main__add-plan add-plan container">
+        <div class="add-plans__wrapper">
+          <h2 class="add-plan__title title title--blue">Добавить план</h2>
+          <ul class="add-plan__slider-list">
+            <li class="add-plan__slider-item">
+              <a href="" class="add-plan__slider-link add-plan__slider-link--select">Первый шаг</a>
+            </li>
+            <li class="add-plan__slider-item">
+              <a href="" class="add-plan__slider-link">Второй шаг</a>
+            </li>
+            <li class="add-plan__slider-item">
+              <a href="" class="add-plan__slider-link">Третий шаг</a>
+            </li>
+          </ul>
+        </div>
         <form class="add-plan__form form" action="https://echo.htmlacademy.ru/" method="get">
-          <ul class="add-plan__list add-plan__list--steps">
-            <li class="add-plan__item step">
-              <h3 class="step__title">
-                <span class="step__counter">Шаг 1.</span>
-                <span class="step__title-text">Даты пребывания</span>
-              </h3>
-              <p class="step__description">
-                Укажите предпочтительное количество попутчиков, которых
-                вы хотели бы позвать в поездку и ее предполагаемую длительность.
-              </p>
-              <label for="number-companions" class="form__label">
-                <span class="form__label-text">ищу попутчиков:</span>
-                <span class="form__label-description">чел.</span>
-              </label>
-              <div class="form__container form__container--number form__container--people">
-                <button type="button" class="form__button form__button--quantity form__button--minus">Меньше</button>
-                <input type="number" value="2" id="number-companions" name="number-companions" class="form__field form__field--number">
-                <button type="button" class="form__button form__button--quantity form__button--plus">Больше</button>
+          <ul class="add-plan__steps-list">
+            <li class="add-plan__steps-item step">
+              <div class="step__header">
+                <h3 class="step__title">
+                  <span class="step__title-counter">Шаг 1.</span>
+                  <span class="step__title-text">Даты пребывания</span>
+                </h3>
+                <p class="step__description">
+                  Укажите предпочтительное количество попутчиков, которых
+                  <br class="step__br step__br--desktop">вы хотели бы позвать в поездку и ее предполагаемую длительность.
+                </p>
+                <ul class="step__slider-list">
+                  <li class="step__slider-item">
+                    <a href="" class="step__slider-link step__slider-link--select">Даты</a>
+                  </li>
+                  <li class="step__slider-item">
+                    <a href="" class="step__slider-link">Маршрут</a>
+                  </li>
+                  <li class="step__slider-item">
+                    <a href="" class="step__slider-link">Развлечения</a>
+                  </li>
+                </ul>
               </div>
-              <label for="duration" class="form__label">
-                <span class="form__label-text">длительность:</span>
-                <span class="form__label-description">дн.</span>
-              </label>
-              <div class="form__container form__container--number form__container--duration">
-                <button type="button" class="form__button form__button--quantity form__button--minus">Меньше</button>
-                <input type="number" value="2" id="duration" name="duration" class="form__field form__field--number">
-                <button type="button" class="form__button form__button--quantity form__button--plus">Больше</button>
+              <div class="step__number-companions number-field">
+                <label class="number-field__label" for="number-companions">ищу попутчиков:</label>
+                <span class="number-field__description">чел.</span>
+                <div class="number-field__container">
+                  <button class="number-field__change number-field__change--minus" type="button">Меньше</button>
+                  <input class="number-field__input" type="text" value="2" id="number-companions" name="number-companions">
+                  <button class="number-field__change number-field__change--plus" type="button">Больше</button>
+                </div>
               </div>
-              <p class="form__paragraph">
-                <input class="visually-hidden" type="checkbox" name="children" id="children">
-                <label class="form__label form__label--checkbox" for="children">Можно с детьми</label>
+
+              <div class="step__duration-trip number-field">
+                <label class="number-field__label" for="duration">длительность:</label>
+                <span class="number-field__description">дн.</span>
+                <div class="number-field__container">
+                  <button class="number-field__change number-field__change--minus" type="button">Меньше</button>
+                  <input class="number-field__input" type="text" value="2" id="duration" name="duration">
+                  <button class="number-field__change number-field__change--plus" type="button">Больше</button>
+                </div>
+              </div>
+              <p class="step__children form__checkbox">
+                <input class="form__toggler" type="checkbox" name="children" id="children">
+                <label class="form__label form__label--checkbox form__label--border" for="children">Можно с детьми</label>
               </p>
               <div class="form__date date">
                 <div class="date__month">
-                  <button class="date__button date__button--previous-month" type="button">Предыдущий месяц</button>
-                  <span class="date__rescription">Март 2019</span>
-                  <button class="date__button date__button--next-month" type="button">Следующий месяц</button>
+                  <button class="date__mount-button date__mount-button--previous" type="button">Предыдущий месяц</button>
+                  <span class="date__description">Март 2019</span>
+                  <button class="date__mount-button date__mount-button--next" type="button">Следующий месяц</button>
                 </div>
                 <table class="date__calendar">
                   <tbody>
                     <tr class="date__row date__row--week">
-                      <th class="date__cell">П</th>
-                      <th class="date__cell">В</th>
-                      <th class="date__cell">С</th>
-                      <th class="date__cell">Ч</th>
-                      <th class="date__cell">П</th>
-                      <th class="date__cell">С</th>
-                      <th class="date__cell">В</th>
+                      <th class="date__title">
+                        П<span class="date__tablet-word">н</span>
+                      </th>
+                      <th class="date__title">
+                        В<span class="date__tablet-word">т</span>
+                      </th>
+                      <th class="date__title">
+                        С<span class="date__tablet-word">р</span>
+                      </th>
+                      <th class="date__title">
+                        Ч<span class="date__tablet-word">т</span>
+                      </th>
+                      <th class="date__title">
+                        П<span class="date__tablet-word">т</span>
+                      </th>
+                      <th class="date__title date__title--weekend">
+                        С<span class="date__tablet-word">б</span>
+                      </th>
+                      <th class="date__title date__title--weekend">
+                        В<span class="date__tablet-word">с</span>
+                      </th>
                     </tr>
                     <tr class="date__row">
                       <td class="date__cell">
                         <input class="visually-hidden" type="checkbox" name="february-23" id="february-23" disabled>
-                        <label class="date__label" for="february-23">23</label>
+                        <label class="date__label date__label--disabled" for="february-23">23</label>
                       </td>
                       <td class="date__cell">
                         <input class="visually-hidden" type="checkbox" name="february-24" id="february-24" disabled>
-                        <label class="date__label" for="february-23">24</label>
+                        <label class="date__label date__label--disabled" for="february-23">24</label>
                       </td>
                       <td class="date__cell">
                         <input class="visually-hidden" type="checkbox" name="february-25" id="february-25" disabled>
-                        <label class="date__label" for="february-23">25</label>
+                        <label class="date__label date__label--disabled" for="february-23">25</label>
                       </td>
                       <td class="date__cell">
                         <input class="visually-hidden" type="checkbox" name="february-26" id="february-26" disabled>
-                        <label class="date__label" for="february-23">26</label>
+                        <label class="date__label date__label--disabled" for="february-23">26</label>
                       </td>
                       <td class="date__cell">
                         <input class="visually-hidden" type="checkbox" name="february-27" id="february-27" disabled>
-                        <label class="date__label" for="february-23">27</label>
+                        <label class="date__label date__label--disabled" for="february-23">27</label>
                       </td>
                       <td class="date__cell">
                         <input class="visually-hidden" type="checkbox" name="february-28" id="february-28" disabled>
-                        <label class="date__label" for="february-23">28</label>
+                        <label class="date__label date__label--disabled" for="february-23">28</label>
                       </td>
                       <td class="date__cell">
                         <input class="visually-hidden" type="checkbox" name="march-1" id="march-1" disabled>
-                        <label class="date__label" for="march-1">1</label>
+                        <label class="date__label date__label--disabled" for="march-1">1</label>
                       </td>
                     </tr>
                     <tr class="date__row">
                       <td class="date__cell">
                         <input class="visually-hidden" type="checkbox" name="march-2" id="march-2" disabled>
-                        <label class="date__label" for="march-2">2</label>
+                        <label class="date__label date__label--disabled" for="march-2">2</label>
                       </td>
                       <td class="date__cell">
                         <input class="visually-hidden" type="checkbox" name="march-3" id="march-3" disabled>
-                        <label class="date__label" for="march-3">3</label>
+                        <label class="date__label date__label--disabled" for="march-3">3</label>
                       </td>
                       <td class="date__cell">
                         <input class="visually-hidden" type="checkbox" name="march-4" id="march-4" disabled>
-                        <label class="date__label" for="march-4">4</label>
+                        <label class="date__label date__label--disabled" for="march-4">4</label>
                       </td>
                       <td class="date__cell">
                         <input class="visually-hidden" type="checkbox" name="march-5" id="march-5" disabled>
-                        <label class="date__label" for="march-5">5</label>
+                        <label class="date__label date__label--disabled" for="march-5">5</label>
                       </td>
                       <td class="date__cell">
                         <input class="visually-hidden" type="checkbox" name="march-6" id="march-6" disabled>
-                        <label class="date__label" for="march-6">6</label>
+                        <label class="date__label date__label--disabled" for="march-6">6</label>
                       </td>
                       <td class="date__cell">
                         <input class="visually-hidden" type="checkbox" name="march-7" id="march-7" disabled>
-                        <label class="date__label" for="march-7">7</label>
+                        <label class="date__label date__label--disabled" for="march-7">7</label>
                       </td>
                       <td class="date__cell">
                         <input class="visually-hidden" type="checkbox" name="march-8" id="march-8" disabled>
-                        <label class="date__label" for="march-8">8</label>
+                        <label class="date__label date__label--disabled" for="march-8">8</label>
                       </td>
                     </tr>
                     <tr class="date__row">
                       <td class="date__cell">
                         <input class="visually-hidden" type="checkbox" name="march-9" id="march-9" disabled>
-                        <label class="date__label" for="march-9">9</label>
+                        <label class="date__label date__label--disabled" for="march-9">9</label>
                       </td>
                       <td class="date__cell">
                         <input class="visually-hidden" type="checkbox" name="march-10" id="march-10" disabled>
-                        <label class="date__label" for="march-10">10</label>
+                        <label class="date__label date__label--disabled" for="march-10">10</label>
                       </td>
                       <td class="date__cell">
                         <input class="visually-hidden" type="checkbox" name="march-11" id="march-11" disabled>
-                        <label class="date__label" for="march-11">11</label>
+                        <label class="date__label date__label--disabled" for="march-11">11</label>
                       </td>
                       <td class="date__cell">
                         <input class="visually-hidden" type="checkbox" name="march-12" id="march-12" disabled>
-                        <label class="date__label" for="march-12">12</label>
+                        <label class="date__label date__label--disabled" for="march-12">12</label>
                       </td>
                       <td class="date__cell">
                         <input class="visually-hidden" type="checkbox" name="march-13" id="march-13" disabled>
-                        <label class="date__label" for="march-13">13</label>
+                        <label class="date__label date__label--disabled" for="march-13">13</label>
                       </td>
                       <td class="date__cell">
                         <input class="visually-hidden" type="checkbox" name="march-14" id="march-14" disabled>
-                        <label class="date__label" for="march-14">14</label>
+                        <label class="date__label date__label--disabled" for="march-14">14</label>
                       </td>
                       <td class="date__cell">
                         <input class="visually-hidden" type="checkbox" name="march-15" id="march-15" disabled>
-                        <label class="date__label" for="march-15">15</label>
+                        <label class="date__label date__label--disabled" for="march-15">15</label>
                       </td>
                     </tr>
                     <tr class="date__row">
                       <td class="date__cell">
                         <input class="visually-hidden" type="checkbox" name="march-16" id="march-16" disabled>
-                        <label class="date__label" for="march-16">16</label>
+                        <label class="date__label date__label--disabled" for="march-16">16</label>
                       </td>
                       <td class="date__cell">
                         <input class="visually-hidden" type="checkbox" name="march-17" id="march-17" disabled>
-                        <label class="date__label" for="march-17">17</label>
+                        <label class="date__label date__label--disabled" for="march-17">17</label>
                       </td>
                       <td class="date__cell">
                         <input class="visually-hidden" type="checkbox" name="march-18" id="march-18" disabled>
-                        <label class="date__label" for="march-18">18</label>
+                        <label class="date__label date__label--disabled" for="march-18">18</label>
                       </td>
                       <td class="date__cell">
                         <input class="visually-hidden" type="checkbox" name="march-19" id="march-19" disabled>
-                        <label class="date__label" for="march-19">19</label>
+                        <label class="date__label date__label--disabled" for="march-19">19</label>
                       </td>
                       <td class="date__cell">
                         <input class="visually-hidden" type="checkbox" name="march-20" id="march-20" disabled>
-                        <label class="date__label" for="march-20">20</label>
+                        <label class="date__label date__label--disabled" for="march-20">20</label>
                       </td>
                       <td class="date__cell">
                         <input class="visually-hidden" type="checkbox" name="march-21" id="march-21" disabled>
-                        <label class="date__label" for="march-21">21</label>
+                        <label class="date__label date__label--disabled" for="march-21">21</label>
                       </td>
                       <td class="date__cell">
                         <input class="visually-hidden" type="checkbox" name="march-22" id="march-22" disabled>
-                        <label class="date__label" for="march-22">22</label>
+                        <label class="date__label date__label--disabled" for="march-22">22</label>
                       </td>
                     </tr>
                     <tr class="date__row">
                       <td class="date__cell">
                         <input class="visually-hidden" type="checkbox" name="march-23" id="march-23" disabled>
-                        <label class="date__label" for="march-23">23</label>
+                        <label class="date__label date__label--disabled" for="march-23">23</label>
                       </td>
                       <td class="date__cell">
                         <input class="visually-hidden" type="checkbox" name="march-24" id="march-24" disabled>
-                        <label class="date__label" for="march-24">24</label>
+                        <label class="date__label date__label--disabled" for="march-24">24</label>
                       </td>
                       <td class="date__cell">
                         <input class="visually-hidden" type="checkbox" name="march-25" id="march-25" disabled>
-                        <label class="date__label" for="march-25">25</label>
+                        <label class="date__label date__label--disabled" for="march-25">25</label>
                       </td>
                       <td class="date__cell">
                         <input class="visually-hidden" type="checkbox" name="march-26" id="march-26">
-                        <label class="date__label" for="march-26">26</label>
+                        <label class="date__label date__label--selected" for="march-26">26</label>
                       </td>
                       <td class="date__cell">
                         <input class="visually-hidden" type="checkbox" name="march-27" id="march-27">
-                        <label class="date__label" for="march-27">27</label>
+                        <label class="date__label date__label--selected" for="march-27">27</label>
                       </td>
                       <td class="date__cell">
                         <input class="visually-hidden" type="checkbox" name="march-28" id="march-28">
-                        <label class="date__label" for="march-28">28</label>
+                        <label class="date__label date__label--selected" for="march-28">28</label>
                       </td>
                       <td class="date__cell">
                         <input class="visually-hidden" type="checkbox" name="march-29" id="march-29">
-                        <label class="date__label" for="march-29">29</label>
+                        <label class="date__label date__label--selected" for="march-29">29</label>
                       </td>
                     </tr>
                     <tr class="date__row">
@@ -432,73 +527,751 @@
                   </tbody>
                 </table>
               </div>
-              <a class="form__button form__button--next-step button" href="">Следующий шаг</a>
+              <a class="step__next button" href="">
+                Следующий шаг
+                <svg class="step__next-icon" width="10" height="14">
+                  <use xlink:href="#icon-triangle-arrow"></use>
+                </svg>
+              </a>
             </li>
-            <li class="add-plan__item step">
-              <h3 class="step__title">
-                <span class="step__counter">Шаг 2.</span>
-                <span class="step__title-text">Маршрут</span>
-              </h3>
-              <p class="step__description">
-                Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.
-              </p>
-              <ul class="form__list form__list--countries">
-                <li class="form__item form__container form__container--select">
-                  <p class="form__select-text form__select-text--selected">
-                    Босния и герцеговина
-                    <button class="form__button form__button--select" type="button">Выбрать другую страну</button>
-                  </p>
-                  <div class="form__flag form__flag--bosnia-and-herzegovina">
-                    <!-- svg -->
+            <li class="add-plan__steps-item step">
+              <div class="step__header">
+                <h3 class="step__title">
+                  <span class="step__title-counter">Шаг 2.</span>
+                  <span class="step__title-text">Маршрут</span>
+                </h3>
+                <p class="step__description">
+                  Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.
+                </p>
+                <ul class="step__slider-list">
+                  <li class="step__slider-item">
+                    <a href="" class="step__slider-link">Даты</a>
+                  </li>
+                  <li class="step__slider-item">
+                    <a href="" class="step__slider-link step__slider-link--select">Маршрут</a>
+                  </li>
+                  <li class="step__slider-item">
+                    <a href="" class="step__slider-link">Развлечения</a>
+                  </li>
+                </ul>
+              </div>
+              <ul class="step__routs routs">
+                <li class="routs__item routs__item--country-selected routs__item--bosnia">
+                  <div class="routs__text routs__text--country-selected">
+                    <span class="rout__country">Босния&nbsp;и&nbsp;Герцеговина</span>
+                    <button class="routs__chose-button routs__chose-button--country-selected" type="button">Изменить</button>
                   </div>
-                  <button class="form__button form__button--delete-country">Удалить</button>
+                  <button class="routs__delete routs__delete">
+                    Удалить
+                    <svg class="routs__delete-icon" width="9" height="9">
+                      <use xlink:href="#icon-close"></use>
+                    </svg>
+                  </button>
                 </li>
-                <li class="form__item form__container form__container--select">
-                  <p class="form__select-text form__select-text--selected">
-                    Чехия
-                    <button class="form__button form__button--select" type="button">Выбрать другую страну</button>
-                  </p>
-                  <div class="form__flag form__flag--czech">
-                    <!-- svg -->
+                <li class="routs__item routs__item--country-selected routs__item--czech">
+                  <div class="routs__text routs__text--country-selected">
+                    <span class="rout__country">Чехия</span>
+                    <button class="routs__chose-button routs__chose-button--country-selected" type="button">Изменить</button>
                   </div>
-                  <button class="form__button form__button--delete-country">Удалить</button>
+                  <button class="routs__delete routs__delete">
+                    Удалить
+                    <svg class="routs__delete-icon" width="9" height="9">
+                      <use xlink:href="#icon-close"></use>
+                    </svg>
+                  </button>
                 </li>
-                <li class="form__item form__container form__container--select">
-                  <p class="form__select-text form__select-text">
-                    <button class="form__button form__button--select" type="button">Выбрать страну</button>
-                  </p>
-                  <button class="form__button form__button--delete-country">Удалить</button>
+                <li class="routs__item routs__item--country-added">
+                  <div class="routs__text routs__text--country-added">
+                    <span class="rout__country">Выберите страну</span>
+                    <button class="routs__chose-button routs__chose-button--country-added" type="button">Выбрать</button>
+                    <div class="rout__select-alphabet select-alphabet">
+                      <ul class="select-alphabet__list">
+                        <li class="select-alphabet__item select-alphabet__item--selected">
+                          <button class="select-alphabet__button select-alphabet__button--selected" type="button">А</button>
+                          <ul class="select-alphabet__countries-list select-alphabet__countries-list--displayed">
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Австралия</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Австрия</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Азербайджан</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Албания</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Алжир</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Ангола</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Андорра</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Антигуа и Барбуда</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Аргентина</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Армения</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Афганистан</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="select-alphabet__item">
+                          <button class="select-alphabet__button" type="button">Б</button>
+                          <ul class="select-alphabet__countries-list">
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Багамские Острова</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Бангладеш</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Барбадос</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Бахрейн</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Белоруссия</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Белиз</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Бельгия</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Бенин</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Болгария</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Боливия</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Босния и Герцеговина</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Ботсвана</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Бразилия</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Бруней</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Буркина-Фасо</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Бурунди</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Бутан</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="select-alphabet__item">
+                          <button class="select-alphabet__button" type="button">В</button>
+                          <ul class="select-alphabet__countries-list">
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Вануату</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Великобритания</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Венгрия</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Венесуэла</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Восточный Тимор</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Вьетнам</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="select-alphabet__item">
+                          <button class="select-alphabet__button" type="button">Г</button>
+                          <ul class="select-alphabet__countries-list">
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Габон</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Гаити</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Гайана</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Гамбия</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Гана</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Гватемала</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Гвинея</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Гвинея-Бисау</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Германия</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Гондурас</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Гренада</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Греция</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Грузия</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="select-alphabet__item">
+                          <button class="select-alphabet__button" type="button">Д</button>
+                          <ul class="select-alphabet__countries-list">
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Дания</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Джибути</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Доминика</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Доминикана</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="select-alphabet__item">
+                          <button class="select-alphabet__button" type="button">Е</button>
+                          <ul class="select-alphabet__countries-list">
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Египет</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="select-alphabet__item">
+                          <button class="select-alphabet__button" type="button">З</button>
+                          <ul class="select-alphabet__countries-list">
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Замбия</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Зимбабве</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="select-alphabet__item">
+                          <button class="select-alphabet__button" type="button">И</button>
+                          <ul class="select-alphabet__countries-list">
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Израиль</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Индия</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Индонезия</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Иордания</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Ирак</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Иран</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Ирландия</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Исландия</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Испания</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Италия</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="select-alphabet__item">
+                          <button class="select-alphabet__button" type="button">К</button>
+                          <ul class="select-alphabet__countries-list">
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Кабо-Верде</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Казахстан</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Камбоджа</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Камерун</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Канада</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Катар</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Кения</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Кипр</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Киргизия</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Кирибати</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Китай</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Колумбия</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="select-alphabet__item">
+                          <button class="select-alphabet__button" type="button">Л</button>
+                          <ul class="select-alphabet__countries-list">
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Лаос</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Латвия</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Лесото</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Либерия</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Ливан</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Ливия</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Литва</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Лихтенштейн</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Люксембург</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="select-alphabet__item">
+                          <button class="select-alphabet__button" type="button">М</button>
+                          <ul class="select-alphabet__countries-list">
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Маврикий</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Мавритания</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Мадагаскар</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Малави</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Малайзия</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Мали</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Мальдивы</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Мальта</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Марокко</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Мексика</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="select-alphabet__item">
+                          <button class="select-alphabet__button" type="button">Н</button>
+                          <ul class="select-alphabet__countries-list">
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Намибия</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Науру</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Непал</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Нигер</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Нигерия</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Нидерланды</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Никарагуа</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Новая Зеландия</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Норвегия</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="select-alphabet__item">
+                          <button class="select-alphabet__button" type="button">О</button>
+                          <ul class="select-alphabet__countries-list">
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">ОАЭ</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Оман</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="select-alphabet__item">
+                          <button class="select-alphabet__button" type="button">П</button>
+                          <ul class="select-alphabet__countries-list">
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Пакистан</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Палау</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Панама</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Папуа — Новая Гвинея</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Парагвай</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Перу</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Польша</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Португалия</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="select-alphabet__item">
+                          <button class="select-alphabet__button" type="button">Р</button>
+                          <ul class="select-alphabet__countries-list">
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Руанда</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Румыния</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Россия</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="select-alphabet__item">
+                          <button class="select-alphabet__button" type="button">С</button>
+                          <ul class="select-alphabet__countries-list">
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Сальвадор</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Самоа</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Сан-Марино</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Саудовская Аравия</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Сейшелы</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Сенегал</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Сербия</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Сингапур</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Сирия</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Словакия</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Словения</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">США</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="select-alphabet__item">
+                          <button class="select-alphabet__button" type="button">Т</button>
+                          <ul class="select-alphabet__countries-list">
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Таджикистан</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Таиланд</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Танзания</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Того</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Тонга</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Тринидад и Тобаго</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Тувалу</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Тунис</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Туркмения</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Турция</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="select-alphabet__item">
+                          <button class="select-alphabet__button" type="button">У</button>
+                          <ul class="select-alphabet__countries-list">
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Уганда</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Узбекистан</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Украина</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Уругвай</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="select-alphabet__item">
+                          <button class="select-alphabet__button" type="button">Ф</button>
+                          <ul class="select-alphabet__countries-list">
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Фиджи</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Филиппины</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Финляндия</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Франция</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="select-alphabet__item">
+                          <button class="select-alphabet__button" type="button">Х</button>
+                          <ul class="select-alphabet__countries-list">
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Хорватия</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="select-alphabet__item">
+                          <button class="select-alphabet__button" type="button">Ч</button>
+                          <ul class="select-alphabet__countries-list">
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Чад</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Черногория</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Чехия</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Чили</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="select-alphabet__item">
+                          <button class="select-alphabet__button" type="button">Ш</button>
+                          <ul class="select-alphabet__countries-list">
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Швейцария</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Швеция</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Шри-Ланка</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="select-alphabet__item">
+                          <button class="select-alphabet__button" type="button">Э</button>
+                          <ul class="select-alphabet__countries-list">
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Эквадор</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Эритрея</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Эсватини</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Эстония</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Эфиопия</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="select-alphabet__item">
+                          <button class="select-alphabet__button" type="button">Ю</button>
+                          <ul class="select-alphabet__countries-list">
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">ЮАР</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Южный Судан</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="select-alphabet__item">
+                          <button class="select-alphabet__button" type="button">Я</button>
+                          <ul class="select-alphabet__countries-list">
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Ямайка</a>
+                            </li>
+                            <li class="select-alphabet__countries-item">
+                              <a class="select-alphabet__countries-link" href="">Япония</a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <button class="routs__delete">
+                    Удалить
+                    <svg class="routs__delete-icon" width="9" height="9">
+                      <use xlink:href="#icon-close"></use>
+                    </svg>
+                  </button>
                 </li>
-                <li class="form__item form__container form__container--select">
-                  <p class="form__select-text form__select-text">
-                    <button class="form__button form__button--select form__button--add-country" type="button">Добавить страну</button>
-                  </p>
+                <li class="routs__item">
+                  <div class="routs__text">
+                    <span class="rout__country">Добавить страну</span>
+                    <button class="routs__chose-button" type="button">Добавить</button>
+                  </div>
+                  <button class="routs__delete routs__delete--hidden">
+                    Удалить
+                    <svg class="routs__delete-icon" width="9" height="9">
+                      <use xlink:href="#icon-close"></use>
+                    </svg>
+                  </button>
                 </li>
               </ul>
-              <a class="form__button form__button--next-step button" href="">Следующий шаг</a>
-              <a class="form__button form__button--back-step" href="">На шаг назад</a>
+              <a class="step__next button" href="">
+                Следующий шаг
+                <svg class="step__next-icon" width="10" height="14">
+                  <use xlink:href="#icon-triangle-arrow"></use>
+                </svg>
+              </a>
+              <a class="step__back" href="">На шаг назад</a>
             </li>
-            <li class="add-plan__item step">
-              <h3 class="step__title">
-                <span class="step__counter">Шаг 3.</span>
-                <span class="step__title-text">Развлечения</span>
-              </h3>
-              <p class="step__description">
-                Наконец, расскажите о своих планах времяпровождения.
-                Можно писать в свободной форме и ставить тэги.
-              </p>
-              <ul class="step__list--textarea">
-                <li class="step__item">
-                  <label class="form__label form__label--textarea" for="plan__bosnia-and-herzegovina">Босния и Герцеговина</label>
-                  <textarea class="form__field form__field--textarea" name="plan__bosnia-and-herzegovina" id="plan__bosnia-and-herzegovina" cols="30" rows="10" placeholder="План действий"></textarea>
+            <li class="add-plan__steps-item step">
+              <div class="step__header">
+                <h3 class="step__title">
+                  <span class="step__title-counter">Шаг 2.</span>
+                  <span class="step__title-text">Развлечения</span>
+                </h3>
+                <p class="step__description">
+                  Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.
+                </p>
+                <ul class="step__slider-list">
+                  <li class="step__slider-item">
+                    <a href="" class="step__slider-link">Даты</a>
+                  </li>
+                  <li class="step__slider-item">
+                    <a href="" class="step__slider-link">Маршрут</a>
+                  </li>
+                  <li class="step__slider-item">
+                    <a href="" class="step__slider-link step__slider-link--select">Развлечения</a>
+                  </li>
+                </ul>
+              </div>
+              <ul class="step__textarea-list">
+                <li class="step__textarea-item textarea">
+                  <label class="textarea__title" for="plan__bosnia-and-herzegovina">Босния и Герцеговина</label>
+                  <textarea class="textarea__field" name="plan__bosnia-and-herzegovina" id="plan__bosnia-and-herzegovina" placeholder="План действий"></textarea>
                 </li>
-                <li class="step__item">
-                  <label class="form__label form__label--textarea" for="plan__czech">Чехия</label>
-                  <textarea class="form__field form__field--textarea" name="plan__czech" id="plan__czech" cols="30" rows="10" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                <li class="step__textarea-item textarea">
+                  <label class="textarea__title" for="plan__czech">Чехия</label>
+                  <textarea class="textarea__field" name="plan__czech" id="plan__czech" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
                 </li>
               </ul>
-              <input class="form__input form__input--submit" type="submit" value="Отправить">
-              <a class="form__button form__button--back-step" href="">На шаг назад</a>
+              <button class="step__next button" type="submit">
+                Отправить
+                <svg class="step__next-icon" width="10" height="14">
+                  <use xlink:href="#icon-triangle-arrow"></use>
+                </svg>
+              </button>
+              <a class="step__back" href="">На шаг назад</a>
             </li>
           </ul>
         </form>
@@ -547,5 +1320,6 @@
         <img src="img/htmlacademy.svg" alt="HTML Academy" class="copiryght__image" width="27" height="34">
       </a>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>

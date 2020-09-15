@@ -1,0 +1,245 @@
+.routs {
+  @include list-reset;
+}
+
+.routs__item {
+  position: relative;
+
+  display: flex;
+  width: 100%;
+  height: 40px;
+  margin-top: 22px;
+
+  font-size: 14px;
+  line-height: 18px;
+  color: $blue-slate;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+
+  &--country-selected::after {
+    content: "";
+
+    display: block;
+    width: 52px;
+    height: 100%;
+    margin-top: 1px;
+    margin-bottom: 1px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 35px 24px;
+    border-radius: 4px;
+    box-shadow: 0 0 0 1px $cloudy-blue;
+  }
+
+  &--czech::after {
+    background-image: url("../img/flag-czech.svg");
+  }
+
+  &--bosnia::after {
+    background-image: url("../img/flag-bosnia.svg");
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.routs__text {
+  position: relative;
+
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  align-items: center;
+  width: 62%;
+  height: 100%;
+  padding-left: 13px;
+
+  background-color: $pale-grey;
+  border: 1px solid $pale-grey;
+  border-radius: 4px;
+
+  &--country-added,
+  &--country-selected {
+    background-color: $white;
+    border: 1px solid $cloudy-blue;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 16px;
+    right: 49px;
+
+    display: block;
+    width: 7px;
+    height: 7px;
+
+    background-color: $pale-grey;
+    border: 1px solid $cloudy-blue;
+    border-radius: 50%;
+  }
+
+  &--country-added::before {
+    background-color: $white;
+  }
+
+  &--country-selected::before {
+    right: -5px;
+
+    background-color: $blue-slate;
+    border: 1px solid $blue-slate;
+  }
+
+
+  &--country-selected::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: block;
+    width: 50px;
+    height: 100%;
+
+    background-image: linear-gradient(to left, transparent 10%, $white 10%, $white 70%, transparent 100%);
+  }
+}
+
+.rout__country {
+  margin-right: 20px;
+  overflow: hidden;
+}
+
+.routs__chose-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+
+  width: 42px;
+  height: 100%;
+
+  font-size: 0;
+
+  background-color: transparent;
+  background-image: url("../img/icon-plus-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 14px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.3;
+
+  &--country-added,
+  &--country-selected {
+    background-image: url("../img/icon-dropdown-form.svg");
+    background-size: 12px 7px;
+  }
+}
+
+.routs__delete {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+
+  display: block;
+  width: 21px;
+  height: 21px;
+  padding-right: 0;
+  padding-left: 0;
+
+  font-size: 0;
+
+  background-color: $pale-grey;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &--hidden {
+    display: none;
+  }
+}
+
+.routs__delete-icon {
+  opacity: 0.3;
+}
+
+@media (min-width: $tablet-width) {
+  .routs {
+    position: relative;
+
+    margin-top: 32px;
+    padding-top: 41px;
+    padding-bottom: 62px;
+
+    border-top: 1px solid $light-blue-grey-two;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 74.3%;
+
+      display: block;
+      width: 1px;
+      height: 100%;
+
+      background-image: linear-gradient(to bottom, $light-blue-grey-two 80%, transparent 100%);
+    }
+  }
+
+  .routs__item {
+    height: 70px;
+    margin-top: 15px;
+
+    font-size: 20px;
+    letter-spacing: 0;
+
+    &--country-selected::after {
+      width: 100px;
+      margin-left: 38px;
+
+      background-size: 70px 48px;
+      box-shadow: none;
+    }
+  }
+
+  .routs__text {
+    flex-grow: 0;
+    width: 66.6%;
+
+    &::before {
+      top: 24px;
+      right: -36px;
+
+      width: 15px;
+      height: 15px;
+    }
+
+
+    &--country-added::before {
+      background-color: $white;
+    }
+
+    &--country-selected::before {
+      right: -36px;
+
+      background-color: $blue-slate;
+      border: 1px solid $blue-slate;
+    }
+  }
+
+  .routs__delete {
+    top: 24px;
+    right: -10px;
+
+    background-color: transparent;
+  }
+
+  .routs__delete-icon {
+    width: 17px;
+    height: 17px;
+  }
+}

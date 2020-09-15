@@ -1,12 +1,12 @@
 .about {
-  padding: 20px 50px;
+  padding: 71px 50px;
   padding-right: 46px;
   padding-bottom: 65px;
 
   background-color: $blue-grey;
   background-image: url("../img/about-mobile@1x.png"), url("../img/bg-rect.svg");
   background-repeat: no-repeat;
-  background-position: center 0, -8px 0;
+  background-position: center 40px, -8px 40px;
   background-size: auto, 113px 132px;
   border-radius: 0 0 30px 30px;
 
@@ -29,6 +29,12 @@
 
   &--bold {
     font-weight: 700;
+  }
+}
+
+.about__br {
+  &--tablet {
+    display: none;
   }
 }
 
@@ -67,6 +73,12 @@
     }
   }
 
+  .about__br {
+    &--tablet {
+      display: block;
+    }
+  }
+
   .about__button {
     display: flex;
     margin-top: 52px;
@@ -76,13 +88,13 @@
 
 @media (min-width: $desktop-width) {
   .about {
-    padding: 128px 130px;
+    padding: 195px 130px;
     padding-right: 392px;
     padding-bottom: 164px;
 
     background-color: $blue-grey;
     background-image: url("../img/about-desktop@1x.png"), url("../img/bg-rect.svg");
-    background-position: right 60px top 85px, 60px 70px;
+    background-position: right 60px top 150px, 60px 136px;
     background-size: auto, 213px 213px;
     border-radius: 0 0 60px 60px;
 
@@ -99,6 +111,12 @@
     &--bold {
       margin-top: 40px;
       margin-right: 450px;
+    }
+  }
+
+  .about__br {
+    &--tablet {
+      display: none;
     }
   }
 

@@ -10,12 +10,12 @@
 
   position: relative;
 
-  padding-bottom: 20px;
-
   border-radius: 0 0 30px 30px;
 
   &--blue {
     z-index: 2;
+
+    padding-bottom: 29px;
 
     background-color: $blue-grey;
   }
@@ -25,37 +25,84 @@
 
     margin-top: -35px;
     padding-top: 60px;
+    padding-bottom: 35px;
 
     background-color: $gold;
   }
 }
 
+.main-contacts__description {
+  margin-top: -5px;
+}
+
 .main-contacts__direct {
-  margin-top: 30px;
+  @include list-reset;
+
+  margin-top: 20px;
 }
 
 .main-contacts__location {
-  margin-bottom: 20px;
+  margin-right: 10px;
+  margin-top: 7px;
 }
 
 .main-contacts__rout {
   width: 100%;
+  margin-top: 32px;
 }
 
 .main-contacts__map {
-  position: relative;
-  z-index: 0;
+  width: 100%;
+  height: 307px;
+  overflow: hidden;
+}
 
+.main-contacts__map-img {
+  display: block;
   width: 100%;
   height: auto;
-  margin-top: -35px;
 }
 
 @media (min-width: $tablet-width) {
   .main-contacts__wrapper {
     @include tablet-container;
 
-    border-radius: 0 0 50px 50px;
+    padding-right: 75px;
+    padding-bottom: 61px;
+    padding-left: 75px;
+
+    border-radius: 0 0 60px 60px;
+
+    &--gold {
+      padding-bottom: 85px;
+    }
+  }
+
+  .main-contacts__description {
+    padding-top: 30px;
+  }
+
+  .main-contacts__br {
+    &--mobile {
+      display: none;
+    }
+  }
+
+  .main-contacts__direct {
+    margin-top: 42px;
+  }
+
+  .main-contacts__location {
+    margin-top: 22px;
+  }
+
+  .main-contacts__rout {
+    width: 100%;
+    margin-top: 46px;
+  }
+
+  .main-contacts__map {
+    height: 516px;
   }
 }
 
@@ -64,16 +111,46 @@
     padding-right: 132px;
     padding-left: 132px;
 
-    border-radius: 0 0 60px 60px;
+    &--blue {
+      padding-bottom: 106px;
+    }
 
     &--gold {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding-bottom: 57px;
     }
   }
 
+  .main-contacts__description {
+    padding-top: 40px;
+  }
+
+  .main-contacts__direct {
+    display: flex;
+    justify-content: center;
+  }
+
+  .main-contacts__direct-item {
+    margin-left: 110px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  .main-contacts__location {
+    margin-top: 28px;
+    margin-left: 151px;
+  }
+
   .main-contacts__rout {
-    width: 324px;
+    margin-top: 34px;
+    width: 325px;
+  }
+
+  .main-contacts__map {
+    height: 456px;
   }
 }

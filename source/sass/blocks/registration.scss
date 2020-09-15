@@ -12,8 +12,17 @@
 }
 
 .registration__description {
+  padding-right: 35px;
+  padding-left: 35px;
+
   text-align: center;
   color: $white;
+}
+
+.registration__br {
+  &--tablet {
+    display: none;
+  }
 }
 
 .registration__form {
@@ -24,6 +33,26 @@
   .registration {
     padding-top: 85px;
   }
+
+  .registration__title {
+    margin-top: 42px;
+  }
+
+  .registration__description {
+    margin-top: 57px;
+  }
+
+  .registration__br {
+    &--mobile {
+      display: none;
+    }
+  }
+
+  .registration__form {
+    margin-top: 66px;
+    padding-right: 35px;
+    padding-left: 35px;
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -31,5 +60,14 @@
     padding-right: 132px;
     padding-left: 132px;
   }
-}
 
+  .registration__title {
+    margin-top: 83px;
+  }
+
+  .registration__form {
+    margin-top: 60px;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}

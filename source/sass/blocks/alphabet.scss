@@ -59,15 +59,15 @@
     padding-bottom: 0;
     width: 425px;
   }
-  
+
   .atphabet__item {
     width: 77px;
     height: 83px;
   }
-  
+
   .alphabet__button {
     height: 100%;
-  
+
     color: rgba(black, 0.2);
     font-size: 60px;
     line-height: 24px;
@@ -75,25 +75,25 @@
 
     background-color: transparent;
     box-shadow: none;
-  
+
     &--selected {
       color: $blue-grey;
-  
+
       background-color: transparent;
       box-shadow: none;
     }
   }
-  
+
   .atphabet__countries-list {
     top: 7px;
     left: 465px;
     overflow-y: auto;
 
     width: 200px;
-  
+
     font-size: 20px;
     line-height: 30px;
-  
+
     &--displayed {
       display: block;
     }
@@ -105,29 +105,29 @@
     padding-bottom: 0;
     width: 100%;
   }
-  
+
   .atphabet__item {
     width: 250px;
     height: auto;
-    margin-top: 48px;
+    margin-top: 47px;
 
     &:nth-of-type(-n+5) {
       margin-top: 0;
     }
   }
-  
+
   .alphabet__button {
     height: 70px;
     padding-left: 0;
     padding-right: 0;
-  
+
     color: $blue-grey;
     text-align: left;
 
     background-color: transparent;
     box-shadow: none;
   }
-  
+
   .atphabet__countries-list {
     position: static;
     overflow-y: visible;
@@ -135,10 +135,10 @@
     margin-top: 24px;
     display: block;
     width: 100%;
-  
+
     font-size: 20px;
     line-height: 30px;
-  
+
     &--displayed {
       display: block;
     }

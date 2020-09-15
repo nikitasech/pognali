@@ -1,0 +1,153 @@
+.contact {
+  display: flex;
+  align-items: center;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  color: $gold;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  fill: currentColor;
+
+  &--blue {
+    color: $blue-grey;
+
+    fill: $gold;
+  }
+
+  &:hover {
+    color: $mango-two;
+  }
+
+  &:active {
+    color: rgba($mango-two, 0.3);
+  }
+
+  &--blue:hover {
+    fill: $mango-two;
+  }
+
+  &--blue:active {
+    fill: rgba($mango-two, 0.3);
+  }
+
+  &--disabled-hover:hover {
+    color: $gold;
+
+    fill: currentColor;
+  }
+
+  &--blue.contact--disabled-hover:hover {
+    color: $blue-grey;
+
+    fill: $gold;
+  }
+
+  &--disabled-hover:active {
+    color: $gold;
+
+    fill: currentColor;
+  }
+
+  &--blue.contact--disabled-hover:active {
+    color: $blue-grey;
+
+    fill: $gold;
+  }
+}
+
+.contact__icon-wrapper {
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+
+  background-color: $blue-grey-two;
+  border-radius: 50%;
+}
+
+.contact__icon {
+  &--phone {
+    width: 18px;
+    height: 18px;
+  }
+
+  &--mail {
+    width: 18px;
+    height: 13px;
+  }
+
+  &--location {
+    width: 14px;
+    height: 22px;
+  }
+}
+
+.contact__text {
+  margin-left: 16px;
+}
+
+@media(min-width: $tablet-width) {
+  .contact {
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  .contact__icon-wrapper {
+    width: 67px;
+    height: 67px;
+  }
+
+  .contact__icon {
+    &--phone {
+      width: 27px;
+      height: 27px;
+    }
+
+    &--mail {
+      width: 27px;
+      height: 19px;
+    }
+
+    &--location {
+      width: 21px;
+      height: 31px;
+    }
+  }
+
+  .contact__text {
+    margin-left: 24px;
+  }
+}
+
+@media(min-width: $desktop-width) {
+  .contact__icon-wrapper {
+    width: 90px;
+    height: 90px;
+  }
+
+  .contact__icon {
+    &--phone {
+      width: 36px;
+      height: 36px;
+    }
+
+    &--mail {
+      width: 36px;
+      height: 26px;
+    }
+
+    &--location {
+      width: 28px;
+      height: 43px;
+    }
+  }
+
+  .contact__text {
+    margin-left: 32px;
+  }
+}

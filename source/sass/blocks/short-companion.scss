@@ -128,8 +128,10 @@
 
 .short-companion__level {
   position: absolute;
-  top: 16px;
-  left: 16px;
+  top: 20px;
+  left: 20px;
+
+  background-image: radial-gradient(rgba(#000000, 0.6), rgba(#000000, 0.6) 64.5%, transparent 65.5%);
 }
 
 @media (min-width: $tablet-width) {

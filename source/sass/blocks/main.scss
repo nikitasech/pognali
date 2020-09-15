@@ -51,6 +51,26 @@
   margin-top: -25px;
 }
 
+.main__catalog-inner {
+  margin-top: 24px;
+}
+
+.main__companions-catalog {
+  margin-top: 28px;
+}
+
+.main__prifile {
+  margin-top: -25px;
+}
+
+.main__plans {
+  margin-top: 31px;
+}
+
+.main__add-plan {
+  margin-top: -35px;
+}
+
 @media (min-width: $tablet-width) {
   .main__companions {
     margin-top: -55px;
@@ -58,6 +78,18 @@
 
   .main__registration {
     margin-top: -55px;
+  }
+
+  .main__catalog-inner {
+    margin-top: 45px;
+  }
+
+  .main__companions-catalog {
+    margin-top: 40px;
+  }
+
+  .main__plans {
+    margin-top: 26px;
   }
 }
 
@@ -72,14 +104,27 @@
     padding-top: 82px;
   }
 
+  .main__about {
+    margin-top: -65px;
+  }
+
   .main__catalog-inner {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-top: 84px;
+    margin-top: 83px;
   }
 
   .main__filters {
     order: 1;
+  }
+
+  .main__companions-catalog {
+    margin-top: 0;
+  }
+
+
+  .main__add-plan {
+    margin-top: -65px;
   }
 }

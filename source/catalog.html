@@ -9,10 +9,10 @@
     <!-- Pixel Glass -->
     <style>
       html {
-        background-repeat: no-repeat;
-        background-position: 50% 0;
         /* Mobile layout by default */
         background-image: url("img/catalog-320.png");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
       }
 
       /* Tablet */
@@ -30,6 +30,7 @@
           background-image: url("img/catalog-1440.png");
         }
       }
+
     </style>
     <script src="js/pixel-glass.js"></script>
     <!-- // Pixel Glass -->
@@ -38,7 +39,7 @@
     <div style="display: none;">
       <include src="build/img/sprite.svg"></include>
     </div>
-    <header class="main-header container">
+    <header class="main-header main-header--white main-header--no-js container">
       <a class="main-header__logo-link" href="index.html">
         <picture>
           <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x">
@@ -47,7 +48,7 @@
 
           <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
           <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
-          <img class="main-header__logo main-header__logo--blue logo" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" alt="Логотип сервиса «Погнали»" width="100" height="19">
+          <img class="main-header__logo main-header__logo--blue main-header__logo--selected logo" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" alt="Логотип сервиса «Погнали»" width="100" height="19">
         </picture>
         <picture>
           <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@2x.webp 2x">
@@ -56,13 +57,13 @@
 
           <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
           <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
-          <img class="main-header__logo main-header__logo--white main-header__logo--selected logo" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" alt="Логотип сервиса «Погнали»" width="100" height="19">
+          <img class="main-header__logo main-header__logo--white logo" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" alt="Логотип сервиса «Погнали»" width="100" height="19">
         </picture>
       </a>
       <button type="button" class="main-header__toggle main-header__toggle--closed">Открыть меню</button>
       <ul class="main-header__actions actions">
         <li class="actions__item actions__item--header actions__item--call">
-          <a href="tel:+78005558628" class="actions__button actions__button--cal button">
+          <a class="actions__button actions__button--cal button" href="tel:+78005558628">
             <svg class="actions__icon" width="18" height="18">
               <use xlink:href="#icon-topmenu-phone"></use>
             </svg>
@@ -70,7 +71,7 @@
           </a>
         </li>
         <li class="actions__item actions__item--header actions__item--write">
-          <a href="mailto:mail@htmlacademy.ru" class="actions__button actions__button--write button">
+          <a class="actions__button actions__button--write button" href="mailto:mail@htmlacademy.ru">
             <svg class="actions__icon" width="18" height="13">
               <use xlink:href="#icon-topmenu-mail"></use>
             </svg>
@@ -78,81 +79,79 @@
           </a>
         </li>
         <li class="actions__item actions__item--header actions__item--auth">
-          <a href="" class="actions__button actions__button--auth button">Авторизация</a>
+          <a class="actions__button actions__button--auth button" href="">Авторизация</a>
         </li>
       </ul>
-      <div class="main-header__menu container">
+      <div class="main-header__menu main-header__menu--no-js container">
         <nav class="main-header__navigation navigation">
           <ul class="navigation__list">
             <li class="navigation__item">
-              <a href="index.html" class="navigation__link">
+              <a class="navigation__link" href="index.html">
                 <span class="navigation__link-text" data-text="О сервисе">О сервисе</span>
               </a>
             </li>
             <li class="navigation__item">
-              <a href="form.html" class="navigation__link">
+              <a class="navigation__link" href="form.html">
                 <span class="navigation__link-text" data-text="Направления">Направления</span>
               </a>
             </li>
             <li class="navigation__item">
-              <a href="catalog.html" class="navigation__link">
+              <a class="navigation__link" href="catalog.html">
                 <span class="navigation__link-text" data-text="Попутчики">Попутчики</span>
               </a>
             </li>
           </ul>
         </nav>
-        <a href="" class="main-header__auth-button button">Авторизация</a>
-        <section class="main-header__contacts contacts">
-          <h2 class="contacts__title visually-hidden">Наши контакты</h2>
-          <ul class="contacts__list contacts__list--direct direct-contacts">
-            <li class="direct-contacts__item direct-contacts__item--tel">
-              <a href="tel:+78005558628" class="direct-contacts__link direct-contacts__link--header link">
-                <div class="direct-contacts__icon-wrapper">
-                  <svg class="direct-contacts__icon" width="18" height="18">
-                    <use xlink:href="#icon-contacts-phone"></use>
-                  </svg>
-                </div>
-                8 800 555-86-28
-              </a>
-            </li>
-            <li class="direct-contacts__item direct-contacts__item--email">
-              <a href="mailto:mail@htmlacademy.ru" class="direct-contacts__link direct-contacts__link--header link">
-                <div class="direct-contacts__icon-wrapper">
-                  <svg class="direct-contacts__icon" width="18" height="13">
-                    <use xlink:href="#icon-contacts-mail"></use>
-                  </svg>
-                </div>
-                mail@htmlacademy.ru
-              </a>
-            </li>
-          </ul>
-          <ul class="contacts__list contacts__list--socials social-contacts">
-            <li class="social-contacts__item">
-              <a href="" class="social-contacts__button social-contacts__button--header social-contacts__button--fb button">
-                <svg class="social-contacts__icon" width="11" height="21">
-                  <use xlink:href="#icon-facebook"></use>
+        <a class="main-header__auth-button button" href="">Авторизация</a>
+        <h2 class="visually-hidden">Наши контакты</h2>
+        <ul class="main-header__direct">
+          <li class="main-header__direct-item">
+            <a class="contact contact--blue" href="tel:+78005558628">
+              <div class="contact__icon-wrapper">
+                <svg class="contact__icon contact__icon--phone" width="18" height="18">
+                  <use xlink:href="#icon-contacts-phone"></use>
                 </svg>
-                Facebook
-              </a>
-            </li>
-            <li class="social-contacts__item">
-              <a href="" class="social-contacts__button  social-contacts__button--header social-contacts__button--vk button">
-                <svg class="social-contacts__icon" width="23" height="12">
-                  <use xlink:href="#icon-vk"></use>
+              </div>
+              <span class="contact__text">8 800 555-86-28</span>
+            </a>
+          </li>
+          <li class="main-header__direct-item">
+            <a class="contact contact--blue" href="mailto:mail@htmlacademy.ru">
+              <div class="contact__icon-wrapper">
+                <svg class="contact__icon contact__icon--mail" width="18" height="18">
+                  <use xlink:href="#icon-contacts-mail"></use>
                 </svg>
-                Вконтакте
-              </a>
-            </li>
-            <li class="social-contacts__item">
-              <a href="" class="social-contacts__button  social-contacts__button--header social-contacts__button--insta button">
-                <svg class="social-contacts__icon" width="18" height="18">
-                  <use xlink:href="#icon-instagram"></use>
-                </svg>
-                Instagram
-              </a>
-            </li>
-          </ul>
-        </section>
+              </div>
+              <span class="contact__text">mail@htmlacademy.ru</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="main-header__socials socials">
+          <li class="socials__item">
+            <a class="socials__button socials__button--fb" href="">
+              <svg class="socials__icon" width="11" height="21">
+                <use xlink:href="#icon-facebook"></use>
+              </svg>
+              Facebook
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__button socials__button--vk" href="">
+              <svg class="socials__icon" width="23" height="12">
+                <use xlink:href="#icon-vk"></use>
+              </svg>
+              Вконтакте
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__button socials__button--insta" href="">
+              <svg class="socials__icon" width="18" height="18">
+                <use xlink:href="#icon-instagram"></use>
+              </svg>
+              Instagram
+            </a>
+          </li>
+        </ul>
       </div>
     </header>
     <main class="main main--catalog">
@@ -165,13 +164,15 @@
           </svg>
         </a>
       </section>
-      <section class="main__countries-filters countries-filters countries-filters--opened container">
+      <!-- countries-filters--opened -->
+      <section class="main__countries-filters countries-filters--opened countries-filters container">
         <h2 class="countries-filters__title">
           <svg class="cointries-filters__title-icon" width="15" height="10">
             <use xlink:href="#icon-filter"></use>
           </svg>
           Фильтрация по странам<span class="countries-filters__colon">:</span>
         </h2>
+        <!-- countries-filters__group-list--visible -->
         <ul class="countries-filters__group-list countries-filters__group-list--visible">
           <li class="countries-filters__group-item">
             <a class="countries-filters__group-link countries-filters__group-link--selected" href="">Европа</a>
@@ -187,11 +188,12 @@
           </li>
         </ul>
         <button class="countries-filters__open-filters">
-          показать все
-          <svg class="countries-filters__open-icon" width="17" height="3">
+          <span class="countries-filters__open-text">показать все</span>
+          <svg class="countries-filters__open-icon" width="17" height="17">
             <use xlink:href="#icon-dots"></use>
           </svg>
         </button>
+        <!-- countries-filters__body--opened -->
         <div class="countries-filters__body countries-filters__body--opened">
           <ul class="coutries-filters__alphabet alphabet">
             <li class="atphabet__item atphabet__item--selected">
@@ -824,169 +826,163 @@
         <section class="main__filters filters">
           <h2 class="visually-hidden">Фильтры</h2>
           <p class="filters__description">Подберите идеального попутчика</p>
-          <form class="filters__form form" action="https://echo.htmlacademy.ru/" method="get">
-            <fieldset class="filters__set">
-              <legend class="filters__legend">
-                Хобби<span class="filters__legend-colon">:</span>
-                <button class="filters__set-button filters__set-button--closed" type="button">
-                  <svg class="filters__set-button-icon" width="8" height="4">
-                    <use xlink:href="#icon-dropdown"></use>
-                  </svg>
-                  Открыть группу
-                </button>
-              </legend>
-              <div class="form__content">
-                <ul class="filters__set-list form__list">
-                  <li class="filters__set-item form__item">
-                    <input class="form__checkbox visually-hidden" type="checkbox" name="hobby__gym" id="hobby__gym" checked>
+          <form class="filters__form form" action="https://echo.htmlacademy.ru" method="get">
+            <ul class="filters__set-list">
+              <li class="filters__set-item">
+                <h3 class="filters__title">
+                  Хобби<span class="filters__title-colon">:</span>
+                  <button class="filters__title-button" type="button">
+                    <svg class="filters__title-icon filters__title-icon--closed" width="8" height="4">
+                      <use xlink:href="#icon-dropdown"></use>
+                    </svg>
+                    <span class="filters__title-text">Открыть группу</span>
+                  </button>
+                </h3>
+                <ul class="filters__content filters__content--closed filters__checkboxes-list">
+                  <li class="filters__item form__checkbox">
+                    <input class="form__toggler" type="checkbox" name="hobby__gym" id="hobby__gym" checked>
                     <label class="form__label form__label--checkbox" for="hobby__gym">Спортзал</label>
                   </li>
-                  <li class="filters__set-item form__item">
-                    <input class="form__checkbox visually-hidden" type="checkbox" name="hobby__hookah" id="hobby__hookah">
+                  <li class="filters__item form__checkbox">
+                    <input class="form__toggler" type="checkbox" name="hobby__hookah" id="hobby__hookah">
                     <label class="form__label form__label--checkbox" for="hobby__hookah">Кальян</label>
                   </li>
-                  <li class="filters__set-item form__item">
-                    <input class="form__checkbox visually-hidden" type="checkbox" name="hobby__sofa" id="hobby__sofa">
+                  <li class="filters__item form__checkbox">
+                    <input class="form__toggler" type="checkbox" name="hobby__sofa" id="hobby__sofa">
                     <label class="form__label form__label--checkbox" for="hobby__sofa">Диван</label>
                   </li>
                 </ul>
-              </div>
-            </fieldset>
-            <fieldset class="filters__set form__set--opened">
-              <legend class="filters__legend">
-                Музыка<span class="filters__legend-colon">:</span>
-                <button class="filters__set-button filters__set-button--opened" type="button">
-                  <svg class="filters__set-button-icon filters__set-button-icon--opened" width="8" height="4">
-                    <use xlink:href="#icon-dropdown"></use>
-                  </svg>
-                  Закрыть группу
-                </button>
-              </legend>
-              <div class="form__content">
-                <ul class="filters__set-list form__list">
-                  <li class="filters__set-item form__item">
-                    <input class="form__checkbox visually-hidden" type="checkbox" name="music__hard-rock" id="music__hard-rock" checked>
+              </li>
+              <li class="filters__set-item">
+                <h3 class="filters__title">
+                  Музыка<span class="filters__title-colon">:</span>
+                  <button class="filters__title-button" type="button">
+                    <svg class="filters__title-icon" width="8" height="4">
+                      <use xlink:href="#icon-dropdown"></use>
+                    </svg>
+                    <span class="filters__title-text">Закрыть группу</span>
+                  </button>
+                </h3>
+                <ul class="filters__content filters__checkboxes-list">
+                  <li class="filters__item form__checkbox">
+                    <input class="form__toggler" type="checkbox" name="music__hard-rock" id="music__hard-rock" checked>
                     <label class="form__label form__label--checkbox" for="music__hard-rock">Тяжелый рок</label>
                   </li>
-                  <li class="filters__set-item form__item">
-                    <input class="form__checkbox visually-hidden" type="checkbox" name="music__russian-rap" id="music__russian-rap">
+                  <li class="filters__item form__checkbox">
+                    <input class="form__toggler" type="checkbox" name="music__russian-rap" id="music__russian-rap">
                     <label class="form__label form__label--checkbox" for="music__russian-rap">Русский рэп</label>
                   </li>
-                  <li class="filters__set-item form__item">
-                    <input class="form__checkbox visually-hidden" type="checkbox" name="music__eurodance" id="music__eurodance">
+                  <li class="filters__item form__checkbox">
+                    <input class="form__toggler" type="checkbox" name="music__eurodance" id="music__eurodance">
                     <label class="form__label form__label--checkbox" for="music__eurodance">Евроденс</label>
                   </li>
                 </ul>
-              </div>
-            </fieldset>
-            <fieldset class="filters__set">
-              <legend class="filters__legend">
-                Еда<span class="filters__legend-colon">:</span>
-                <button class="filters__set-button filters__set-button--closed" type="button">
-                  <svg class="filters__set-button-icon" width="8" height="4">
-                    <use xlink:href="#icon-dropdown"></use>
-                  </svg>
-                  Открыть группу
-                </button>
-              </legend>
-              <div class="form__content">
-                <ul class="filters__set-list form__list">
-                  <li class="filters__set-item form__item">
-                    <input class="form__checkbox visually-hidden" type="checkbox" name="food__meat-eater" id="food__meat-eater" checked>
+              </li>
+              <li class="filters__set-item">
+                <h3 class="filters__title">
+                  Еда<span class="filters__title-colon">:</span>
+                  <button class="filters__title-button" type="button">
+                    <svg class="filters__title-icon filters__title-icon--closed" width="8" height="4">
+                      <use xlink:href="#icon-dropdown"></use>
+                    </svg>
+                    <span class="filters__title-text">Открыть группу</span>
+                  </button>
+                </h3>
+                <ul class="filters__content filters__content--closed filters__checkboxes-list">
+                  <li class="filters__item form__checkbox">
+                    <input class="form__toggler" type="checkbox" name="food__meat-eater" id="food__meat-eater" checked>
                     <label class="form__label form__label--checkbox" for="food__meat-eater">Мясоед</label>
                   </li>
-                  <li class="filters__set-item form__item">
-                    <input class="form__checkbox visually-hidden" type="checkbox" name="food__good-food" id="food__good-food">
+                  <li class="filters__item form__checkbox">
+                    <input class="form__toggler" type="checkbox" name="food__good-food" id="food__good-food">
                     <label class="form__label form__label--checkbox" for="food__good-food">Сидит на ПП</label>
                   </li>
-                  <li class="filters__set-item form__item">
-                    <input class="form__checkbox visually-hidden" type="checkbox" name="food__raw-foodist" id="food__raw-foodist">
+                  <li class="filters__item form__checkbox">
+                    <input class="form__toggler" type="checkbox" name="food__raw-foodist" id="food__raw-foodist">
                     <label class="form__label form__label--checkbox" for="food__raw-foodist">Веган-сыроед</label>
                   </li>
                 </ul>
-              </div>
-            </fieldset>
-            <fieldset class="filters__set filters__set--opened">
-              <legend class="filters__legend">
-                Транспорт<span class="filters__legend-colon">:</span>
-                <button class="filters__set-button filters__set-button--opened" type="button">
-                  <svg class="filters__set-button-icon filters__set-button-icon--opened" width="8" height="4">
-                    <use xlink:href="#icon-dropdown"></use>
-                  </svg>
-                  Закрыть группу
-                </button>
-              </legend>
-              <div class="form__content">
-                <ul class="filters__transport-list form__transport-list">
-                  <li class="form__transport-item">
-                    <input class="form__checkbox visually-hidden" type="checkbox" name="transport__plane" id="transport__plane" checked>
-                    <label class="form__label form__label--transport" for="transport__plane">
+              </li>
+              <li class="filters__set-item">
+                <h3 class="filters__title">
+                  Транспорт<span class="filters__title-colon">:</span>
+                  <button class="filters__title-button" type="button">
+                    <svg class="filters__title-icon" width="8" height="4">
+                      <use xlink:href="#icon-dropdown"></use>
+                    </svg>
+                    <span class="filters__title-text">Закрыть группу</span>
+                  </button>
+                </h3>
+                <ul class="filters__content filters__transport-list">
+                  <li class="form__checkbox">
+                    <input class="form__toggler" type="checkbox" name="transport__plane" id="transport__plane" checked>
+                    <label class="form__label form__label--icon-checkbox" for="transport__plane">
                       Авиаперелёт
-                      <svg class="form__transport-icon" width="14" height="16">
+                      <svg class="form__checkbox-icon" width="14" height="16">
                         <use xlink:href="#icon-plane"></use>
                       </svg>
+                    </label>
                   </li>
-                  <li class="form__transport-item">
-                    <input class="form__checkbox visually-hidden" type="checkbox" name="transport__car" id="transport__car">
-                    <label class="form__label form__label--transport" for="transport__car">
+                  <li class="form__checkbox">
+                    <input class="form__toggler" type="checkbox" name="transport__car" id="transport__car">
+                    <label class="form__label form__label--icon-checkbox" for="transport__car">
                       Автотранспорт
-                      <svg class="form__transport-icon" width="13" height="16">
+                      <svg class="form__checkbox-icon" width="13" height="16">
                         <use xlink:href="#icon-bus"></use>
                       </svg>
                     </label>
                   </li>
-                  <li class="form__transport-item">
-                    <input class="form__checkbox visually-hidden" type="checkbox" name="transport__bicycle" id="transport__bicycle">
-                    <label class="form__label form__label--transport" for="transport__bicycle">
+                  <li class="form__checkbox">
+                    <input class="form__toggler" type="checkbox" name="transport__bicycle" id="transport__bicycle">
+                    <label class="form__label form__label--icon-checkbox" for="transport__bicycle">
                       Велосипед
-                      <svg class="form__transport-icon" width="19" height="17">
+                      <svg class="form__checkbox-icon" width="19" height="17">
                         <use xlink:href="#icon-bike"></use>
                       </svg>
                     </label>
                   </li>
-                  <li class="form__transport-item">
-                    <input class="form__checkbox visually-hidden" type="checkbox" name="transport__walk" id="transport__walk">
-                    <label class="form__label form__label--transport" for="transport__walk">
+                  <li class="form__checkbox">
+                    <input class="form__toggler" type="checkbox" name="transport__walk" id="transport__walk">
+                    <label class="form__label form__label--icon-checkbox" for="transport__walk">
                       Пешком
-                      <svg class="form__transport-icon" width="15" height="17">
+                      <svg class="form__checkbox-icon" width="15" height="17">
                         <use xlink:href="#icon-run"></use>
                       </svg>
                     </label>
                   </li>
                 </ul>
-              </div>
-            </fieldset>
-            <fieldset class="filters__set filters__set--opened">
-              <legend class="filters__legend">
-                Левел<span class="filters__legend-colon">:</span>
-                <button class="filters__set-button filters__set-button--opened" type="button">
-                  <svg class="filters__set-button-icon filters__set-button-icon--opened" width="8" height="4">
-                    <use xlink:href="#icon-dropdown"></use>
-                  </svg>
-                  Закрыть группу
-                </button>
-              </legend>
-              <div class="form__content double-range">
-                <div class="double-range__controls">
-                  <input class="double-range__field double-range__field--min" type="text" value="0" id="double-range__field--min">
-                  <input class="double-range__field double-range__field--max" type="text" value="3000" id="double-range__field--max">
-                </div>
-                <div class="double-range__scale">
-                  <div class="double-range__bar">
-                    <label class="double-range__toggle double-range__toggle--min" for="double-range__field--min">
-                      От
-                    </label>
-                    <label class="double-range__toggle double-range__toggle--max" for="double-range__field--max">
-                      До
-                    </label>
+              </li>
+              <li class="filters__set-item filters__set-item--range">
+                <h3 class="filters__title">
+                  Левел<span class="filters__title-colon">:</span>
+                  <button class="filters__title-button" type="button">
+                    <svg class="filters__title-icon" width="8" height="4">
+                      <use xlink:href="#icon-dropdown"></use>
+                    </svg>
+                    <span class="filters__title-text">Закрыть группу</span>
+                  </button>
+                </h3>
+                <div class="filters__content double-range">
+                  <div class="double-range__controls">
+                    <input class="double-range__field double-range__field--min" type="text" value="30" id="double-range__field--min">
+                    <input class="double-range__field double-range__field--max" type="text" value="100" id="double-range__field--max">
                   </div>
-                </div>
-              </div>
-            </fieldset>
-            <input type="submit" value="Показать" class="form__submit button">
+                  <div class="double-range__scale">
+                    <div class="double-range__bar">
+                      <label class="double-range__toggle double-range__toggle--min" for="double-range__field--min">
+                        От
+                      </label>
+                      <label class="double-range__toggle double-range__toggle--max" for="double-range__field--max">
+                        До
+                      </label>
+                    </div>
+                  </div>
+              </li>
+            </ul>
+            <input type="submit" value="Показать" class="filters__submit form__submit button">
           </form>
         </section>
-        <section class="companions-catalog">
+        <section class="main__companions-catalog companions-catalog">
           <ul class="companions-catalog__list">
             <li class="companions-catalog__item companion">
               <picture>
@@ -1001,6 +997,7 @@
               <div class="companion__wrapper companion__wrapper--name-tags">
                 <h3 class="companion__name">
                   <a class="companion__link link link--blue" href="">Таня Фирсова</a>
+                  <span class="companion__status">Не готова к путешествию</span>
                 </h3>
                 <ul class="companion__hashtags-list">
                   <li class="companion__hashtags-item">
@@ -1062,8 +1059,14 @@
                   </ul>
                 </div>
                 <div class="companion__level">
-                  <p class="companion__subtitle companion__subtitle--level">level<span class="companion__level-colon">:</span></p>
-                  <span class="companion__level-number">99</span>
+                  <p class="companion__subtitle companion__subtitle--level">левел<span class="companion__level-colon">:</span></p>
+                  <p class="level level--blue">
+                    99
+                    <span class="level__description level__description--grey">level</span>
+                    <svg class="level__bar" width="60" height="60" viewBox="0 0 46 46">
+                      <circle r="21" cx="23" cy="23" fill="none" stroke-width="2.2" stroke="#ff8d30" stroke-dasharray="132" stroke-dashoffset="1.5"/>
+                    </svg>
+                  </p>
                 </div>
               </div>
               <div class="companion__wrapper companion__wrapper--buttons">
@@ -1093,6 +1096,7 @@
               <div class="companion__wrapper companion__wrapper--name-tags">
                 <h3 class="companion__name">
                   <a class="companion__link link link--blue" href="">Петя Демин</a>
+                  <span class="companion__status">Не готов к путешествию</span>
                 </h3>
                 <ul class="companion__hashtags-list">
                   <li class="companion__hashtags-item">
@@ -1150,8 +1154,14 @@
                   </ul>
                 </div>
                 <div class="companion__level">
-                  <p class="companion__subtitle companion__subtitle--level">level<span class="companion__level-colon">:</span></p>
-                  <span class="companion__level-number">80</span>
+                  <p class="companion__subtitle companion__subtitle--level">левел<span class="companion__level-colon">:</span></p>
+                  <p class="level level--blue">
+                    80
+                    <span class="level__description level__description--grey">level</span>
+                    <svg class="level__bar" width="60" height="60" viewBox="0 0 46 46">
+                      <circle r="21" cx="23" cy="23" fill="none" stroke-width="2.2" stroke="#ff8d30" stroke-dasharray="132" stroke-dashoffset="26"/>
+                    </svg>
+                  </p>
                 </div>
               </div>
               <div class="companion__wrapper companion__wrapper--buttons">
@@ -1181,6 +1191,7 @@
               <div class="companion__wrapper companion__wrapper--name-tags">
                 <h3 class="companion__name">
                   <a class="companion__link link link--blue" href="">Марк Смолов</a>
+                  <span class="companion__status">Не готов к путешествию</span>
                 </h3>
                 <ul class="companion__hashtags-list">
                   <li class="companion__hashtags-item">
@@ -1239,8 +1250,14 @@
                   </ul>
                 </div>
                 <div class="companion__level">
-                  <p class="companion__subtitle companion__subtitle--level">level<span class="companion__level-colon">:</span></p>
-                  <span class="companion__level-number">25</span>
+                  <p class="companion__subtitle companion__subtitle--level">левел<span class="companion__level-colon">:</span></p>
+                  <p class="level level--blue">
+                    25
+                    <span class="level__description level__description--grey">level</span>
+                    <svg class="level__bar" width="60" height="60" viewBox="0 0 46 46">
+                      <circle r="21" cx="23" cy="23" fill="none" stroke-width="2.2" stroke="#ff8d30" stroke-dasharray="132" stroke-dashoffset="99"/>
+                    </svg>
+                  </p>
                 </div>
               </div>
               <div class="companion__wrapper companion__wrapper--buttons">
@@ -1270,6 +1287,7 @@
               <div class="companion__wrapper companion__wrapper--name-tags">
                 <h3 class="companion__name">
                   <a class="companion__link link link--blue" href="">Лариса Роговая</a>
+                  <span class="companion__status companion__status--ready">Готова к путешествию</span>
                 </h3>
                 <ul class="companion__hashtags-list">
                   <li class="companion__hashtags-item">
@@ -1324,8 +1342,14 @@
                   </ul>
                 </div>
                 <div class="companion__level">
-                  <p class="companion__subtitle companion__subtitle--level">level<span class="companion__level-colon">:</span></p>
-                  <span class="companion__level-number">50</span>
+                  <p class="companion__subtitle companion__subtitle--level">левел<span class="companion__level-colon">:</span></p>
+                  <p class="level level--blue">
+                    60
+                    <span class="level__description level__description--grey">level</span>
+                    <svg class="level__bar" width="60" height="60" viewBox="0 0 46 46">
+                      <circle r="21" cx="23" cy="23" fill="none" stroke-width="2.2" stroke="#ff8d30" stroke-dasharray="132" stroke-dashoffset="66"/>
+                    </svg>
+                  </p>
                 </div>
               </div>
               <div class="companion__wrapper companion__wrapper--buttons">
@@ -1348,7 +1372,7 @@
               <svg class="pagination__deploy-icon" width="18" height="18">
                 <use xlink:href="#icon-show-more-plus"></use>
               </svg>
-              Показать ещё
+              Показать еще
             </a>
             <div class="pagination__wrapper">
               <ul class="pagination__pages-list">
@@ -1367,7 +1391,7 @@
               </ul>
               <ul class="pagination__side-list">
                 <li class="pagination__side-item">
-                  <a class="pagination__button" href="">
+                  <a class="pagination__button pagination__button--previous" href="">
                     Предыдущий
                     <svg class="pagination__icon pagination__icon--previous" width="10" height="20">
                       <use xlink:href="#icon-triangle-arrow"></use>
@@ -1375,7 +1399,7 @@
                   </a>
                 </li>
                 <li class="pagination__side-item">
-                  <a class="pagination__button" href="">
+                  <a class="pagination__button pagination__button--next" href="">
                     Следующий
                     <svg class="pagination__icon pagination__icon--next" width="10" height="20">
                       <use xlink:href="#icon-triangle-arrow"></use>

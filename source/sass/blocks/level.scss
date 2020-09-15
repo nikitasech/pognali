@@ -1,4 +1,6 @@
 .level {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -6,20 +8,54 @@
   width: 60px;
   height: 60px;
   margin: 0;
+  padding-top: 2px;
 
+  font-weight: 700;
   font-size: 24px;
   line-height: 24px;
   text-align: center;
   color: $white;
 
-  background-color: rgba(#000000, 0.6);
   border-radius: 50%;
+
+  &--blue {
+    color: $blue-slate;
+  }
 }
 
 .level__description {
   display: block;
-  padding-top: 4px;
+  padding-top: 0;
 
+  font-weight: 400;
   font-size: 14px;
   line-height: 14px;
+
+  &--grey {
+    color: $grey;
+  }
+
+  &::before {
+    content: "";
+
+    display: block;
+    width: 30px;
+    height: 1px;
+    margin-bottom: 2px;
+
+    background-color: rgba($white, 0.3);
+  }
+
+  &--grey::before {
+    background-color: rgba($grey, 0.3);
+  }
+}
+
+.level__bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  transform: rotate(-90deg);
+  transform-origin: center;
 }
