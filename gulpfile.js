@@ -10,7 +10,6 @@ var htmlmin = require('gulp-htmlmin');
 var include = require('posthtml-include');
 
 var uglify = require('gulp-uglify-es').default;
-var concat = require('gulp-concat');
 
 var sass = require('gulp-sass');
 var plumber = require('gulp-plumber');
@@ -18,7 +17,6 @@ var sourcemap = require('gulp-sourcemaps');
 var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
 var csso = require('gulp-csso');
-var gcmq = require('gulp-group-css-media-queries');
 
 var imagemin = require('gulp-imagemin');
 var webp = require('gulp-webp');
