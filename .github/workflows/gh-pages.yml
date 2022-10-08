@@ -1,5 +1,8 @@
 name: Build and Deploy
-on: [push] # defaults to master
+on:
+  push:
+    branches:
+      - main
 permissions:
   contents: write
 jobs:
